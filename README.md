@@ -1,8 +1,8 @@
-![](https://lh4.googleusercontent.com/DdaQ4rfR8Go8yXBuGsMXUVL2hZH0eacMEfGxfJD9d_-HZmB3O41Z3-6H-JyfpAn72KcI6FFVKcvZBGUiAlm8ELhX3Hnzm5DRvd1jUERmMHKFHP2IZWyjvbkhXu1nKw05_Wnm1wgQ)
+# FBLA Social App
 
-# FBLA Navigator 1.0 README
+# FBLA Social App 1.0 README
 
-By Makenna Swartz, Daniel Simboli, Adil Ansari
+By Makenna Swartz, Samyutka Neeraj, and Vincent Lauro
 
 Easton Area High School
 
@@ -12,7 +12,7 @@ Easton, PA
 
   
 
-FBLA Navigator is a mobile application for Android devices. To login into the app, users must first fill out a form to join FBLA. Once in the app, users can view current events, competitive events, community service opportunities and fundraisers in the calendar or on the event pages. From both locations there are also options to sign up for all events, including meetings. On the about FBLA page there are links to state and national websites as well as a Q and A section. To connect with their chapter, users have access to links to social media, as well as a place to email there director directly from the application. A list of local, state, and national officer teams is also provided if the user wishes to contact them instead. Officers and directors may interact with the application by logging on to the website, [fblamanager.me](http://fblamanager.me/), where they can create and post new events and messages, as well as track users and meeting attendance. FBLA Navigator is currently error free, however a bug reporting system is implemented if the user later discovers an issue.
+About FBLA Social App Here....
 
   
 
@@ -23,28 +23,6 @@ FBLA Navigator is a mobile application for Android devices. To login into the ap
   
 
 - Designed for Android devices
-
-- Options to login if user is already a member or create an account to join FBLA
-
-- Information about FBLA as well as links to important FBLA websites
-
-- Q and A section of frequently asked questions
-
-- A calendar full of current and competitive events
-
-- A list of competitive events with links to their guidelines
-
-- Options to sign up for current events and sign into meetings
-
-- Ability for directors and officers to track meeting attendance from website
-
-- Ability to email club director directly from application
-
-- Links to local, state, and national social media accounts
-
-- LIsts of local, state, and national officer teams
-
-- Officers and directors can create and post events and messages from the website
 
 - A bug reporting system
 
@@ -120,10 +98,6 @@ Menu Icons from Icons8 - [https://icons8.com/](https://icons8.com/)
 
 Background Image from Pexels - [https://www.pexels.com/](https://www.pexels.com/)
 
-  
-  
-
-National Officer Photos from FBLA-PBL - [https://www.fbla-pbl.org/fbla/officers/](https://www.fbla-pbl.org/fbla/officers/)
 
   
 
@@ -294,18 +268,7 @@ Syncfusion.Xamarin.SfComboBox by Syncfusion Inc. - [https://www.nuget.org/packag
 ## References
 
   
-
-- “FBLA-PBL.” FBLA-PBL, [www.fbla-pbl.org/](http://www.fbla-pbl.org/).
-
-- “FBLA Competitive Events: Academic Competitions for High School Students.” FBLA, https://www.fbla-pbl.org/fbla/competitive-events/.
-
-- “FBLA National Officers - FBLA-PBL.” FBLA, https://www.fbla-pbl.org/fbla/officers/.
-
-- “Easton, PA FBLA Study Set.” Quizlet, 2019, https://quizlet.com/447443583/easton-pa-fbla-study-set-flash-cards/.
-
-- BeckettMorsch. “BeckettMorsch/QuizzicalFBLA.” GitHub, https://github.com/BeckettMorsch/QuizzicalFBLA/blob/master/README.md.
-
-  
+ 
 
   
 
@@ -317,7 +280,7 @@ The MIT License (MIT)
 
   
 
-Copyright (c) 2019
+Copyright (c) 2020
 
   
 
