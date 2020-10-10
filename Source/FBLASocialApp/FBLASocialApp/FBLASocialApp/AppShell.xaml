@@ -3,6 +3,7 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:FBLASocialApp.Views"
        xmlns:forms="clr-namespace:FBLASocialApp.Views.Forms;assembly=FBLASocialApp"
+       xmlns:user="clr-namespace:FBLASocialApp.Views.UserInfo"
        Title="FBLASocialApp"
        x:Class="FBLASocialApp.AppShell">
 
@@ -83,6 +84,7 @@
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
         <ShellContent Title="Browse" Icon="tab_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Title="User Info" Icon="tab_feed.png" ContentTemplate="{DataTemplate user:ChatProfilePage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
