@@ -5,7 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using FBLASocialApp.Controls;
 using FBLASocialApp.ViewModels;
-using FBLASocialApp.ViewModels.Forms;
+using FBLASocialApp.ViewModels.Login;
 
 namespace FBLASocialApp.Converters
 {

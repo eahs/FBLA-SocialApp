@@ -1,3 +1,9 @@
+using Syncfusion.XForms.iOS.Graphics;
+using Syncfusion.XForms.iOS.BadgeView;
+using Syncfusion.XForms.iOS.Cards;
+using Syncfusion.SfRating.XForms.iOS;
+using Syncfusion.XForms.iOS.Core;
+using Syncfusion.ListView.XForms.iOS;
 using  Syncfusion.XForms.iOS.Graphics;
 using Syncfusion.XForms.iOS.Border;
 using Syncfusion.XForms.iOS.Buttons;
@@ -27,6 +33,11 @@ namespace FBLASocialApp.iOS
         {
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init();
+            SfBadgeViewRenderer.Init();
+            SfCardViewRenderer.Init();
+            SfRatingRenderer.Init();
+            Core.Init();
+            SfListViewRenderer.Init();
             SfGradientViewRenderer.Init();
             SfBorderRenderer.Init();
             SfButtonRenderer.Init();

@@ -2,8 +2,8 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:FBLASocialApp.Views"
-       xmlns:forms="clr-namespace:FBLASocialApp.Views.Forms;assembly=FBLASocialApp"
-       xmlns:user="clr-namespace:FBLASocialApp.Views.UserInfo"
+       xmlns:about="clr-namespace:FBLASocialApp.Views.About"
+       xmlns:login="clr-namespace:FBLASocialApp.Views.Login;assembly=FBLASocialApp"
        Title="FBLASocialApp"
        x:Class="FBLASocialApp.AppShell">
 
@@ -82,10 +82,8 @@
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-        <ShellContent Title="Browse" Icon="tab_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
-        <ShellContent Title="User Info" Icon="tab_feed.png" ContentTemplate="{DataTemplate user:ChatProfilePage}" />
-    </FlyoutItem>
+        <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate about:AboutUsWithCardsPage}" />
+     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
@@ -97,7 +95,7 @@
         If you would like to navigate to this content you can do so by calling
         await Shell.Current.GoToAsync("//LoginPage");
     -->
-    <ShellContent Route="LoginPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate forms:LoginPage}" />
+    <ShellContent Route="LoginPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:LoginPage}" />
 
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
