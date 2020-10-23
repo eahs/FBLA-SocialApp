@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
@@ -11,7 +12,7 @@ namespace FBLASocialApp.Models.Notification
     /// </summary>
     [Preserve(AllMembers = true)]
     [DataContract]
-    public class SocialNotificationModel : INotifyPropertyChanged
+    public class Notification : INotifyPropertyChanged
     {
 
         #region Field
@@ -33,6 +34,8 @@ namespace FBLASocialApp.Models.Notification
         /// </summary>
         [DataMember(Name = "receivedTime")]
         public string ReceivedTime { get; set; }
+
+        public DateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the notification item is read or not.

@@ -9,29 +9,29 @@ namespace FBLASocialApp.DataService
     /// The Notification Data Service
     /// </summary>
     [Preserve(AllMembers = true)]
-    public class SocialNotificationDataService
+    public class NotificationDataService
     {
         #region fields
 
-        private static SocialNotificationDataService _instance;
+        private static NotificationDataService _instance;
 
-        private SocialNotificationViewModel notificationViewModel;
+        private NotificationViewModel notificationViewModel;
 
         #endregion
 
         #region Properties
 
         /// <summary>
-        /// Gets an instance of the <see cref="SocialNotificationDataService"/>.
+        /// Gets an instance of the <see cref="NotificationDataService"/>.
         /// </summary>
-        public static SocialNotificationDataService Instance => _instance ?? (_instance = new SocialNotificationDataService());
+        public static NotificationDataService Instance => _instance ?? (_instance = new NotificationDataService());
 
         /// <summary>
         /// Gets or sets the value of notification view model.
         /// </summary>
-        public SocialNotificationViewModel SocialNotificationViewModel =>
+        public NotificationViewModel NotificationViewModel =>
             this.notificationViewModel ??
-            (this.notificationViewModel = PopulateData<SocialNotificationViewModel>("notification.json"));
+            (this.notificationViewModel = PopulateData<NotificationViewModel>("notification.json"));
 
         #endregion
 

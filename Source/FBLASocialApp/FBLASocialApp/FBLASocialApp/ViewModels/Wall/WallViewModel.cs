@@ -4,13 +4,13 @@ using Syncfusion.XForms.Buttons;
 using Xamarin.Forms.Internals;
 using Model = FBLASocialApp.Models.Post;
 
-namespace FBLASocialApp.ViewModels.Home
+namespace FBLASocialApp.ViewModels.Wall
 {
     /// <summary>
     /// ViewModel for Post card type page.
     /// </summary> 
     [Preserve(AllMembers = true)]
-    public class FeedViewModel : BaseViewModel
+    public class WallViewModel : BaseViewModel
     {
         #region Fields
 
@@ -40,7 +40,7 @@ namespace FBLASocialApp.ViewModels.Home
 
         #region Constructor
 
-        public FeedViewModel()
+        public WallViewModel()
         {
 
             this.BookmarkCommand = new Command(this.BookmarkButtonClicked);

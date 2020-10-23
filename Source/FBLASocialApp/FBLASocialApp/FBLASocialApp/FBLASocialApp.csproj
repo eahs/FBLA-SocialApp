@@ -35,7 +35,7 @@
     <EmbeddedResource Update="Themes\LightTheme.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\About\AboutUsWithCardsPage.xaml">
+    <EmbeddedResource Update="Views\About\AboutPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\About\Styles.xaml">
@@ -86,13 +86,13 @@
     <EmbeddedResource Update="Views\Login\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Notification\SocialNotificationPage.xaml">
+    <EmbeddedResource Update="Views\Notification\NotificationPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Notification\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Social\SocialProfileWithConnectionsPage.xaml">
+    <EmbeddedResource Update="Views\Social\UserStoryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Social\Styles.xaml">
@@ -113,6 +113,12 @@
     <EmbeddedResource Update="Views\Templates\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Wall\WallPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Wall\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -122,8 +128,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\About\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Home\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Notification\NotificationPage.xaml.cs">
+      <DependentUpon>NotificationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Social\UserStoryPage.xaml.cs">
+      <DependentUpon>UserStoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Wall\WallPage.xaml.cs">
+      <DependentUpon>WallPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Wall\Styles.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

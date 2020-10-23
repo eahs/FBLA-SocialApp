@@ -1,5 +1,5 @@
 <ContentPage
-    x:Class="FBLASocialApp.Views.About.AboutUsWithCardsPage"
+    x:Class="FBLASocialApp.Views.About.AboutPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:behavior="clr-namespace:FBLASocialApp.Behaviors"

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
-             xmlns:viewModel="clr-namespace:FBLASocialApp.ViewModels.Home"
+             xmlns:viewModel="clr-namespace:FBLASocialApp.ViewModels.Wall"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:controls="clr-namespace:FBLASocialApp.Controls"
@@ -12,7 +12,7 @@
              x:Name="articleCard"
              BackgroundColor="{DynamicResource Gray-White}"
              NavigationPage.HasNavigationBar="False"
-             x:Class="FBLASocialApp.Views.Home.HomePage">
+             x:Class="FBLASocialApp.Views.Wall.WallPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -23,16 +23,56 @@
     </ContentPage.Resources>
 
     <ContentPage.BindingContext>
-        <viewModel:FeedViewModel />
+        <viewModel:WallViewModel />
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>  
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+
+            <StackLayout x:Name="TitleView"  Padding="8,8" Grid.Row="0" HeightRequest="48"
+                         BackgroundColor="{DynamicResource Gray-White}" Spacing="0"
+                         HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+
+                <StackLayout x:Name="Title" HorizontalOptions="FillAndExpand"  IsVisible="True"
+                             Orientation="Horizontal"  VerticalOptions="FillAndExpand"  Spacing="0">
+
+                    <!--  Back button command  -->
+                    <buttons:SfButton  x:Name="backButton"  Command="{Binding BackButtonCommand}"
+                                       CommandParameter="{x:Reference backButton}" CornerRadius="4"
+                                       Style="{StaticResource IconButtonStyle}" Text="{StaticResource Back}"/>
+
+                    <!--   Article card page Title  -->
+                    <Label  Margin="16,0" FontFamily="{StaticResource Montserrat-Medium}" FontSize="16"
+                            HorizontalOptions="CenterAndExpand" TextColor="{DynamicResource Gray-900}"
+                            LineHeight="1.25"  Text="Articles"  VerticalOptions="Center" VerticalTextAlignment="Center" />
+
+                </StackLayout>
+
+                <StackLayout  x:Name="Search" HorizontalOptions="EndAndExpand" IsVisible="False"
+                                Orientation="Horizontal" Spacing="0">
+
+                    <!--  Back to title layout  -->
+                    <buttons:SfButton x:Name="BackToTitle" Clicked="BackToTitle_Clicked"  Text="{StaticResource Back}"
+                                      Style="{StaticResource NavigationBarButtonStyle}" WidthRequest="38" HeightRequest="38"
+                                      CornerRadius="4" Padding="0"/>
+
+                    <!--  Rounded Search Entry  -->
+                    <border:SfBorder Style="{StaticResource SfBorderStyle}">
+                        <controls:BorderlessEntry x:Name="SearchEntry"  BindingContext="{x:Reference ArticlesCard}"
+                                                  Text="{Binding SearchText, Mode=TwoWay}" Placeholder="Search here"
+                                                  HorizontalOptions="FillAndExpand"  Style="{StaticResource SearchEntryStyle}"/>
+                    </border:SfBorder>
+                </StackLayout>
+
+                <!--  Search Button  -->
+                <buttons:SfButton  x:Name="SearchButton" IsVisible="True" Clicked="SearchButton_Clicked" Style="{StaticResource IconButtonStyle }"
+                                   Text="{StaticResource Search}" />
+            </StackLayout>
 
             <BoxView Grid.Row="1" HeightRequest="1" BackgroundColor="{DynamicResource Gray-200}"/>
 
@@ -41,7 +81,7 @@
                     <controls:SearchableArticleList x:Name="ArticlesCard" IsScrollBarVisible="False"  AllowSwiping="True" 
                                   AutoFitMode="Height" SelectionGesture="Tap"  SelectionMode="Single" ItemSpacing="16" 
                                   VerticalOptions="FillAndExpand" SearchText="{Binding SearchText}" TapCommand="{Binding ItemTappedCommand}"
-                                  ItemsSource="{Binding Posts}"  SelectionBackgroundColor="Transparent">
+                                  ItemsSource="{Binding Articles}"  SelectionBackgroundColor="Transparent">
                         <controls:SearchableArticleList.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -54,7 +94,7 @@
                                                 <RowDefinition Height="Auto"/>
                                             </Grid.RowDefinitions>
 
-                                            <!--  Image of the Post  -->
+                                            <!--  Image of the Article  -->
                                             <Image
                                                 Aspect="AspectFill"  Grid.Row="0"
                                                 
@@ -75,10 +115,10 @@
                                                 <!--  OverLay Effect  -->
                                                 <Frame  CornerRadius="4" Opacity="0.35" BackgroundColor="{DynamicResource Gray-Black}" Grid.Row="0"/>
 
-                                                <!-- Description of the Post  -->
+                                                <!-- Description of the Article  -->
                                             <StackLayout Grid.Row="0" Margin="16,70,16,0" Spacing="0" VerticalOptions="EndAndExpand">
                                                 
-                                                <!--Post Title-->
+                                                <!--Article Title-->
                                                 <Label Text="{Binding Name}"  Margin="0,8" FontSize="16" 
                                                 FontFamily="{StaticResource Montserrat-SemiBold}" LineBreakMode="WordWrap"
                                                 TextColor="{DynamicResource Gray-White}" VerticalOptions="End"  LineHeight="{OnPlatform Default=-1,Android=1.5}"/>

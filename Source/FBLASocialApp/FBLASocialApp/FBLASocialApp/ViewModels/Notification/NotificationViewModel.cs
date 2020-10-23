@@ -11,7 +11,7 @@ namespace FBLASocialApp.ViewModels.Notification
     /// </summary>
     [Preserve(AllMembers = true)]
     [DataContract]
-    public class SocialNotificationViewModel : BaseViewModel
+    public class NotificationViewModel : BaseViewModel
     {
         #region Fields
 
@@ -28,7 +28,7 @@ namespace FBLASocialApp.ViewModels.Notification
         /// <summary>
         /// Initializes a new instance for the <see cref="SocialNotificationViewModel"/> class.
         /// </summary>
-        public SocialNotificationViewModel()
+        public NotificationViewModel()
         {
 
         }
@@ -73,14 +73,14 @@ namespace FBLASocialApp.ViewModels.Notification
         /// <summary>
         /// Gets or sets a collection of values to be displayed in the social notification page recent list.
         /// </summary>
-        [DataMember(Name = "recentSocialNotificationList")]
-        public ObservableCollection<SocialNotificationModel> RecentList { get; set; }
+        [DataMember(Name = "recentNotificationList")]
+        public ObservableCollection<Models.Notification.Notification> RecentList { get; set; }
 
         /// <summary>
         /// Gets or sets a collection of values to be displayed in the social notification page earlier list.
         /// </summary>
-        [DataMember(Name = "earlierSocialNotificationList")]
-        public ObservableCollection<SocialNotificationModel> EarlierList { get; set; }
+        [DataMember(Name = "earlierNotificationList")]
+        public ObservableCollection<Models.Notification.Notification> EarlierList { get; set; }
 
         #endregion
 
@@ -92,7 +92,7 @@ namespace FBLASocialApp.ViewModels.Notification
         /// <param name="selectedItem">Selected item from the list view.</param>
         private void ItemSelected(object selectedItem)
         {
-            ((selectedItem as Syncfusion.ListView.XForms.ItemTappedEventArgs)?.ItemData as SocialNotificationModel).IsRead = true;
+            ((selectedItem as Syncfusion.ListView.XForms.ItemTappedEventArgs)?.ItemData as Models.Notification.Notification).IsRead = true;
             // Do something
         }
 

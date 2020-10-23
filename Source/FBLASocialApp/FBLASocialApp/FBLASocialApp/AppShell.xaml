@@ -3,7 +3,10 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:FBLASocialApp.Views"
        xmlns:about="clr-namespace:FBLASocialApp.Views.About"
+       xmlns:home="clr-namespace:FBLASocialApp.Views.Home"       
+       xmlns:notification="clr-namespace:FBLASocialApp.Views.Notification"
        xmlns:login="clr-namespace:FBLASocialApp.Views.Login;assembly=FBLASocialApp"
+       xmlns:chat="clr-namespace:FBLASocialApp.Views.Chat"
        Title="FBLASocialApp"
        x:Class="FBLASocialApp.AppShell">
 
@@ -82,8 +85,12 @@
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate about:AboutUsWithCardsPage}" />
-     </FlyoutItem>
+        <ShellContent Title="Home" Icon="tab_about.png" Route="HomePage" ContentTemplate="{DataTemplate home:HomePage}" />
+        <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate about:AboutPage}" />
+        <ShellContent Title="Notifications" Icon="tab_about.png" Route="NotificationPage" ContentTemplate="{DataTemplate notification:NotificationPage}" />
+        <ShellContent Title="Chat" Icon="tab_about.png" Route="ChatSessionsPage" ContentTemplate="{DataTemplate chat:RecentChatPage}" />
+
+    </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <!--

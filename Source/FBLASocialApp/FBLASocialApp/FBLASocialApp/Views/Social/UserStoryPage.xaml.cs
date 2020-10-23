@@ -9,12 +9,12 @@ namespace FBLASocialApp.Views.Social
     /// </summary>
     [Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SocialProfileWithConnectionsPage : ContentPage
+    public partial class UserStoryPage : ContentPage
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SocialProfileWithConnectionsPage" /> class.
+        /// Initializes a new instance of the <see cref="UserStoryPage" /> class.
         /// </summary>
-        public SocialProfileWithConnectionsPage()
+        public UserStoryPage()
         {
             InitializeComponent();
         }

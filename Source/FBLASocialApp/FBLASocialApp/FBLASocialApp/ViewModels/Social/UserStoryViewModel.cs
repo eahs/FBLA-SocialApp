@@ -11,7 +11,7 @@ namespace FBLASocialApp.ViewModels.Social
     /// ViewModel for social profile pages.
     /// </summary>
     [Preserve(AllMembers = true)]
-    public class SocialProfileViewModel : BaseViewModel
+    public class UserStoryViewModel : BaseViewModel
     {
         #region Fields
 
@@ -32,9 +32,9 @@ namespace FBLASocialApp.ViewModels.Social
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance for the <see cref="SocialProfileViewModel" /> class.
+        /// Initializes a new instance for the <see cref="UserStoryViewModel" /> class.
         /// </summary>
-        public SocialProfileViewModel()
+        public UserStoryViewModel()
         {
             this.HeaderImagePath = "Album2.png";
             this.ProfileImage = "ProfileImage16.png";

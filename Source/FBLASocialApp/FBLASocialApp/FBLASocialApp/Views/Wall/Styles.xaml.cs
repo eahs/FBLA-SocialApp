@@ -1,19 +1,19 @@
 ﻿using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
-namespace FBLASocialApp.Views.About
+namespace FBLASocialApp.Views.Wall
 {
     /// <summary>
-    /// About us with cards page.
+    /// Class helps to reduce repetitive markup, and allows an apps appearance to be more easily changed.
     /// </summary>
     [Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AboutUsWithCardsPage
+    public partial class Styles
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:FBLASocialApp.Views.About.AboutUsWithCardsPage"/> class.
+        /// Initializes a new instance of the <see cref="Styles" /> class.
         /// </summary>
-        public AboutUsWithCardsPage()
+        public Styles()
         {
             InitializeComponent();
         }

@@ -10,15 +10,15 @@ namespace FBLASocialApp.Views.Notification
     /// </summary>
     [Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SocialNotificationPage : ContentPage
+    public partial class NotificationPage : ContentPage
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SocialNotificationPage" /> class.
+        /// Initializes a new instance of the <see cref="NotificationPage" /> class.
         /// </summary>
-        public SocialNotificationPage()
+        public NotificationPage()
         {
             InitializeComponent();
-            this.BindingContext = SocialNotificationDataService.Instance.SocialNotificationViewModel;
+            this.BindingContext = NotificationDataService.Instance.NotificationViewModel;
         }
     }
 }
