@@ -6,6 +6,7 @@
        xmlns:notification="clr-namespace:FBLASocialApp.Views.Notification"
        xmlns:login="clr-namespace:FBLASocialApp.Views.Login;assembly=FBLASocialApp"
        xmlns:chat="clr-namespace:FBLASocialApp.Views.Chat"
+       xmlns:social="clr-namespace:FBLASocialApp.Views.Social"
        Title="FBLASocialApp"
        x:Class="FBLASocialApp.AppShell">
 
@@ -83,14 +84,50 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="Home" Icon="tab_about.png" Route="HomePage" ContentTemplate="{DataTemplate home:HomePage}" />
-        <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate about:AboutPage}" />
-        <ShellContent Title="Notifications" Icon="tab_about.png" Route="NotificationPage" ContentTemplate="{DataTemplate notification:NotificationPage}" />
-        <ShellContent Title="Chat" Icon="tab_about.png" Route="ChatSessionsPage" ContentTemplate="{DataTemplate chat:RecentChatPage}" />
 
+    <FlyoutItem Title="Home" Icon="tab_about.png">
+        <Tab Title="Home" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate home:HomePage}" />
+        </Tab>
     </FlyoutItem>
 
+    <FlyoutItem Title="Notifications" Icon="tab_about.png">
+        <Tab Title="Notifications" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate notification:NotificationPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Chat" Icon="tab_about.png">
+        <Tab Title="Chat" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate chat:RecentChatPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Favorites" Icon="tab_about.png">
+        <Tab Title="Favorites" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate about:AboutPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Wall" Icon="tab_about.png">
+        <Tab Title="Wall" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate social:UserStoryPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="New Post" Icon="tab_about.png">
+        <Tab Title="New Post" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate about:AboutPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Settings" Icon="tab_about.png">
+        <Tab Title="Settings" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate about:AboutPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <!--
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
