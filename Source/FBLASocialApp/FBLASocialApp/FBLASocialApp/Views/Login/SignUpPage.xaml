@@ -75,13 +75,22 @@
                             Style="{StaticResource LabelStyle}"
                             Text="Create an account to start doing more" />
 
-                        <!--  Entry to get username from user  -->
+                        <!--  Entry to get first name from user  -->
                         <border:SfBorder BorderColor="{Binding Source={x:Reference NameEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
                             <control:BorderlessEntry
-                                x:Name="NameEntry"
-                                Placeholder="Name"
+                                x:Name="FirstNameEntry"
+                                Placeholder="FirstName"
                                 Style="{StaticResource EntryStyle}"
-                                Text="{Binding Name}" />
+                                Text="{Binding FirstName}" />
+                        </border:SfBorder>
+
+                        <!--  Entry to get last name from user  -->
+                        <border:SfBorder BorderColor="{Binding Source={x:Reference NameEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
+                            <control:BorderlessEntry
+                                x:Name="LastNameEntry"
+                                Placeholder="LastName"
+                                Style="{StaticResource EntryStyle}"
+                                Text="{Binding LastName}" />
                         </border:SfBorder>
 
                         <!--  Entry to get email ID from user  -->
