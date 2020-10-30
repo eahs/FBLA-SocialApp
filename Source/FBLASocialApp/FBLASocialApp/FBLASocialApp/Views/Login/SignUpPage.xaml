@@ -76,21 +76,21 @@
                             Text="Create an account to start doing more" />
 
                         <!--  Entry to get first name from user  -->
-                        <border:SfBorder BorderColor="{Binding Source={x:Reference NameEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
+                        <border:SfBorder BorderColor="{Binding Source={x:Reference FirstNameEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
                             <control:BorderlessEntry
                                 x:Name="FirstNameEntry"
-                                Placeholder="FirstName"
+                                Placeholder="First Name"
                                 Style="{StaticResource EntryStyle}"
-                                Text="{Binding FirstName}" />
+                                Text="{Binding Name}" />
                         </border:SfBorder>
 
                         <!--  Entry to get last name from user  -->
-                        <border:SfBorder BorderColor="{Binding Source={x:Reference NameEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
+                        <border:SfBorder BorderColor="{Binding Source={x:Reference LastNameEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
                             <control:BorderlessEntry
                                 x:Name="LastNameEntry"
-                                Placeholder="LastName"
+                                Placeholder="Last Name"
                                 Style="{StaticResource EntryStyle}"
-                                Text="{Binding LastName}" />
+                                Text="{Binding Name}" />
                         </border:SfBorder>
 
                         <!--  Entry to get email ID from user  -->
