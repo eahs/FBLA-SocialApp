@@ -1,6 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using SocialApi;
+using SocialApi.Response.v1;
+using SocialApi.Models;
+using System;
 
 namespace FBLASocialApp.ViewModels.Login
 {
@@ -13,6 +17,7 @@ namespace FBLASocialApp.ViewModels.Login
         #region Fields
 
         private string password;
+        private bool errorVisible = false;
 
         #endregion
 
@@ -55,6 +60,21 @@ namespace FBLASocialApp.ViewModels.Login
             }
         }
 
+
+        public bool ErrorIsVisible
+        {
+            get
+            {
+                return this.errorVisible;
+            }
+
+            set
+            {
+                this.errorVisible = value;
+                OnPropertyChanged("ErrorIsVisible");
+            }
+        }
+
         #endregion
 
         #region Command
@@ -87,9 +107,51 @@ namespace FBLASocialApp.ViewModels.Login
         /// Invoked when the Log In button is clicked.
         /// </summary>
         /// <param name="obj">The Object</param>
-        private void LoginClicked(object obj)
+        private async void LoginClicked(object obj)
         {
-            // Do something
+            if (IsBusy) return;
+
+            IsBusy = true;
+
+            // TODO: LoginClicked error checks
+            if (Password == "" || Email == "")
+            {
+                ErrorIsVisible = true;
+                ErrorMessage = "Invalid Credentials";
+            }
+
+            if (IsInvalidEmail)
+            {
+                ErrorIsVisible = true;
+                ErrorMessage = "Email is invalid";
+            }
+
+            if (!IsInvalidEmail)
+            {
+                ApiResponse<AuthenticateResponse> response = await SocialApi.SocialApi.Current.Login(Email, Password);
+
+                if (response.StatusCode == 200)
+                {
+                    // Navigate to the login page
+                }
+                else
+                {
+                    ErrorMessage = response.ErrorMessage;
+                    ErrorIsVisible = true;
+                }
+
+                /*
+                if (status == UserManagerResponseStatus.Success)
+                    MessagingCenter.Send<LoginPageViewModel>(this, "LoadApp");
+                else if (status == UserManagerResponseStatus.InvalidCredentials)
+                {
+                    ErrorIsVisible = true;
+                    ErrorMessage = "Password was incorrect.";
+                }
+                */
+            }
+
+            IsBusy = false;
         }
 
         /// <summary>
@@ -99,6 +161,7 @@ namespace FBLASocialApp.ViewModels.Login
         private void SignUpClicked(object obj)
         {
             // Do something
+            
         }
 
         /// <summary>
