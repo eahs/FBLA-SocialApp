@@ -128,7 +128,7 @@ namespace FBLASocialApp.ViewModels.Login
 
             if (!IsInvalidEmail)
             {
-                ApiResponse<AuthenticateResponse> response = await SocialApi.SocialApi.Current.Login(Email, Password);
+                ApiResponse<AuthenticateResponse> response = await YakkaApi.Current.Login(Email, Password);
 
                 if (response.StatusCode == 200)
                 {
