@@ -108,7 +108,7 @@
     <EmbeddedResource Update="Views\Social\Templates\ProfileTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Templates\ArticleActivityTemplate.xaml">
+    <EmbeddedResource Update="Views\Templates\PostTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Templates\NavigationTileTemplate.xaml">
@@ -143,6 +143,9 @@
     </Compile>
     <Compile Update="Views\Social\UserStoryPage.xaml.cs">
       <DependentUpon>UserStoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Templates\PostTemplate.xaml.cs">
+      <DependentUpon>PostTemplate.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Wall\WallPage.xaml.cs">
       <DependentUpon>WallPage.xaml</DependentUpon>

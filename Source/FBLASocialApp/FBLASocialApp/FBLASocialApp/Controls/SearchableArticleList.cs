@@ -19,13 +19,13 @@ namespace FBLASocialApp.Controls
         {
             if (base.FilterContacts(obj))
             {
-                var taskInfo = obj as Models.Post;
-                if (taskInfo == null || string.IsNullOrEmpty(taskInfo.Name) || string.IsNullOrEmpty(taskInfo.Author))
+                var taskInfo = obj as SocialApi.Models.Post;
+                if (taskInfo == null || string.IsNullOrEmpty(taskInfo.Title) || string.IsNullOrEmpty(taskInfo.Author.FullName))
                 {
                     return false;
                 }
-                return taskInfo.Name.ToUpperInvariant().Contains(this.SearchText.ToUpperInvariant())
-                       || taskInfo.Author.ToUpperInvariant().Contains(this.SearchText.ToUpperInvariant());
+                return taskInfo.Title.ToUpperInvariant().Contains(this.SearchText.ToUpperInvariant())
+                       || taskInfo.Author.FullName.ToUpperInvariant().Contains(this.SearchText.ToUpperInvariant());
             }
             return false;
         }

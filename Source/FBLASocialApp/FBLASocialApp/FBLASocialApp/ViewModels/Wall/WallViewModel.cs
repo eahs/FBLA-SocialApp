@@ -2,7 +2,9 @@
 using System.Collections.ObjectModel;
 using Syncfusion.XForms.Buttons;
 using Xamarin.Forms.Internals;
-using Model = FBLASocialApp.Models.Post;
+using Model = SocialApi.Models.Post;
+using SocialApi.Models;
+using System;
 
 namespace FBLASocialApp.ViewModels.Wall
 {
@@ -51,59 +53,58 @@ namespace FBLASocialApp.ViewModels.Wall
             {
                 new Model
                 {
-                    Name = "Better Brainstorming by Hand",
-                    Author = "John Doe",
-                    Date = "Apr 16",
-                    AverageReadingTime = "5 min read",
+                    Title = "Better Brainstorming by Hand",
+                    Author = new Member {
+                        MemberId = 1,
+                        FullName = "John Doe"
+                        },
+                    CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleParallaxHeaderImage.png",
-                    BookmarkedCount= 157,
-                    FavouritesCount= 100,
-                    SharedCount = 170
+                    FavoriteCount= 100
                 },
                 new Model
                 {
-                    Name = "Holistic Approach to UI Design",
-                    Author = "John Doe",
-                    Date = "Apr 28",
-                    AverageReadingTime = "5 min read",
+                    Title = "Holistic Approach to UI Design",
+                    Author = new Member {
+                        MemberId = 1,
+                        FullName = "John Doe"
+                        },
+                    CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "Event-Image.png",
-                    BookmarkedCount= 123,
-                    FavouritesCount= 60,
-                    SharedCount = 100
+                    FavoriteCount= 60
                 },
                 new Model
                 {
-                    Name = "Learning to Reset",
-                    Author = "John Doe",
-                    Date = "Aug 16",
-                    AverageReadingTime = "5 min read",
+                    Title = "Learning to Reset",
+                    Author = new Member {
+                        MemberId = 1,
+                        FullName = "John Doe"
+                        },
+                    CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleImage2.png",
-                    BookmarkedCount= 213,
-                    FavouritesCount= 250,
-                    SharedCount = 210
+                    FavoriteCount= 250
                 },
                 new Model
                 {
-                    Name = "Music",
-                    Author = "John Doe",
-                    Date = "Aug 25",
-                    AverageReadingTime = "5 min read",
+                    Title = "Music",
+                    Author = new Member {
+                        MemberId = 1,
+                        FullName = "John Doe"
+                        },                    CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleImage7.jpg",
-                    BookmarkedCount= 263,
-                    FavouritesCount= 350,
-                    SharedCount = 300
+                    FavoriteCount= 350
                 },
                 new Model
                 {
-                    Name = "Guiding Your Flock to Success",
-                    Author = "John Doe",
-                    Date = "Apr 16",
+                    Title = "Guiding Your Flock to Success",
+                    Author = new Member {
+                        MemberId = 1,
+                        FullName = "John Doe"
+                        },                    CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleImage4.png",
-                    AverageReadingTime = "5 min read",
-                    BookmarkedCount= 113,
-                    FavouritesCount= 90,
-                    SharedCount = 190
+                    FavoriteCount= 90
                 },
+
             };
         }
 
@@ -128,7 +129,7 @@ namespace FBLASocialApp.ViewModels.Wall
         {
             if (obj != null && (obj is Model))
             {
-                (obj as Model).IsFavourite = (obj as Model).IsFavourite ? false : true;
+                (obj as Model).IsFavorite = (obj as Model).IsFavorite ? false : true;
             }
             else
             {
@@ -142,6 +143,7 @@ namespace FBLASocialApp.ViewModels.Wall
 
         public void BookmarkButtonClicked(object obj)
         {
+            /*
             if (obj != null && (obj is Model))
             {
                 (obj as Model).IsBookmarked = (obj as Model).IsBookmarked ? false : true;
@@ -154,6 +156,7 @@ namespace FBLASocialApp.ViewModels.Wall
                     button.Text = (button.Text == "\ue72f") ? "\ue734" : "\ue72f";
                 }
             }
+            */
         }
 
         private void ShareButtonClicked(object obj)
