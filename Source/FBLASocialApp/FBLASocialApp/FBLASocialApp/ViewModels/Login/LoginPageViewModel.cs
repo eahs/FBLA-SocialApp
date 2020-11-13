@@ -167,6 +167,8 @@ namespace FBLASocialApp.ViewModels.Login
             label.BackgroundColor = Color.FromHex("#70FFFFFF");
             await Task.Delay(100);
             label.BackgroundColor = Color.Transparent;
+
+            await Shell.Current.GoToAsync("//WallPage?memberId=3");
         }
 
         /// <summary>

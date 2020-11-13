@@ -5,9 +5,18 @@ using Xamarin.Forms.Internals;
 using Model = SocialApi.Models.Post;
 using SocialApi.Models;
 using System;
+using System.Threading.Tasks;
+using SocialApi.Response.v1;
+using System.Collections.Generic;
 
 namespace FBLASocialApp.ViewModels.Wall
 {
+    public enum WallLoadMethod
+    {
+        LoadByMemberId,
+        LoadByWallId
+    };
+
     /// <summary>
     /// ViewModel for Post card type page.
     /// </summary> 
@@ -27,6 +36,9 @@ namespace FBLASocialApp.ViewModels.Wall
         /// </summary>
         public ObservableCollection<Model> Posts { get; set; }
 
+        public int PrimaryId { get; set; } = -1;  // MemberId or WallId
+        public WallLoadMethod LoadMethod { get; set; } = WallLoadMethod.LoadByMemberId;
+
         /// <summary>
         /// Gets the command that will be executed when an item is selected.
         /// </summary>
@@ -41,6 +53,7 @@ namespace FBLASocialApp.ViewModels.Wall
         #endregion
 
         #region Constructor
+
 
         public WallViewModel()
         {
@@ -111,6 +124,52 @@ namespace FBLASocialApp.ViewModels.Wall
         #endregion
 
         #region Methods
+
+        protected override async Task LoadItemsAsync()
+        {
+            await Task.Delay(1);
+
+            // Basic pattern
+            
+            try
+            {
+                bool success = false;
+                ApiResponse<List<Post>> posts = null;
+
+                // Make async request to obtain data
+                if (LoadMethod == WallLoadMethod.LoadByMemberId)
+                {
+                    posts = await SocialApi.Posts.GetMemberWall(PrimaryId);
+                }
+                else
+                {
+                    posts = await SocialApi.Posts.GetWall(PrimaryId);
+                }
+
+                success = posts.StatusCode == 200;
+
+                if (success)
+                {
+                    IsError = false;
+                    DataAvailable = true;
+
+                    // Copy posts into Posts
+                }
+                else
+                {
+                    // An error occurred that is stored
+                    ErrorMessage = "An error occurred";
+                    DataAvailable = false;
+                    IsError = true;
+                }
+            }
+            catch (Exception e)
+            {
+                // An exception occurred
+                DataAvailable = false;
+            }
+            
+        }
 
         /// <summary>
         /// Invoked when an item is selected from the articles card list page.

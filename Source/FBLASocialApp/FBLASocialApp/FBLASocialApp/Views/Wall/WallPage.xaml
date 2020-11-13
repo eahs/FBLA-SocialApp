@@ -22,10 +22,6 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ContentPage.BindingContext>
-        <viewModel:WallViewModel />
-    </ContentPage.BindingContext>
-
     <ContentPage.Content>
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
@@ -81,7 +77,7 @@
                     <controls:SearchableArticleList x:Name="ArticlesCard" IsScrollBarVisible="False"  AllowSwiping="True" 
                                   AutoFitMode="Height" SelectionGesture="Tap"  SelectionMode="Single" ItemSpacing="16" 
                                   VerticalOptions="FillAndExpand" SearchText="{Binding SearchText}" TapCommand="{Binding ItemTappedCommand}"
-                                  ItemsSource="{Binding Articles}"  SelectionBackgroundColor="Transparent">
+                                  ItemsSource="{Binding Posts}"  SelectionBackgroundColor="Transparent">
                         <controls:SearchableArticleList.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>

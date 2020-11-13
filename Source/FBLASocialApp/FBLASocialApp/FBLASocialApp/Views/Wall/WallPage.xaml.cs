@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FBLASocialApp.ViewModels.Wall;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -8,6 +9,8 @@ namespace FBLASocialApp.Views.Wall
     /// <summary>
     /// Page to display articles as a card type.
     /// </summary>
+    [QueryProperty("MemberId", "memberId")]
+    [QueryProperty("WallId", "wallId")]  // "member" or "wall"
     [Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WallPage
@@ -19,6 +22,39 @@ namespace FBLASocialApp.Views.Wall
         {
             InitializeComponent();
         }
+
+        public string MemberId
+        {
+            set
+            {
+                string mid = Uri.UnescapeDataString(value);
+                int memberId = Convert.ToInt32(mid);
+
+                WallViewModel vm = new WallViewModel();
+                vm.PrimaryId = memberId;
+                vm.LoadMethod = WallLoadMethod.LoadByMemberId;
+                vm.LoadItemsCommand.Execute(null);
+
+                this.BindingContext = vm;
+            }
+        }
+
+        public string WallId
+        {
+            set
+            {
+                string wid = Uri.UnescapeDataString(value);
+                int wallId = Convert.ToInt32(wid);
+
+                WallViewModel vm = new WallViewModel();
+                vm.PrimaryId = wallId;
+                vm.LoadMethod = WallLoadMethod.LoadByWallId;
+                vm.LoadItemsCommand.Execute(null);
+
+                this.BindingContext = vm;
+            }
+        }
+
 
         /// <summary>
         /// Invoked when view size is changed.

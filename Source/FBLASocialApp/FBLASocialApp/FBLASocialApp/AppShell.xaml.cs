@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using FBLASocialApp.ViewModels;
 using FBLASocialApp.Views;
+using FBLASocialApp.Views.Wall;
 using Xamarin.Forms;
 
 namespace FBLASocialApp
@@ -11,7 +12,9 @@ namespace FBLASocialApp
         public AppShell()
         {
             InitializeComponent();
-            //Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
+            
+            //Routing.RegisterRoute("WallPage", typeof(WallPage));
+            
             //Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
         }
 
