@@ -13,6 +13,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Syncfusion.XForms.Pickers.iOS;
 
 namespace FBLASocialApp.iOS
 {
@@ -41,7 +42,10 @@ namespace FBLASocialApp.iOS
             SfGradientViewRenderer.Init();
             SfBorderRenderer.Init();
             SfButtonRenderer.Init();
+
             LoadApplication(new App());
+
+            SfDatePickerRenderer.Init();
 
             return base.FinishedLaunching(app, options);
         }

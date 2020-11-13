@@ -15,7 +15,8 @@
                                                                   iOSPhoneLandscape=LoginBackground-Landscape.png,
                                                                   iOSTabletLandscape=LoginBackground-Landscape.png}"
     NavigationPage.HasNavigationBar="False"
-    Style="{StaticResource ContentPageStyle}">
+    Style="{StaticResource ContentPageStyle}"
+    x:Name="loginPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -100,6 +101,7 @@
                                 Text="{Binding Password}" />
                         </border:SfBorder>
 
+
                         <!--  Forgot password link  -->
                         <Label
                             x:Name="ForgotPasswordLabel"
@@ -120,6 +122,7 @@
                             Grid.Row="5"
                             Margin="0,16"
                             Command="{Binding LoginCommand}"
+                            CommandParameter="{x:Reference loginPage}"
                             Style="{StaticResource SfButtonStyle}"
                             Text="LOG IN" />
 

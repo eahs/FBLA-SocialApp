@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms.Internals;
+﻿using FBLASocialApp.ViewModels.Login;
+using System;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace FBLASocialApp.Views.Login
@@ -16,6 +18,19 @@ namespace FBLASocialApp.Views.Login
         public SignUpPage()
         {
             InitializeComponent();
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, System.EventArgs e)
+        {
+            birthdayPicker.IsOpen = true;
+        }
+
+        private void birthdayPicker_DateSelected(object sender, Syncfusion.XForms.Pickers.DateChangedEventArgs e)
+        {
+            SignUpPageViewModel vm = this.BindingContext as SignUpPageViewModel;
+
+            BirthdayEntry.Text = ((DateTime)e.NewValue).ToShortDateString();
+
         }
     }
 }

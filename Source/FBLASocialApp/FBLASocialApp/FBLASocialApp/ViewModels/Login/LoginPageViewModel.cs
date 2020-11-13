@@ -137,6 +137,10 @@ namespace FBLASocialApp.ViewModels.Login
                 {
                     ErrorMessage = response.ErrorMessage;
                     ErrorIsVisible = true;
+
+                    Page p = obj as Page;
+                    await p.DisplayAlert("Error", ErrorMessage, "OK");
+
                 }
             }
 
