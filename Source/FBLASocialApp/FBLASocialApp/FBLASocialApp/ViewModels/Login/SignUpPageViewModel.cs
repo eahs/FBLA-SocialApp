@@ -1,5 +1,9 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using SocialApi;
+using SocialApi.Response.v1;
+using SocialApi.Models;
 
 namespace FBLASocialApp.ViewModels.Login
 {
@@ -11,11 +15,13 @@ namespace FBLASocialApp.ViewModels.Login
     {
         #region Fields
 
-        private string name;
+        private string firstName;
+
+        private string lastName;
 
         private string password;
 
-        private string confirmPassword;
+        private DateTime birthday;
 
         #endregion
 
@@ -35,23 +41,45 @@ namespace FBLASocialApp.ViewModels.Login
         #region Property
 
         /// <summary>
-        /// Gets or sets the property that bounds with an entry that gets the name from user in the Sign Up page.
+        /// Gets or sets the property that bounds with an entry that gets the first name from user in the Sign Up page.
         /// </summary>
-        public string Name
+        public string FirstName
         {
             get
             {
-                return this.name;
+                return this.firstName;
             }
 
             set
             {
-                if (this.name == value)
+                if (this.firstName == value)
                 {
                     return;
                 }
 
-                this.name = value;
+                this.firstName = value;
+                this.NotifyPropertyChanged();
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the property that bounds with an entry that gets the last name from user in the Sign Up page.
+        /// </summary>
+        public string LastName
+        {
+            get
+            {
+                return this.lastName;
+            }
+
+            set
+            {
+                if (this.lastName == value)
+                {
+                    return;
+                }
+
+                this.lastName = value;
                 this.NotifyPropertyChanged();
             }
         }
@@ -81,21 +109,21 @@ namespace FBLASocialApp.ViewModels.Login
         /// <summary>
         /// Gets or sets the property that bounds with an entry that gets the password confirmation from users in the Sign Up page.
         /// </summary>
-        public string ConfirmPassword
+        public DateTime Birthday
         {
             get
             {
-                return this.confirmPassword;
+                return this.birthday;
             }
 
             set
             {
-                if (this.confirmPassword == value)
+                if (this.birthday == value)
                 {
                     return;
                 }
 
-                this.confirmPassword = value;
+                this.birthday = value;
                 this.NotifyPropertyChanged();
             }
         }
@@ -122,18 +150,23 @@ namespace FBLASocialApp.ViewModels.Login
         /// Invoked when the Log in button is clicked.
         /// </summary>
         /// <param name="obj">The Object</param>
-        private void LoginClicked(object obj)
+        private async void LoginClicked(object obj)
         {
-            // Do something
+            await Shell.Current.GoToAsync("//LoginPage");
         }
 
         /// <summary>
         /// Invoked when the Sign Up button is clicked.
         /// </summary>
         /// <param name="obj">The Object</param>
-        private void SignUpClicked(object obj)
+        private async void SignUpClicked(object obj)
         {
-            // Do something
+            ApiResponse<Member> response = await Members.CreateMember(FirstName, LastName, Birthday, Email, Password);
+
+            if(response.StatusCode == 200)
+            {
+                await Shell.Current.GoToAsync("//HomePage");
+            }
         }
 
         #endregion

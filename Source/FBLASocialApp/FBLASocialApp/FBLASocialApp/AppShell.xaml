@@ -87,7 +87,7 @@
 
     <FlyoutItem Title="Home" Icon="tab_about.png">
         <Tab Title="Home" Icon="tab_about.png">
-            <ShellContent ContentTemplate="{DataTemplate home:HomePage}" />
+            <ShellContent Route ="HomePage" ContentTemplate="{DataTemplate home:HomePage}" />
         </Tab>
     </FlyoutItem>
 
@@ -127,12 +127,9 @@
         </Tab>
     </FlyoutItem>
 
-    
-    <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <!--
+
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>
-    -->
 
     <!--
         This defines content that won't show up in a flyout menu. When this content is active the flyout menu won't be available.
@@ -141,6 +138,7 @@
         await Shell.Current.GoToAsync("//LoginPage");
     -->
     <ShellContent Route="LoginPage" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:LoginPage}" />
+    <ShellContent Route="SignUpPage" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:SignUpPage}" />
 
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
