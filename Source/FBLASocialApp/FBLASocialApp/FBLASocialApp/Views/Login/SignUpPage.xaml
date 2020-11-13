@@ -137,6 +137,7 @@
                                 x:Name="PasswordEntry"
                                 IsPassword="true"
                                 Placeholder="Password"
+                                Text="{Binding Password}"
                                 Style="{StaticResource EntryStyle}"
                                 />
                         </border:SfBorder>
@@ -146,6 +147,7 @@
                                 x:Name="PasswordEntry2"
                                 IsPassword="true"
                                 Placeholder="Confirm Password"
+                                Text="{Binding Password2}"
                                 Style="{StaticResource EntryStyle}"
                                  />
                         </border:SfBorder>

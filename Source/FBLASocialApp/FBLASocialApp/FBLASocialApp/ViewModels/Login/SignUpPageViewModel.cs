@@ -20,6 +20,7 @@ namespace FBLASocialApp.ViewModels.Login
         private string lastName;
 
         private string password;
+        private string password2;
 
         private DateTime birthday;
 
@@ -102,6 +103,28 @@ namespace FBLASocialApp.ViewModels.Login
                 }
 
                 this.password = value;
+                this.NotifyPropertyChanged();
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the property that bounds with an entry that gets the password from users in the Sign Up page.
+        /// </summary>
+        public string Password2
+        {
+            get
+            {
+                return this.password2;
+            }
+
+            set
+            {
+                if (this.password2 == value)
+                {
+                    return;
+                }
+
+                this.password2 = value;
                 this.NotifyPropertyChanged();
             }
         }
