@@ -17,7 +17,8 @@
                                                                   iOSPhoneLandscape=LoginBackground-Landscape.png,
                                                                   iOSTabletLandscape=LoginBackground-Landscape.png}"
     NavigationPage.HasNavigationBar="False"
-    Style="{StaticResource ContentPageStyle}">
+    Style="{StaticResource ContentPageStyle}"
+    x:Name="signUpPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -138,15 +139,17 @@
                                 IsPassword="true"
                                 Placeholder="Password"
                                 Style="{StaticResource EntryStyle}"
+                                Text="{Binding Password}"
                                 />
                         </border:SfBorder>
                         
-                        <border:SfBorder BorderColor="{Binding Source={x:Reference PasswordEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
+                        <border:SfBorder BorderColor="{Binding Source={x:Reference PasswordEntry2}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}" Style="{StaticResource SfBorderStyle}">
                             <control:BorderlessEntry
                                 x:Name="PasswordEntry2"
                                 IsPassword="true"
                                 Placeholder="Confirm Password"
                                 Style="{StaticResource EntryStyle}"
+                                Text="{Binding ConfirmPassword}"
                                  />
                         </border:SfBorder>
 
