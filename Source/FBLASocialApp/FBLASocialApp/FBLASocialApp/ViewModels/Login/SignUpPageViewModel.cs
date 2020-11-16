@@ -22,7 +22,11 @@ namespace FBLASocialApp.ViewModels.Login
         private string password;
         private string password2;
 
+        private string confirmPassword;
+
         private DateTime birthday;
+
+        private bool errorVisible = false;
 
         #endregion
 
@@ -110,21 +114,21 @@ namespace FBLASocialApp.ViewModels.Login
         /// <summary>
         /// Gets or sets the property that bounds with an entry that gets the password from users in the Sign Up page.
         /// </summary>
-        public string Password2
+        public string ConfirmPassword
         {
             get
             {
-                return this.password2;
+                return this.confirmPassword;
             }
 
             set
             {
-                if (this.password2 == value)
+                if (this.confirmPassword == value)
                 {
                     return;
                 }
 
-                this.password2 = value;
+                this.confirmPassword = value;
                 this.NotifyPropertyChanged();
             }
         }
@@ -148,6 +152,20 @@ namespace FBLASocialApp.ViewModels.Login
 
                 this.birthday = value;
                 this.NotifyPropertyChanged();
+            }
+        }
+
+        public bool ErrorIsVisible
+        {
+            get
+            {
+                return this.errorVisible;
+            }
+
+            set
+            {
+                this.errorVisible = value;
+                OnPropertyChanged("ErrorIsVisible");
             }
         }
 
@@ -184,12 +202,47 @@ namespace FBLASocialApp.ViewModels.Login
         /// <param name="obj">The Object</param>
         private async void SignUpClicked(object obj)
         {
-            ApiResponse<Member> response = await Members.CreateMember(FirstName, LastName, Birthday, Email, Password);
-
-            if(response.StatusCode == 200)
+            if (Password == ConfirmPassword)
             {
-                await Shell.Current.GoToAsync("//HomePage");
+                ApiResponse<Member> response = await Members.CreateMember(FirstName, LastName, Birthday, Email, Password);
+
+                if (response.StatusCode == 200)
+                {
+                    ApiResponse<AuthenticateResponse> loginResponse = await YakkaApi.Current.Login(Email, Password);
+
+                    if (loginResponse.StatusCode == 200)
+                    {
+                        await Shell.Current.GoToAsync("//HomePage");
+                    }
+                    else
+                    {
+                        ErrorMessage = loginResponse.ErrorMessage;
+                        ErrorIsVisible = true;
+
+                        Page p = obj as Page;
+                        await p.DisplayAlert("Error", ErrorMessage, "OK");
+
+                    }
+                }
+                else
+                {
+                    ErrorMessage = response.ErrorMessage;
+                    ErrorIsVisible = true;
+
+                    Page p = obj as Page;
+                    await p.DisplayAlert("Error", ErrorMessage, "OK");
+                }
             }
+            else
+            {
+                ErrorMessage = "Passwords do not match";
+                ErrorIsVisible = true;
+
+                Page p = obj as Page;
+                await p.DisplayAlert("Error", ErrorMessage, "OK");
+            }
+
+     
         }
 
         #endregion
