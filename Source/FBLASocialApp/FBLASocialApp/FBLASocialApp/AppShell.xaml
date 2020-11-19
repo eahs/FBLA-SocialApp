@@ -174,5 +174,18 @@
     </Shell.MenuItemTemplate>
 
     -->
-
+    <Shell.FlyoutHeaderTemplate>
+    <DataTemplate>
+        <Grid BackgroundColor="#FEA579"
+                  HeightRequest="150"
+                  Padding="10,0,0,1">
+            <Label Text="Yakka"
+               TextColor="White"
+               BackgroundColor="#FEA579"
+               FontSize="Header"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" />
+        </Grid>
+    </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
 </Shell>
