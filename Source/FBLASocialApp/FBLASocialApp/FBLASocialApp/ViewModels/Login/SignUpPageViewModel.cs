@@ -20,9 +20,8 @@ namespace FBLASocialApp.ViewModels.Login
         private string lastName;
 
         private string password;
-        private string password2;
 
-        private string confirmPassword;
+        private string password2;
 
         private DateTime birthday;
 
@@ -114,21 +113,21 @@ namespace FBLASocialApp.ViewModels.Login
         /// <summary>
         /// Gets or sets the property that bounds with an entry that gets the password from users in the Sign Up page.
         /// </summary>
-        public string ConfirmPassword
+        public string Password2
         {
             get
             {
-                return this.confirmPassword;
+                return this.Password2;
             }
 
             set
             {
-                if (this.confirmPassword == value)
+                if (this.Password2 == value)
                 {
                     return;
                 }
 
-                this.confirmPassword = value;
+                this.Password2 = value;
                 this.NotifyPropertyChanged();
             }
         }
@@ -202,7 +201,7 @@ namespace FBLASocialApp.ViewModels.Login
         /// <param name="obj">The Object</param>
         private async void SignUpClicked(object obj)
         {
-            if (Password == ConfirmPassword)
+            if (Password == Password2)
             {
                 ApiResponse<Member> response = await Members.CreateMember(FirstName, LastName, Birthday, Email, Password);
 

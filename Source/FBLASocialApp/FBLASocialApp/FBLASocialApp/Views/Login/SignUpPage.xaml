@@ -138,7 +138,6 @@
                                 x:Name="PasswordEntry"
                                 IsPassword="true"
                                 Placeholder="Password"
-                                Text="{Binding Password}"
                                 Style="{StaticResource EntryStyle}"
                                 Text="{Binding Password}"
                                 />
@@ -151,7 +150,6 @@
                                 Placeholder="Confirm Password"
                                 Text="{Binding Password2}"
                                 Style="{StaticResource EntryStyle}"
-                                Text="{Binding ConfirmPassword}"
                                  />
                         </border:SfBorder>
 
@@ -170,12 +168,14 @@
                         Spacing="1"
                         VerticalOptions="End">
 
+                        <!--
                         <StackLayout.Padding>
                             <OnIdiom
                                 x:DataType="Thickness"
                                 Default="0, 48, 0, 0"
                                 Phone="0" />
                         </StackLayout.Padding>
+                        -->
 
                         <Label
                             FontFamily="{StaticResource Montserrat-Medium}"

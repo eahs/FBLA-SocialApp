@@ -138,7 +138,7 @@
                         <buttons:SfButton
                             Grid.Row="7"
                             Margin="0,16,0,16"
-                            BackgroundColor="{DynamicResource FacebookBlue}"
+                            BackgroundColor="{DynamicResource LightGreen}"
                             Command="{Binding SocialMediaLoginCommand}"
                             CornerRadius="20"
                             HeightRequest="40">
@@ -150,13 +150,13 @@
                                     <Label
                                         FontFamily="{StaticResource FontIcons}"
                                         FontSize="18"
-                                        Text="&#xe735;"
+                                        Text="&#xe74d;"
                                         TextColor="{DynamicResource Gray-White}"
                                         VerticalTextAlignment="Center" />
                                     <Label
                                         FontFamily="{StaticResource Montserrat-Medium}"
                                         FontSize="16"
-                                        Text="Login with Facebook"
+                                        Text="Login with Google"
                                         TextColor="{DynamicResource Gray-White}" />
                                 </StackLayout>
                             </buttons:SfButton.Content>
@@ -170,12 +170,14 @@
                         Spacing="1"
                         VerticalOptions="End">
 
+                        <!--
                         <StackLayout.Padding>
                             <OnIdiom
                                 x:DataType="Thickness"
                                 Default="0, 48, 0, 0"
                                 Phone="0" />
                         </StackLayout.Padding>
+                        -->
 
                         <Label
                             FontFamily="{StaticResource Montserrat-Medium}"
