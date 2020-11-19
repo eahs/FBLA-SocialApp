@@ -80,7 +80,7 @@
     <!--  Common style for flat buttons  -->
     <Style x:Key="SfFlatButtonStyle" TargetType="buttons:SfButton">
         <Setter Property="BackgroundColor" Value="Transparent" />
-        <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
+        <Setter Property="TextColor" Value="{DynamicResource Red}" />
         <Setter Property="FontFamily" Value="{StaticResource Montserrat-SemiBold}" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
