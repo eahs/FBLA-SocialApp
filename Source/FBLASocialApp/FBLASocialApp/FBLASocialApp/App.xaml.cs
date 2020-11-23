@@ -15,7 +15,7 @@ namespace FBLASocialApp
         {
             Barrel.ApplicationId = "fblasocialapp";
 
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzMwOTQwQDMxMzgyZTMyMmUzMENJSEhmbkhkUm5SMFMwT1lRampEY3diZFo3QmtOVTdQQXFtOW5vMVlLeGs9");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzU3MTk3QDMxMzgyZTMzMmUzMGVhZWs4VWU3bVoySkRHREIrZXFFMzBPT0xNNWo4YndZMWhzRmxodmFCRjA9");
 
             InitializeComponent();
 

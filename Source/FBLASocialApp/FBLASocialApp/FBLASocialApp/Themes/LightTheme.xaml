@@ -11,9 +11,9 @@
     <Color x:Key="PrimaryGradient">#FFA579</Color>
     <Color x:Key="PrimaryLight">#ffe8f4</Color>
     <Color x:Key="SecondaryGradient">#7644ad</Color>
-    <Color x:Key="Secondary">#d54381</Color>
+    <Color x:Key="Secondary">#017584</Color>
     <Color x:Key="Green">#7ed321</Color>
-    <Color x:Key="Red">#ff4a4a</Color>
+    <Color x:Key="Red">#e0875b</Color>
     <Color x:Key="Orange">#ff844a</Color>
     <Color x:Key="Blue">#4acaff</Color>
     <Color x:Key="HyperLink">#567cd7</Color>
