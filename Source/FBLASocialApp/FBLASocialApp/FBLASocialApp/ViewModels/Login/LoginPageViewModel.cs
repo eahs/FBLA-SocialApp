@@ -168,7 +168,7 @@ namespace FBLASocialApp.ViewModels.Login
             //await Task.Delay(100);
             //label.BackgroundColor = Color.Transparent;
 
-            await Shell.Current.GoToAsync("//ForgotPasswordPage");
+            await Shell.Current.GoToAsync("//ResetPasswordPage");
         }
 
         /// <summary>
