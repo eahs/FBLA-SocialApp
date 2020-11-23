@@ -163,12 +163,12 @@ namespace FBLASocialApp.ViewModels.Login
         /// <param name="obj">The Object</param>
         private async void ForgotPasswordClicked(object obj)
         {
-            var label = obj as Label;
-            label.BackgroundColor = Color.FromHex("#70FFFFFF");
-            await Task.Delay(100);
-            label.BackgroundColor = Color.Transparent;
+            //var label = obj as Label;
+            //label.BackgroundColor = Color.FromHex("#70FFFFFF");
+            //await Task.Delay(100);
+            //label.BackgroundColor = Color.Transparent;
 
-            await Shell.Current.GoToAsync("//WallPage?memberId=3");
+            await Shell.Current.GoToAsync("//ResetPasswordPage");
         }
 
         /// <summary>

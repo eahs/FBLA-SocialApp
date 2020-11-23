@@ -98,18 +98,18 @@ namespace FBLASocialApp.ViewModels.Login
         /// Invoked when the Submit button is clicked.
         /// </summary>
         /// <param name="obj">The Object</param>
-        private void SubmitClicked(object obj)
+        private async void SubmitClicked(object obj)
         {
-            // Do something
+            await Shell.Current.GoToAsync("//LoginPage");
         }
 
         /// <summary>
         /// Invoked when the Sign Up button is clicked.
         /// </summary>
         /// <param name="obj">The Object</param>
-        private void SignUpClicked(object obj)
+        private async void SignUpClicked(object obj)
         {
-            // Do something
+            await Shell.Current.GoToAsync("//SignUpPage");
         }
 
         #endregion
