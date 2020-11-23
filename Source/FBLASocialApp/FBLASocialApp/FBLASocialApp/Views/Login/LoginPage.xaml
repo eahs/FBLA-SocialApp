@@ -135,33 +135,32 @@
                             Text="Or sign in with Google" />
 
                         <!--  Login through facebook account  -->
-                        <buttons:SfButton
+
+                        <Frame
                             Grid.Row="7"
                             Margin="0,16,0,16"
-                            BackgroundColor="{DynamicResource LightGreen}"
-                            Command="{Binding SocialMediaLoginCommand}"
-                            CornerRadius="20"
-                            HeightRequest="40">
-                            <buttons:SfButton.Content>
-                                <StackLayout
-                                    HorizontalOptions="CenterAndExpand"
-                                    Orientation="Horizontal"
-                                    VerticalOptions="Center">
-                                    <Label
-                                        FontFamily="{StaticResource FontIcons}"
-                                        FontSize="18"
-                                        Text="&#xe74d;"
-                                        TextColor="{DynamicResource Gray-White}"
-                                        VerticalTextAlignment="Center" />
-                                    <Label
-                                        FontFamily="{StaticResource Montserrat-Medium}"
-                                        FontSize="16"
-                                        Text="Login with Google"
-                                        TextColor="{DynamicResource Gray-White}" />
-                                </StackLayout>
-                            </buttons:SfButton.Content>
-                        </buttons:SfButton>
-
+                            CornerRadius="5"
+                            BackgroundColor="#4285f4"
+                            HeightRequest="40"
+                            HorizontalOptions="Center"
+                            Padding="1">
+                            <StackLayout
+                                HorizontalOptions="StartAndExpand"
+                                Orientation="Horizontal"
+                                VerticalOptions="Center">
+                                <Image Source="google_login.png"/>
+                                <Label
+                                    FontFamily="{StaticResource Montserrat-Medium}"
+                                    FontSize="16"
+                                    FontAttributes="Bold"
+                                    Text="Sign in with Google "
+                                    TextColor="{DynamicResource Gray-White}"                                     
+                                    VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SocialMediaLoginCommand}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
                     </Grid>
 
                     <StackLayout

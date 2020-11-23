@@ -228,4 +228,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\ChatMessageBackground.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\google_login.png" />
+  </ItemGroup>
 </Project>

@@ -140,6 +140,8 @@
     <ShellContent Route="LoginPage" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:LoginPage}" />
     <ShellContent Route="ResetPasswordPage" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:ResetPasswordPage}" />
     <ShellContent Route="SignUpPage" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:SignUpPage}" />
+    <ShellContent Route="ForgotPasswordPage" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:ForgotPasswordPage}" />
+
     <ShellContent Route="WallPage" ContentTemplate="{DataTemplate wall:WallPage}" />
 
     <!-- Optional Templates 

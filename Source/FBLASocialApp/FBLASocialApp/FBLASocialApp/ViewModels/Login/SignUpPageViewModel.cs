@@ -15,13 +15,13 @@ namespace FBLASocialApp.ViewModels.Login
     {
         #region Fields
 
-        private string firstName;
+        private string firstName = "";
 
-        private string lastName;
+        private string lastName = "";
 
-        private string password;
+        private string password = "";
 
-        private string confirmPassword;
+        private string confirmPassword = "";
 
         private DateTime birthday;
 
