@@ -35,7 +35,7 @@
                             HeightRequest="100"
                             HorizontalOptions="Start"
 							BackgroundColor="{DynamicResource Gray-200}" 
-                            Source="{Binding ImagePath}"
+                            Source="{Binding Image}"
                             VerticalOptions="Fill"
                             WidthRequest="100" />
                     </border:SfBorder>
@@ -46,7 +46,7 @@
                         FontFamily="{StaticResource Montserrat-Medium}"
                         FontSize="12"
                         HorizontalOptions="End"
-                        Text="{Binding Time, StringFormat='{0:h:mm tt}'}"
+                        Text="{Binding CreatedAt, StringFormat='{0:h:mm tt}'}"
                         TextColor="{DynamicResource Gray-White}"
                         VerticalOptions="End" />
 

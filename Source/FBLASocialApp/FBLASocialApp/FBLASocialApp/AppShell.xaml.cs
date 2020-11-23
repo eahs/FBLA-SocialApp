@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using FBLASocialApp.ViewModels;
 using FBLASocialApp.Views;
+using FBLASocialApp.Views.Chat;
 using FBLASocialApp.Views.Wall;
 using Xamarin.Forms;
 
@@ -13,7 +14,7 @@ namespace FBLASocialApp
         {
             InitializeComponent();
             
-            //Routing.RegisterRoute("WallPage", typeof(WallPage));
+            Routing.RegisterRoute("Chat/Session", typeof(ChatMessagePage));
             
             //Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
         }

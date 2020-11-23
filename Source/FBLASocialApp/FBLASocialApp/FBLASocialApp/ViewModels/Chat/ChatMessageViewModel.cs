@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using FBLASocialApp.Models.Chat;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using SocialApi.Models;
 
 namespace FBLASocialApp.ViewModels.Chat
 {
@@ -41,7 +42,7 @@ namespace FBLASocialApp.ViewModels.Chat
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatMessageViewModel" /> class.
         /// </summary>
-        public ChatMessageViewModel()
+        public ChatMessageViewModel(int sessionId)
         {
             this.MakeVoiceCall = new Command(this.VoiceCallClicked);
             this.MakeVideoCall = new Command(this.VideoCallClicked);
@@ -96,7 +97,7 @@ namespace FBLASocialApp.ViewModels.Chat
         /// <summary>
         /// Gets or sets a collection of chat messages.
         /// </summary>
-        public ObservableCollection<ChatMessage> ChatMessageInfo
+        public ObservableCollection<SocialApi.Models.ChatMessage> ChatMessageInfo
         {
             get
             {
@@ -185,30 +186,30 @@ namespace FBLASocialApp.ViewModels.Chat
             {
                 new ChatMessage
                 {
-                    Message = this.descriptions[0],
-                    Time = currentTime.AddMinutes(-2517),
+                    Body = this.descriptions[0],
+                    CreatedAt = currentTime.AddMinutes(-2517),
                     IsReceived = true,
                 },
                 new ChatMessage
                 {
-                    Message = this.descriptions[1],
-                    Time = currentTime.AddMinutes(-2408),
+                    Body = this.descriptions[1],
+                    CreatedAt = currentTime.AddMinutes(-2408),
                 },
                 new ChatMessage
                 {
-                    ImagePath = App.BaseImageUrl + "Electronics.png",
-                    Time = currentTime.AddMinutes(-2405),
+                    Image = App.BaseImageUrl + "Electronics.png",
+                    CreatedAt = currentTime.AddMinutes(-2405),
                 },
                 new ChatMessage
                 {
-                    Message = this.descriptions[2],
-                    Time = currentTime.AddMinutes(-1103),
+                    Body = this.descriptions[2],
+                    CreatedAt = currentTime.AddMinutes(-1103),
                     IsReceived = true,
                 },
                 new ChatMessage
                 {
-                    Message = this.descriptions[3],
-                    Time = currentTime.AddMinutes(-1006),
+                    Body = this.descriptions[3],
+                    CreatedAt = currentTime.AddMinutes(-1006),
                 },
             };
         }
@@ -268,8 +269,8 @@ namespace FBLASocialApp.ViewModels.Chat
             {
                 this.ChatMessageInfo.Add(new ChatMessage
                 {
-                    Message = this.NewMessage,
-                    Time = DateTime.Now
+                    Body = this.NewMessage,
+                    CreatedAt = DateTime.Now
                 });
             }
 
@@ -280,9 +281,9 @@ namespace FBLASocialApp.ViewModels.Chat
         /// Invoked when the back button is clicked.
         /// </summary>
         /// <param name="obj">The object</param>
-        private void BackButtonClicked(object obj)
+        private async void BackButtonClicked(object obj)
         {
-            // Do something
+            await Shell.Current.GoToAsync("..");
         }
 
         /// <summary>

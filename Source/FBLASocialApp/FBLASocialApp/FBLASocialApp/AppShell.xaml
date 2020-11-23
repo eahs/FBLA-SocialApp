@@ -99,9 +99,7 @@
     </FlyoutItem>
 
     <FlyoutItem Title="Chat" Icon="tab_about.png">
-        <Tab Title="Chat" Icon="tab_about.png">
-            <ShellContent ContentTemplate="{DataTemplate chat:RecentChatPage}" />
-        </Tab>
+        <ShellContent Route="Chat" ContentTemplate="{DataTemplate chat:RecentChatPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Favorites" Icon="tab_about.png">

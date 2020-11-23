@@ -271,9 +271,11 @@ namespace FBLASocialApp.ViewModels.Chat
         /// <summary>
         /// Invoked when an item is selected.
         /// </summary>
-        private void ItemSelected(object selectedItem)
+        private async void ItemSelected(object selectedItem)
         {
             // Do something
+            
+            await Shell.Current.GoToAsync("//Chat/Session?sessionId=30");
         }
 
         /// <summary>
