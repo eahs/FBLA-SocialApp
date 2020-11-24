@@ -91,7 +91,7 @@ namespace FBLASocialApp.ViewModels.Chat
                     MessageType = "Text",
                     Message = "Contrary to popular belief, Lorem Ipsum is not simply random text." +
                               "It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-                    Time = "12/8/2018",
+                    Time = "12/8/2020",
                     NotificationType = "Sent"
                 },
                 new ChatDetail
@@ -99,7 +99,7 @@ namespace FBLASocialApp.ViewModels.Chat
                     ImagePath = App.BaseImageUrl + "ProfileImage9.png",
                     SenderName = "Ira Membrit",
                     MessageType = "Photo",
-                    Time = "8/8/2018",
+                    Time = "8/8/2020",
                     AvailableStatus = "Available",
                     NotificationType = "Viewed"
                 },
@@ -109,7 +109,7 @@ namespace FBLASocialApp.ViewModels.Chat
                     MessageType = "Text",
                     Message = "A customer who bought your",
                     SenderName = "Serina Willams",
-                    Time = "10/6/2018",
+                    Time = "10/6/2020",
                     NotificationType = "Sent"
                 },
                  new ChatDetail
@@ -118,7 +118,7 @@ namespace FBLASocialApp.ViewModels.Chat
                     SenderName = "Alise Valasquez",
                     MessageType = "Text",
                     Message = "Syncfusion components help you deliver applications with great user experiences across iOS, Android, and Universal Windows Platform from a single code base.",
-                    Time = "2/5/2018",
+                    Time = "2/5/2020",
                     NotificationType = "New"
                 },
                 new ChatDetail
@@ -126,7 +126,7 @@ namespace FBLASocialApp.ViewModels.Chat
                     ImagePath = App.BaseImageUrl + "ProfileImage12.png",
                     SenderName = "Allie Bellew",
                     MessageType = "Audio",
-                    Time = "24/4/2018",
+                    Time = "24/4/2020",
                     AvailableStatus = "Available",
                     NotificationType = "Viewed"
                 },
@@ -136,7 +136,7 @@ namespace FBLASocialApp.ViewModels.Chat
                     SenderName = "Navya Sharma",
                     MessageType = "Text",
                     Message = "https://www.syncfusion.com",
-                    Time = "10/4/2018",
+                    Time = "10/4/2020",
                     NotificationType = "New"
                 },
                 new ChatDetail
@@ -144,7 +144,7 @@ namespace FBLASocialApp.ViewModels.Chat
                     ImagePath = App.BaseImageUrl + "ProfileImage14.png",
                     SenderName = "Carly Ling",
                     MessageType = "Video",
-                    Time = "22/3/2018",
+                    Time = "22/3/2020",
                     AvailableStatus = "Available",
                     NotificationType = "Received"
                 },
@@ -154,7 +154,7 @@ namespace FBLASocialApp.ViewModels.Chat
                     SenderName = "Diayana Sebastine",
                     MessageType = "Contact",
                     Message = "Kishore Nisanth",
-                    Time = "15/3/2018",
+                    Time = "15/3/2020",
                     NotificationType = "Viewed"
                 },
                 new ChatDetail
@@ -163,7 +163,7 @@ namespace FBLASocialApp.ViewModels.Chat
                     SenderName = "Marc Sherry",
                     MessageType = "Text",
                     Message = "Val Geisier is a writer who",
-                    Time = "12/3/2018",
+                    Time = "12/3/2020",
                     AvailableStatus = "Available",
                     NotificationType = "Sent"
                 },
@@ -174,7 +174,7 @@ namespace FBLASocialApp.ViewModels.Chat
                     MessageType = "Text",
                     Message = "Contrary to popular belief, Lorem Ipsum is not simply random text." +
                               "It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-                    Time = "3/2/2018",
+                    Time = "3/2/2020",
                     NotificationType = "Sent"
                 },
             };

@@ -39,7 +39,7 @@
                 <StackLayout Grid.Row="2" Spacing="0">
                 <ScrollView>
                     <controls:SearchableArticleList x:Name="ArticlesCard" IsScrollBarVisible="False"  AllowSwiping="True" 
-                                  AutoFitMode="Height" SelectionGesture="Tap"  SelectionMode="Single" ItemSpacing="16" 
+                                  AutoFitMode="Height" SelectionGesture="Tap"  SelectionMode="Single" ItemSpacing="4" 
                                   VerticalOptions="FillAndExpand" SearchText="{Binding SearchText}" TapCommand="{Binding ItemTappedCommand}"
                                   ItemsSource="{Binding Posts}"  SelectionBackgroundColor="Transparent">
                         <controls:SearchableArticleList.ItemTemplate>
@@ -55,55 +55,80 @@
                                             </Grid.RowDefinitions>
 
                                                 <!-- Description of the Post  -->
-                                            <StackLayout Grid.Row="0" Margin="16,0,16,0" Spacing="0" VerticalOptions="EndAndExpand">
+                                            <StackLayout Grid.Row="0" Margin="8,0,8,0" Spacing="0" VerticalOptions="EndAndExpand">
 
-                                                <!--  Author name  -->
-                                                <Label 
-                                                FontFamily="{StaticResource Montserrat-Medium}"
-                                                FontSize="12"
-                                                LineHeight="{OnPlatform Default=-1,
-                                                                        Android=1.5}"
-                                                Text="{Binding Author.FullName}"
-                                                TextColor="{DynamicResource Gray-Black}"
-                                                VerticalOptions="End" />
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="35"/>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                        </Grid.ColumnDefinitions>
 
-                                                <!--  Published date  -->
-                                                <Label 
-                                                Margin="0,0,0,8" VerticalOptions="End"
-                                                FontFamily="{StaticResource Montserrat-Medium}"
-                                                FontSize="12"
-                                                LineHeight="{OnPlatform Default=-1,
-                                                                        Android=1.5}"
-                                                TextColor="{DynamicResource Gray-Black }">
-                                                        <Label.FormattedText>
-                                                            <FormattedString>
-                                                                <Span Text="{Binding CreatedAt}" />
-                                                                <Span Text=" | " />
-                                                                <Span Text="..." />
-                                                            </FormattedString>
-                                                        </Label.FormattedText>
-                                                    </Label>
+                                                        <border:SfBorder Grid.Column="0" BackgroundColor="{DynamicResource Gray-200}" Style="{StaticResource ProfileBorderStyle}">
+                                                            <Image
+                                                                HeightRequest="32"
+                                                                WidthRequest="32">
+                                                                <!--
+                                                                <Image.GestureRecognizers>
+                                                                    <TapGestureRecognizer Command="{Binding ProfileImageCommand}" CommandParameter="{Binding .}" />
+                                                                </Image.GestureRecognizers>
+                                                                -->
+                                                                <Image.Source>
+                                                                    <UriImageSource Uri="{Binding Author.ProfilePhoto.Url}" 
+			                                                            CacheValidity="14" 
+			                                                            CachingEnabled="true"/>
+                                                                </Image.Source>
+                                                            </Image>
+                                                        </border:SfBorder>
 
+                                                        <StackLayout Grid.Column="1">
 
-                                                <!--Post Title-->
-                                                <Label Text="{Binding Title}"  Margin="0,8" FontSize="16" 
-                                                FontFamily="{StaticResource Montserrat-SemiBold}" LineBreakMode="WordWrap"
-                                                TextColor="{DynamicResource Gray-Black}" VerticalOptions="End"  LineHeight="{OnPlatform Default=-1,Android=1.5}"/>
+                                                            <!--  Author name  -->
+                                                            <Label 
+                                                            FontFamily="{StaticResource Montserrat-Bold}"
+                                                            FontSize="12"
+                                                            LineHeight="{OnPlatform Default=-1,
+                                                                                    Android=1.5}"
+                                                            Text="{Binding Author.FullName}"
+                                                            TextColor="{DynamicResource Gray-Black}"
+                                                            Margin="0,5,0,0"
+                                                            VerticalOptions="End" />
+
+                                                            <!--  Published date  -->
+                                                            <Label 
+                                                                Margin="0,-5,0,0" VerticalOptions="End"
+                                                                FontFamily="{StaticResource Montserrat-Medium}"
+                                                                FontSize="12"
+                                                                LineHeight="{OnPlatform Default=-1,
+                                                                                        Android=1.5}"
+                                                                TextColor="{DynamicResource Gray-Black }">
+                                                                                <Label.FormattedText>
+                                                                                    <FormattedString>
+                                                                                    <Span Text="Posted " />
+                                                                                    <Span Text="{Binding CreatedAt}" />
+                                                                                    </FormattedString>
+                                                                                </Label.FormattedText>
+                                                            </Label>
+
+                                                        </StackLayout>
+                                                    </Grid>
 
                                                 <!--Post Body-->
+                                                <!--
                                                 <Label Text="{Binding Body}"  Margin="0,8" FontSize="10" 
                                                 FontFamily="{StaticResource Montserrat-SemiBold}" LineBreakMode="WordWrap"
                                                 TextColor="{DynamicResource Gray-Black}" VerticalOptions="End"  LineHeight="{OnPlatform Default=-1,Android=1.5}"/>
-
+                                                -->
                                                    <!--  Image of the Post  -->
                                                     <Image
-                                                Aspect="AspectFill"                                            
-                                                HeightRequest="{OnIdiom Phone=170,
-                                                                        Tablet=170,
-                                                                        Desktop=170}"
-                                                WidthRequest="{OnIdiom Phone=343,
-                                                                        Tablet=323,
-                                                                        Desktop=423}">
+                                                        Aspect="AspectFill"                                            
+                                                        HeightRequest="{OnIdiom Phone=170,
+                                                                                Tablet=170,
+                                                                                Desktop=170}"
+                                                        WidthRequest="{OnIdiom Phone=343,
+                                                                                Tablet=323,
+                                                                                Desktop=423}"
+                                                        
+                                                        Margin="-8,5,-8,0">
                                                         <Image.Source>
                                                             <UriImageSource
                                                         CacheValidity="14"
@@ -111,6 +136,11 @@
                                                         Uri="{Binding ImagePath}"/>
                                                         </Image.Source>
                                                     </Image>
+
+                                                    <!--Post Title-->
+                                                    <Label Text="{Binding Title}"  Margin="0,8" FontSize="14" 
+                                                    FontFamily="{StaticResource Montserrat-Medium}" LineBreakMode="WordWrap"
+                                                    TextColor="{DynamicResource Gray-Black}" VerticalOptions="End"  LineHeight="{OnPlatform Default=-1,Android=1.5}"/>
 
                                                 </StackLayout>
                                                 

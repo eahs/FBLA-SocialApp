@@ -56,7 +56,11 @@ namespace FBLASocialApp.ViewModels.Home
                     Title = "Better Brainstorming by Hand",
                     Author = new Member {
                         MemberId = 1,
-                        FullName = "John Doe"
+                        FullName = "Diayana Sebastine",
+                        ProfilePhoto = new Photo
+                            {
+                                Url = App.BaseImageUrl + "ProfileImage15.png"
+                            }
                         },
                     CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleParallaxHeaderImage.png",
@@ -67,8 +71,12 @@ namespace FBLASocialApp.ViewModels.Home
                     Title = "Holistic Approach to UI Design",
                     Author = new Member {
 				        MemberId = 1,
-				        FullName = "John Doe"				
-				        },
+				        FullName = "John Doe",
+                        ProfilePhoto = new Photo
+                            {
+                                Url = App.BaseImageUrl + "ProfileImage12.png"
+                            }
+                        },
                     CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "Event-Image.png",
                     FavoriteCount= 60
@@ -78,8 +86,12 @@ namespace FBLASocialApp.ViewModels.Home
                     Title = "Learning to Reset",
                     Author = new Member {
 				        MemberId = 1,
-				        FullName = "John Doe"				
-				        },
+				        FullName = "John Doe",
+                        ProfilePhoto = new Photo
+                            {
+                                Url = App.BaseImageUrl + "ProfileImage1.png"
+                            }
+                        },
                     CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleImage2.png",
                     FavoriteCount= 250
@@ -89,8 +101,13 @@ namespace FBLASocialApp.ViewModels.Home
                     Title = "Music",
                     Author = new Member {
                         MemberId = 1,
-                        FullName = "John Doe"
-                        },                    CreatedAt = DateTime.Now,
+                        FullName = "John Doe",
+                        ProfilePhoto = new Photo
+                            {
+                                Url = App.BaseImageUrl + "ProfileImage2.png"
+                            }
+                        },                    
+                    CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleImage7.jpg",
                     FavoriteCount= 350
                 },
@@ -99,8 +116,13 @@ namespace FBLASocialApp.ViewModels.Home
                     Title = "Guiding Your Flock to Success",
                     Author = new Member {
                         MemberId = 1,
-                        FullName = "John Doe"
-                        },                    CreatedAt = DateTime.Now,
+                        FullName = "John Doe",
+                        ProfilePhoto = new Photo
+                            {
+                                Url = App.BaseImageUrl + "ProfileImage5.png"
+                            }
+                        },                    
+                    CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleImage4.png",
                     FavoriteCount= 90
                 },
