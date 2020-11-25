@@ -9,6 +9,7 @@
        xmlns:social="clr-namespace:FBLASocialApp.Views.Social"
        xmlns:wall="clr-namespace:FBLASocialApp.Views.Wall"       
        xmlns:settings="clr-namespace:FBLASocialApp.Views.Settings"
+       xmlns:font="clr-namespace:FBLASocialApp.Helpers"
        Title="FBLASocialApp"
        x:Class="FBLASocialApp.AppShell">
 
@@ -92,7 +93,7 @@
         <FlyoutItem.Icon>
             <FontImageSource
                 FontFamily="{StaticResource LineAwesomeFont}"
-                Glyph="&#xf015;"
+                Glyph="{x:Static font:LineAwesome.Home}"
                 Color="Black"
                 Size="24"
                 />
@@ -102,35 +103,89 @@
         </Tab>
     </FlyoutItem>
 
-    <FlyoutItem Title="Notifications" Icon="tab_about.png">
+    <FlyoutItem Title="Notifications">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.ExclamationCircle}"
+                Color="Black"
+                Size="24"
+                />
+        </FlyoutItem.Icon>
+
         <Tab Title="Notifications" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate notification:NotificationPage}" />
         </Tab>
     </FlyoutItem>
 
-    <FlyoutItem Title="Chat" Icon="tab_about.png">
+    <FlyoutItem Title="Chat">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Comment}"
+                Color="Black"
+                Size="24"
+                />
+        </FlyoutItem.Icon>
+
         <ShellContent Route="Chat" ContentTemplate="{DataTemplate chat:RecentChatPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Favorites" Icon="tab_about.png">
+    <FlyoutItem Title="Favorites">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Heart}"
+                Color="Black"
+                Size="24"
+                />
+        </FlyoutItem.Icon>
+
         <Tab Title="Favorites" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate about:AboutPage}" />
         </Tab>
     </FlyoutItem>
 
-    <FlyoutItem Title="Wall" Icon="tab_about.png">
+    <FlyoutItem Title="Wall">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Newspaper}"
+                Color="Black"
+                Size="24"
+                />
+        </FlyoutItem.Icon>
+
         <Tab Title="Wall" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate social:UserStoryPage}" />
         </Tab>
     </FlyoutItem>
 
-    <FlyoutItem Title="New Post" Icon="tab_about.png">
+    <FlyoutItem Title="New Post">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.AlternatePencil}"
+                Color="Black"
+                Size="24"
+                />
+        </FlyoutItem.Icon>
+
         <Tab Title="New Post" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate about:AboutPage}" />
         </Tab>
     </FlyoutItem>
 
-    <FlyoutItem Title="Settings" Icon="tab_about.png">
+    <FlyoutItem Title="Settings">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Cog}"
+                Color="Black"
+                Size="24"
+                />
+        </FlyoutItem.Icon>
+
         <Tab Title="Settings" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate settings:SettingPage}" />
         </Tab>
