@@ -11,11 +11,12 @@
     xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
     xmlns:local="clr-namespace:FBLASocialApp.Views.Login"
     xmlns:viewModel="clr-namespace:FBLASocialApp.ViewModels.Login"
-    BackgroundImageSource="{core:OnPlatformOrientationStringValue Default=LoginBackground.png,
+    BackgroundImageSource="{core:OnPlatformOrientationStringValue Default=LibraryofKnowledge.png,
                                                                   iOSPhoneLandscape=LoginBackground-Landscape.png,
                                                                   iOSTabletLandscape=LoginBackground-Landscape.png}"
     NavigationPage.HasNavigationBar="False"
-    Style="{StaticResource ContentPageStyle}">
+    Style="{StaticResource ContentPageStyle}"
+    x:Name="loginPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -70,7 +71,7 @@
                         <!--  Label to display the title of this page  -->
                         <Label
                             FontFamily="{StaticResource Montserrat-SemiBold}"
-                            FontSize="20"
+                            FontSize="30"
                             HorizontalTextAlignment="Center"
                             Style="{StaticResource LabelStyle}"
                             Text="Log In" />
@@ -82,7 +83,7 @@
                             FontFamily="{StaticResource Montserrat-Medium}"
                             HorizontalTextAlignment="Center"
                             Style="{StaticResource LabelStyle}"
-                            Text="Let's get to work" />
+                            Text="Ready to share your hard work?" />
 
                         <!--  Entry to get email ID from user  -->
                         <local:EmailEntry Grid.Row="2" Padding="0,24" />
@@ -99,6 +100,7 @@
                                 Style="{StaticResource EntryStyle}"
                                 Text="{Binding Password}" />
                         </border:SfBorder>
+
 
                         <!--  Forgot password link  -->
                         <Label
@@ -120,6 +122,7 @@
                             Grid.Row="5"
                             Margin="0,16"
                             Command="{Binding LoginCommand}"
+                            CommandParameter="{x:Reference loginPage}"
                             Style="{StaticResource SfButtonStyle}"
                             Text="LOG IN" />
 
@@ -129,36 +132,35 @@
                             FontFamily="{StaticResource Montserrat-Medium}"
                             HorizontalTextAlignment="Center"
                             Style="{StaticResource LabelStyle}"
-                            Text="Or create an account using social media" />
+                            Text="Or sign in with Google" />
 
                         <!--  Login through facebook account  -->
-                        <buttons:SfButton
+
+                        <Frame
                             Grid.Row="7"
                             Margin="0,16,0,16"
-                            BackgroundColor="{DynamicResource FacebookBlue}"
-                            Command="{Binding SocialMediaLoginCommand}"
-                            CornerRadius="20"
-                            HeightRequest="40">
-                            <buttons:SfButton.Content>
-                                <StackLayout
-                                    HorizontalOptions="CenterAndExpand"
-                                    Orientation="Horizontal"
-                                    VerticalOptions="Center">
-                                    <Label
-                                        FontFamily="{StaticResource FontIcons}"
-                                        FontSize="18"
-                                        Text="&#xe735;"
-                                        TextColor="{DynamicResource Gray-White}"
-                                        VerticalTextAlignment="Center" />
-                                    <Label
-                                        FontFamily="{StaticResource Montserrat-Medium}"
-                                        FontSize="16"
-                                        Text="Login with Facebook"
-                                        TextColor="{DynamicResource Gray-White}" />
-                                </StackLayout>
-                            </buttons:SfButton.Content>
-                        </buttons:SfButton>
-
+                            CornerRadius="5"
+                            BackgroundColor="#4285f4"
+                            HeightRequest="40"
+                            HorizontalOptions="Center"
+                            Padding="1">
+                            <StackLayout
+                                HorizontalOptions="StartAndExpand"
+                                Orientation="Horizontal"
+                                VerticalOptions="Center">
+                                <Image Source="google_login.png"/>
+                                <Label
+                                    FontFamily="{StaticResource Montserrat-Medium}"
+                                    FontSize="16"
+                                    FontAttributes="Bold"
+                                    Text="Sign in with Google "
+                                    TextColor="{DynamicResource Gray-White}"                                     
+                                    VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SocialMediaLoginCommand}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
                     </Grid>
 
                     <StackLayout
@@ -167,12 +169,14 @@
                         Spacing="1"
                         VerticalOptions="End">
 
+                        <!--
                         <StackLayout.Padding>
                             <OnIdiom
                                 x:DataType="Thickness"
                                 Default="0, 48, 0, 0"
                                 Phone="0" />
                         </StackLayout.Padding>
+                        -->
 
                         <Label
                             FontFamily="{StaticResource Montserrat-Medium}"

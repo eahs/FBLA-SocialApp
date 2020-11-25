@@ -1,4 +1,5 @@
 ﻿using FBLASocialApp.Models.Chat;
+using SocialApi.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -61,7 +62,7 @@ namespace FBLASocialApp.Views.Chat
         {
             if (((ChatMessage)item).IsReceived)
             {
-                if (string.IsNullOrEmpty(((ChatMessage)item).ImagePath))
+                if (string.IsNullOrEmpty(((ChatMessage)item).Image))
                 {
                     return this.IncomingTextTemplate;
                 }
@@ -72,7 +73,7 @@ namespace FBLASocialApp.Views.Chat
             }
             else
             {
-                if (string.IsNullOrEmpty(((ChatMessage)item).ImagePath))
+                if (string.IsNullOrEmpty(((ChatMessage)item).Image))
                 {
                     return this.OutgoingTextTemplate;
                 }

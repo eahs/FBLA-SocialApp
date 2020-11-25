@@ -9,9 +9,11 @@ using FBLASocialApp.Models;
 using FBLASocialApp.Services;
 using System.Windows.Input;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace FBLASocialApp.ViewModels
 {
+    [DataContract]
     public class BaseViewModel : INotifyPropertyChanged
     {
         private bool isBusy = false, isError, dataAvailable;

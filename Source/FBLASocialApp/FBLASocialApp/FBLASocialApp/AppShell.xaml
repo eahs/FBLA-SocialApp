@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:FBLASocialApp.Views"
        xmlns:about="clr-namespace:FBLASocialApp.Views.About"
+       xmlns:home="clr-namespace:FBLASocialApp.Views.Home"       
+       xmlns:notification="clr-namespace:FBLASocialApp.Views.Notification"
        xmlns:login="clr-namespace:FBLASocialApp.Views.Login;assembly=FBLASocialApp"
+       xmlns:chat="clr-namespace:FBLASocialApp.Views.Chat"
+       xmlns:social="clr-namespace:FBLASocialApp.Views.Social"
+       xmlns:wall="clr-namespace:FBLASocialApp.Views.Wall"       
+       xmlns:newpost="clr-namespace:FBLASocialApp.Views.NewPost"    
+       xmlns:settings="clr-namespace:FBLASocialApp.Views.Settings"
+       xmlns:font="clr-namespace:FBLASocialApp.Helpers"
        Title="FBLASocialApp"
        x:Class="FBLASocialApp.AppShell">
 
@@ -16,12 +23,12 @@
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource PrimaryDarkColor}" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource PrimaryDarkColor}" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
@@ -34,6 +41,7 @@
             https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
             -->
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium"></Setter>
                 <Setter Property="TextColor" Value="White"></Setter>
             </Style>
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
@@ -44,12 +52,12 @@
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
                                     <Setter Property="BackgroundColor" Value="White" />
-                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Red}" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="BackgroundColor" Value="{StaticResource PrimaryDarkColor}" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -66,7 +74,7 @@
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Red}" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -81,12 +89,160 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate about:AboutUsWithCardsPage}" />
-     </FlyoutItem>
 
-    <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    <FlyoutItem Title="Home" Route="Yakka">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Home}"
+                Color="Black"
+                Size="24"
+                />
+        </FlyoutItem.Icon>
+        <Tab Title="Home" Route ="Home">
+            <Tab.Icon>
+                <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Home}"
+                Color="Black"
+                Size="24"
+                />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate home:HomePage}" />
+        </Tab>
+        <Tab Title="Favorites" Route="Favorites">
+            <Tab.Icon>
+                <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Heart}"
+                Color="Black"
+                Size="24"
+                />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate home:HomePage}" />
+        </Tab>
+        <Tab Title="New Post" Route="NewPost">
+            <Tab.Icon>
+                <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.AlternatePencil}"
+                Color="Black"
+                Size="24"
+                />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate newpost:NewPostPage}" />
+        </Tab>
+        <Tab Title="My Wall" Route="MyWall">
+            <Tab.Icon>
+                <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Newspaper}"
+                Color="Black"
+                Size="24"
+                />
+            </Tab.Icon>
+
+            <ShellContent ContentTemplate="{DataTemplate social:UserStoryPage}" />
+        </Tab>
+        <Tab Title="Chat" Route="Chat">
+            <Tab.Icon>
+                <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Comment}"
+                Color="Black"
+                Size="24"
+                />
+            </Tab.Icon>
+
+            <ShellContent ContentTemplate="{DataTemplate chat:RecentChatPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Notifications" Route="Notifications">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.ExclamationCircle}"
+                Color="Black"
+                Size="24"
+                />
+        </FlyoutItem.Icon>
+
+        <Tab Title="Notifications" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate notification:NotificationPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <MenuItem Text="Chat" Clicked="Chat_Clicked">
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Comment}"
+                Color="Black"
+                Size="24"
+                />
+        </MenuItem.IconImageSource>
+    </MenuItem>
+
+
+    <MenuItem Text="Favorites" Clicked="Favorites_Clicked">
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Heart}"
+                Color="Black"
+                Size="24"
+                />
+        </MenuItem.IconImageSource>
+    </MenuItem>
+
+    <MenuItem Text="My Wall" Clicked="MyWall_Clicked">
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Newspaper}"
+                Color="Black"
+                Size="24"
+                />
+        </MenuItem.IconImageSource>
+    </MenuItem>
+
+    <MenuItem Text="New Post" Clicked="NewPost_Clicked">
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.AlternatePencil}"
+                Color="Black"
+                Size="24"
+                />
+        </MenuItem.IconImageSource>
+    </MenuItem>
+
+    <FlyoutItem Title="Settings" Route="Settings">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Cog}"
+                Color="Black"
+                Size="24"
+                />
+        </FlyoutItem.Icon>
+
+        <Tab Title="Settings" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate settings:SettingPage}" />
+        </Tab>
+    </FlyoutItem>
+
+
+    <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="Logout_Clicked">
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.AlternateSignOut}"
+                Color="Black"
+                Size="24"
+                />
+        </MenuItem.IconImageSource>
     </MenuItem>
 
     <!--
@@ -95,7 +251,10 @@
         If you would like to navigate to this content you can do so by calling
         await Shell.Current.GoToAsync("//LoginPage");
     -->
-    <ShellContent Route="LoginPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:LoginPage}" />
+    <ShellContent Route="Login" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:LoginPage}" />
+    <ShellContent Route="ResetPassword" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:ResetPasswordPage}" />
+    <ShellContent Route="SignUp" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:SignUpPage}" />
+    <ShellContent Route="Wall" ContentTemplate="{DataTemplate wall:WallPage}" />
 
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
@@ -129,5 +288,18 @@
     </Shell.MenuItemTemplate>
 
     -->
-
+    <Shell.FlyoutHeaderTemplate>
+    <DataTemplate>
+        <Grid BackgroundColor="#FEA579"
+                  HeightRequest="150"
+                  Padding="10,0,0,1">
+            <Label Text="Yakka"
+               TextColor="White"
+               BackgroundColor="#FEA579"
+               FontSize="Header"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" />
+        </Grid>
+    </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
 </Shell>

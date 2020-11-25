@@ -145,6 +145,15 @@
         <Setter Property="FontSize" Value="16" />
     </Style>
 
+    <!--  Common style for profile border style  -->
+    <Style x:Key="ProfileBorderStyle" TargetType="border:SfBorder">
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="BorderColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="CornerRadius" Value="20" />
+    </Style>
+    
     <!--  Common style for option labels  -->
     <Style
         x:Key="OptionButtonLabelStyle"

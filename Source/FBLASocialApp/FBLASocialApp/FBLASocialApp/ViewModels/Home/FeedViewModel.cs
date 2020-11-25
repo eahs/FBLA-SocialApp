@@ -2,7 +2,9 @@
 using System.Collections.ObjectModel;
 using Syncfusion.XForms.Buttons;
 using Xamarin.Forms.Internals;
-using Model = FBLASocialApp.Models.Post;
+using Model = SocialApi.Models.Post;
+using SocialApi.Models;
+using System;
 
 namespace FBLASocialApp.ViewModels.Home
 {
@@ -23,7 +25,7 @@ namespace FBLASocialApp.ViewModels.Home
         /// <summary>
         /// Gets or sets a collction of value to be displayed in articles card page.
         /// </summary>
-        public ObservableCollection<Model> Articles { get; set; }
+        public ObservableCollection<Model> Posts { get; set; }
 
         /// <summary>
         /// Gets the command that will be executed when an item is selected.
@@ -47,63 +49,89 @@ namespace FBLASocialApp.ViewModels.Home
             this.AddFavouriteCommand = new Command(this.FavouriteButtonClicked);
             this.ShareCommand = new Command(this.ShareButtonClicked);
 
-            this.Articles = new ObservableCollection<Model>()
+            this.Posts = new ObservableCollection<Model>()
             {
                 new Model
                 {
-                    Name = "Better Brainstorming by Hand",
-                    Author = "John Doe",
-                    Date = "Apr 16",
-                    AverageReadingTime = "5 min read",
-                    ImagePath= App.BaseImageUrl + "ArticleParallaxHeaderImage.png",
-                    BookmarkedCount= 157,
-                    FavouritesCount= 100,
-                    SharedCount = 170
+                    Title = "Lowell High School State-Wide Hackathon ",
+                    Body = "Today, my team and I participated in our school’s most famous hackathon and competed with several teams from the state. We made 1st place with a cash price of $500! A big thanks to Lisa, Miles, and Johnathan. Thank you for your dedication to practices for these last several months.",
+                    Author = new Member {
+                        MemberId = 1,
+                        FullName = "Robert Smith",
+                        ProfilePhoto = new Photo
+                            {
+                                Url = App.BaseImageUrl + "RobertSmith.jfif"
+                            }
+                        },
+                    CreatedAt = DateTime.Now,
+                    ImagePath= App.BaseImageUrl + "Hackathon.jpg",
+                    FavoriteCount= 100
                 },
                 new Model
                 {
-                    Name = "Holistic Approach to UI Design",
-                    Author = "John Doe",
-                    Date = "Apr 28",
-                    AverageReadingTime = "5 min read",
+                    Title = "Holistic Approach to UI Design",
+                    Body = "",
+                    Author = new Member {
+                        MemberId = 1,
+                        FullName = "John Doe",
+                        ProfilePhoto = new Photo
+                            {
+                                Url = App.BaseImageUrl + "ProfileImage12.png"
+                            }
+                        },
+                    CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "Event-Image.png",
-                    BookmarkedCount= 123,
-                    FavouritesCount= 60,
-                    SharedCount = 100
+                    FavoriteCount= 60
                 },
                 new Model
                 {
-                    Name = "Learning to Reset",
-                    Author = "John Doe",
-                    Date = "Aug 16",
-                    AverageReadingTime = "5 min read",
+                    Title = "Learning to Reset",
+                    Body = "",
+                    Author = new Member {
+                        MemberId = 1,
+                        FullName = "John Doe",
+                        ProfilePhoto = new Photo
+                            {
+                                Url = App.BaseImageUrl + "ProfileImage1.png"
+                            }
+                        },
+                    CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleImage2.png",
-                    BookmarkedCount= 213,
-                    FavouritesCount= 250,
-                    SharedCount = 210
+                    FavoriteCount= 250
                 },
                 new Model
                 {
-                    Name = "Music",
-                    Author = "John Doe",
-                    Date = "Aug 25",
-                    AverageReadingTime = "5 min read",
+                    Title = "Music",
+                    Body = "",
+                    Author = new Member {
+                        MemberId = 1,
+                        FullName = "John Doe",
+                        ProfilePhoto = new Photo
+                            {
+                                Url = App.BaseImageUrl + "ProfileImage2.png"
+                            }
+                        },
+                    CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleImage7.jpg",
-                    BookmarkedCount= 263,
-                    FavouritesCount= 350,
-                    SharedCount = 300
+                    FavoriteCount= 350
                 },
                 new Model
                 {
-                    Name = "Guiding Your Flock to Success",
-                    Author = "John Doe",
-                    Date = "Apr 16",
+                    Title = "Guiding Your Flock to Success",
+                    Body = "",
+                    Author = new Member {
+                        MemberId = 1,
+                        FullName = "John Doe",
+                        ProfilePhoto = new Photo
+                            {
+                                Url = App.BaseImageUrl + "ProfileImage5.png"
+                            }
+                        },
+                    CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleImage4.png",
-                    AverageReadingTime = "5 min read",
-                    BookmarkedCount= 113,
-                    FavouritesCount= 90,
-                    SharedCount = 190
+                    FavoriteCount= 90
                 },
+
             };
         }
 
@@ -128,7 +156,7 @@ namespace FBLASocialApp.ViewModels.Home
         {
             if (obj != null && (obj is Model))
             {
-                (obj as Model).IsFavourite = (obj as Model).IsFavourite ? false : true;
+                (obj as Model).IsFavorite = (obj as Model).IsFavorite ? false : true;
             }
             else
             {
@@ -142,6 +170,7 @@ namespace FBLASocialApp.ViewModels.Home
 
         public void BookmarkButtonClicked(object obj)
         {
+            /*
             if (obj != null && (obj is Model))
             {
                 (obj as Model).IsBookmarked = (obj as Model).IsBookmarked ? false : true;
@@ -154,6 +183,7 @@ namespace FBLASocialApp.ViewModels.Home
                     button.Text = (button.Text == "\ue72f") ? "\ue734" : "\ue72f";
                 }
             }
+            */
         }
 
         private void ShareButtonClicked(object obj)

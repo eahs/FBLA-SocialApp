@@ -1,3 +1,5 @@
+using Syncfusion.XForms.iOS.RichTextEditor;
+using Syncfusion.XForms.iOS.TabView;
 using Syncfusion.XForms.iOS.Graphics;
 using Syncfusion.XForms.iOS.BadgeView;
 using Syncfusion.XForms.iOS.Cards;
@@ -13,6 +15,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Syncfusion.XForms.Pickers.iOS;
 
 namespace FBLASocialApp.iOS
 {
@@ -32,7 +35,9 @@ namespace FBLASocialApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
-            global::Xamarin.Forms.Forms.Init();
+global::Xamarin.Forms.Forms.Init();
+SfRichTextEditorRenderer.Init();
+SfTabViewRenderer.Init();
             SfBadgeViewRenderer.Init();
             SfCardViewRenderer.Init();
             SfRatingRenderer.Init();
@@ -41,7 +46,10 @@ namespace FBLASocialApp.iOS
             SfGradientViewRenderer.Init();
             SfBorderRenderer.Init();
             SfButtonRenderer.Init();
+
             LoadApplication(new App());
+
+            SfDatePickerRenderer.Init();
 
             return base.FinishedLaunching(app, options);
         }

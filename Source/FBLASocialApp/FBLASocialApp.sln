@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FBLASocialApp", "FBLASocial
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneSignalNotificationServiceExtension", "FBLASocialApp\OneSignalNotificationServiceExtension\OneSignalNotificationServiceExtension.csproj", "{1C779F9E-5716-496D-8BF5-B00B38B38704}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialAPI", "FBLASocialApp\SocialApp-Api\SocialAPI\SocialAPI\SocialAPI.csproj", "{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,18 @@ Global
 		{1C779F9E-5716-496D-8BF5-B00B38B38704}.Release|iPhone.Build.0 = Release|iPhone
 		{1C779F9E-5716-496D-8BF5-B00B38B38704}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{1C779F9E-5716-496D-8BF5-B00B38B38704}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}.Release|iPhone.Build.0 = Release|Any CPU
+		{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{5E67184C-4DC5-4AAD-8BD8-E39DD62FA55C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

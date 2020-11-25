@@ -1,5 +1,5 @@
 {
-  "recentSocialNotificationList": [
+  "recentNotificationList": [
     {
       "name": "John Doe sent you a friend request.",
       "receivedTime": "2 mins ago",
@@ -12,7 +12,7 @@
     }
   ],
 
-  "earlierSocialNotificationList": [
+  "earlierNotificationList": [
     {
       "name": "Milton Lane invited you to like Syncfusion.",
       "receivedTime": "4 hours ago",

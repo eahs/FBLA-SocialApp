@@ -12,7 +12,8 @@
     xmlns:local="clr-namespace:FBLASocialApp.Views.Chat"
     xmlns:viewModel="clr-namespace:FBLASocialApp.ViewModels.Chat"
     BackgroundImage="ChatMessageBackground.png"
-    NavigationPage.HasNavigationBar="False">
+    NavigationPage.HasNavigationBar="False"
+    Shell.NavBarIsVisible="False">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -23,10 +24,6 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ContentPage.Resources>
-
-    <ContentPage.BindingContext>
-        <viewModel:ChatMessageViewModel />
-    </ContentPage.BindingContext>
 
     <ContentPage.Content>
 

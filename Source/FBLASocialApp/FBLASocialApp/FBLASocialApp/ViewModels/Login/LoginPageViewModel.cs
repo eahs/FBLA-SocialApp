@@ -1,6 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using SocialApi;
+using SocialApi.Response.v1;
+using SocialApi.Models;
+using System;
 
 namespace FBLASocialApp.ViewModels.Login
 {
@@ -13,6 +17,7 @@ namespace FBLASocialApp.ViewModels.Login
         #region Fields
 
         private string password;
+        private bool errorVisible = false;
 
         #endregion
 
@@ -55,6 +60,21 @@ namespace FBLASocialApp.ViewModels.Login
             }
         }
 
+
+        public bool ErrorIsVisible
+        {
+            get
+            {
+                return this.errorVisible;
+            }
+
+            set
+            {
+                this.errorVisible = value;
+                OnPropertyChanged("ErrorIsVisible");
+            }
+        }
+
         #endregion
 
         #region Command
@@ -87,18 +107,54 @@ namespace FBLASocialApp.ViewModels.Login
         /// Invoked when the Log In button is clicked.
         /// </summary>
         /// <param name="obj">The Object</param>
-        private void LoginClicked(object obj)
+        private async void LoginClicked(object obj)
         {
-            // Do something
+            if (IsBusy) return;
+
+            IsBusy = true;
+
+            if (Password == "" || Email == "")
+            {
+                ErrorIsVisible = true;
+                ErrorMessage = "Invalid Credentials";
+            }
+
+            if (IsInvalidEmail)
+            {
+                ErrorIsVisible = true;
+                ErrorMessage = "Email is invalid";
+            }
+
+            if (!IsInvalidEmail)
+            {
+                ApiResponse<AuthenticateResponse> response = await YakkaApi.Current.Login(Email, Password);
+
+                if (response.StatusCode == 200)
+                {
+                    await Shell.Current.GoToAsync("//Yakka/Home");
+                }
+                else
+                {
+                    ErrorMessage = response.ErrorMessage;
+                    ErrorIsVisible = true;
+
+                    Page p = obj as Page;
+                    await p.DisplayAlert("Error", ErrorMessage, "OK");
+
+                }
+            }
+
+            IsBusy = false;
         }
 
         /// <summary>
         /// Invoked when the Sign Up button is clicked.
         /// </summary>
         /// <param name="obj">The Object</param>
-        private void SignUpClicked(object obj)
+        private async void SignUpClicked(object obj)
         {
-            // Do something
+            await Shell.Current.GoToAsync("//SignUp");
+
         }
 
         /// <summary>
@@ -107,10 +163,12 @@ namespace FBLASocialApp.ViewModels.Login
         /// <param name="obj">The Object</param>
         private async void ForgotPasswordClicked(object obj)
         {
-            var label = obj as Label;
-            label.BackgroundColor = Color.FromHex("#70FFFFFF");
-            await Task.Delay(100);
-            label.BackgroundColor = Color.Transparent;
+            //var label = obj as Label;
+            //label.BackgroundColor = Color.FromHex("#70FFFFFF");
+            //await Task.Delay(100);
+            //label.BackgroundColor = Color.Transparent;
+
+            await Shell.Current.GoToAsync("//ResetPassword");
         }
 
         /// <summary>

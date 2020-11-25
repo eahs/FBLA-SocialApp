@@ -97,59 +97,86 @@
       <HintPath>..\..\packages\Com.OneSignal.3.10.1\lib\Xamarin.iOS10\OneSignal.iOS.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Syncfusion.Buttons.XForms, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.Buttons.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.Buttons.XForms.dll</HintPath>
+    <Reference Include="Syncfusion.Buttons.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.Buttons.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.Buttons.XForms.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Buttons.XForms.iOS, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.Buttons.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.Buttons.XForms.iOS.dll</HintPath>
+    <Reference Include="Syncfusion.Buttons.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.Buttons.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.Buttons.XForms.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Cards.XForms, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.Cards.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.Cards.XForms.dll</HintPath>
+    <Reference Include="Syncfusion.Cards.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.Cards.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.Cards.XForms.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Cards.XForms.iOS, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.Cards.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.Cards.XForms.iOS.dll</HintPath>
+    <Reference Include="Syncfusion.Cards.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.Cards.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.Cards.XForms.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Core.XForms, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.Core.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.Core.XForms.dll</HintPath>
+    <Reference Include="Syncfusion.Core.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.Core.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.Core.XForms.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Core.XForms.iOS, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.Core.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.Core.XForms.iOS.dll</HintPath>
+    <Reference Include="Syncfusion.Core.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.Core.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.Core.XForms.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.DataSource.Portable, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.DataSource.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.DataSource.Portable.dll</HintPath>
+    <Reference Include="Syncfusion.DataSource.Portable, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.DataSource.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.DataSource.Portable.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.GridCommon.Portable, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.GridCommon.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.GridCommon.Portable.dll</HintPath>
+    <Reference Include="Syncfusion.GridCommon.Portable, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.GridCommon.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.GridCommon.Portable.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Licensing, Version=18.2.0.59, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Licensing.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.Licensing.dll</HintPath>
+    <Reference Include="Syncfusion.Licensing, Version=18.3.0.48, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Licensing.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.Licensing.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfBadgeView.XForms, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfBadgeView.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.SfBadgeView.XForms.dll</HintPath>
+    <Reference Include="Syncfusion.SfBadgeView.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfBadgeView.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfBadgeView.XForms.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfBadgeView.XForms.iOS, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfBadgeView.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.SfBadgeView.XForms.iOS.dll</HintPath>
+    <Reference Include="Syncfusion.SfBadgeView.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfBadgeView.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfBadgeView.XForms.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfComboBox.XForms, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfComboBox.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.SfComboBox.XForms.dll</HintPath>
+    <Reference Include="Syncfusion.SfComboBox.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfComboBox.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfComboBox.XForms.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfComboBox.XForms.iOS, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfComboBox.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.SfComboBox.XForms.iOS.dll</HintPath>
+    <Reference Include="Syncfusion.SfComboBox.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfComboBox.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfComboBox.XForms.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfListView.XForms, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfListView.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.dll</HintPath>
+    <Reference Include="Syncfusion.SfListView.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfListView.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfListView.XForms.iOS, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfListView.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.iOS.dll</HintPath>
+    <Reference Include="Syncfusion.SfListView.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfListView.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfRating.iOS, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRating.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.SfRating.iOS.dll</HintPath>
+    <Reference Include="Syncfusion.SfPicker.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfPicker.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfPicker.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfRating.XForms, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRating.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.SfRating.XForms.dll</HintPath>
+    <Reference Include="Syncfusion.SfPicker.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfPicker.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfPicker.XForms.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfRating.XForms.iOS, Version=18.2451.0.59, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRating.18.2.0.59\lib\Xamarin.iOS10\Syncfusion.SfRating.XForms.iOS.dll</HintPath>
+    <Reference Include="Syncfusion.SfPicker.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfPicker.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfPicker.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPopupLayout.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfPopupLayout.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfPopupLayout.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPopupLayout.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfPopupLayout.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfPopupLayout.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRating.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRating.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfRating.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRating.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRating.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfRating.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRating.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRating.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfRating.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRichTextEditor.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRichTextEditor.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfRichTextEditor.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRichTextEditor.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRichTextEditor.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfRichTextEditor.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfTabView.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfTabView.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfTabView.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfTabView.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfTabView.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfTabView.XForms.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.IO.Compression" />

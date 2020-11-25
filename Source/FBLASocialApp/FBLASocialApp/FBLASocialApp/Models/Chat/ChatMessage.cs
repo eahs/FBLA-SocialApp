@@ -8,7 +8,7 @@ namespace FBLASocialApp.Models.Chat
     /// Model for chat message 
     /// </summary>
     [Preserve(AllMembers = true)]
-    public class ChatMessage : INotifyPropertyChanged
+    public class ChatMessage_OBSOLETE : INotifyPropertyChanged
     {
         #region Fields
 

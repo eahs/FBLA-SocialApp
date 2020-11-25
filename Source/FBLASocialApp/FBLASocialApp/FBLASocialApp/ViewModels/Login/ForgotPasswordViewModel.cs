@@ -51,9 +51,9 @@ namespace FBLASocialApp.ViewModels.Login
         /// Invoked when the Sign Up button is clicked.
         /// </summary>
         /// <param name="obj">The Object</param>
-        private void SignUpClicked(object obj)
+        private async void SignUpClicked(object obj)
         {
-            // Do something
+            await Shell.Current.GoToAsync("//SignUp");
         }
 
         #endregion

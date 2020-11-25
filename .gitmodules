@@ -1,0 +1,2 @@
+[submodule "Source/FBLASocialApp/FBLASocialApp/SocialApp-Api"]
+	url = https://github.com/eahs/SocialApp-Api
