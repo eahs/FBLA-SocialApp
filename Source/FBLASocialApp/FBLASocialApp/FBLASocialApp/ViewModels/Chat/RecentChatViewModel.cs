@@ -32,7 +32,7 @@ namespace FBLASocialApp.ViewModels.Chat
                 new ChatDetail
                 {
                     ImagePath = App.BaseImageUrl + "ProfileImage2.png",
-                    SenderName = "Alice Russell",
+                    SenderName = "Alex Russell",
                     MessageType = "Text",
                     Message = "https://app.syncfusion",
                     Time = "15 min",

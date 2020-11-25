@@ -18,14 +18,21 @@ namespace FBLASocialApp.ViewModels.Chat
         /// <summary>
         /// Stores the message text in an array. 
         /// </summary>
-        private readonly string[] descriptions = { "Hi, can you tell me the specifications of the Dell Inspiron 5370 laptop?",
-            " * Processor: Intel Core i5-8250U processor " +
-            "\n" + " * OS: Pre-loaded Windows 10 with lifetime validity" +
-            "\n" + " * Display: 13.3-inch FHD (1920 x 1080) LED display" +
-            "\n" + " * Memory: 8GB DDR RAM with Intel UHD 620 Graphics" +
-            "\n" + " * Battery: Lithium battery",
-            "How much battery life does it have with wifi and without?",
-            "Approximately 5 hours with wifi. About 7 hours without.",
+        private readonly string[] descriptions = { "Hi, Jill! My name is Alex Russell. I am an alumni of Carnegie Mellon University." +
+                "\n" + "I just saw your recent post about your Swan Lake performance." +
+                "\n" + "Can you tell me more about your dance?",
+            "Hello, Mr. Alex! It's very nice to meet you. I can definitely tell you more about my dance." +
+            "\n" + "I started learning ballet when I was five years old at the local dance studio." +
+            "\n" + "At age eleven, I auditioned for the Lincoln Performing Arts School and was accepted." +
+            "\n" + "Now, I have been a student there throughout my middle school and high school career." +
+            "\n" + "With my school's ballet team, I have competed in several state and national competitions." +
+            "\n" + "Apart from competitions, I take great pride in being a part of our school's productions of famous ballets." +
+            "\n" + "I truly enjoy working with the younger students during rehearsals and encouraging their love for dance.",
+            "Wow, I congratulate you on your accomplishments! I would like to get to know you more. Would you be open for an interview on this Saturday at 1:00 PM?",
+            "Yes, I would. Thank you so much for the offer! I look forward to speaking with you.",
+            "I look forward to speaking with you as well. The interview will be over phonecall. Here is my number: 567-897-9050",
+            "Thank you! Have a wonderful day!",
+            "Have a good day.",
         };
 
         private string profileName = "Alex Russell";
