@@ -150,7 +150,7 @@ xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTab
 
 
 
-                                                <Templates:PostTemplate Grid.Row="1" ParentBindingContext="{Binding Path=BindingContext, Source={x:Reference homePage}}"/>
+                                                <Templates:PostTemplate Grid.Row="1" ParentBindingContext="{Binding Path=BindingContext, Source={x:Reference favoritesPage}}"/>
 
                                             </Grid>
                                         </controls:CustomShadowFrame.Content>
