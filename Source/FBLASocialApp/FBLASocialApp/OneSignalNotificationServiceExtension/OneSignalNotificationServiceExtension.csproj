@@ -142,6 +142,21 @@
     <Reference Include="Syncfusion.SfListView.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.SfListView.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfPicker.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfPicker.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfPicker.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPicker.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfPicker.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfPicker.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPicker.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfPicker.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfPicker.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPopupLayout.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfPopupLayout.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfPopupLayout.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPopupLayout.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfPopupLayout.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfPopupLayout.XForms.iOS.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.SfRating.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.SfRating.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfRating.iOS.dll</HintPath>
     </Reference>
@@ -150,6 +165,18 @@
     </Reference>
     <Reference Include="Syncfusion.SfRating.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.SfRating.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfRating.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRichTextEditor.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRichTextEditor.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfRichTextEditor.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRichTextEditor.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRichTextEditor.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfRichTextEditor.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfTabView.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfTabView.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfTabView.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfTabView.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfTabView.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfTabView.XForms.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.IO.Compression" />

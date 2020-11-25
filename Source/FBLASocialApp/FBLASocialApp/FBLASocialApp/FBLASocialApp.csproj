@@ -28,6 +28,8 @@
     <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.3.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="18.3.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfRating" Version="18.3.0.48" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor" Version="18.3.0.48" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="18.3.0.48" />
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
@@ -91,6 +93,12 @@
     <EmbeddedResource Update="Views\Login\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\NewPost\NewPostPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NewPost\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Notification\NotificationPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
@@ -144,6 +152,9 @@
     </Compile>
     <Compile Update="Views\Home\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NewPost\Styles.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
     <Compile Update="Views\Notification\NotificationPage.xaml.cs">
       <DependentUpon>NotificationPage.xaml</DependentUpon>

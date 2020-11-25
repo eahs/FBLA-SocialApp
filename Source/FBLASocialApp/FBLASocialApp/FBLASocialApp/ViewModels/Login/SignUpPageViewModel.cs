@@ -192,7 +192,7 @@ namespace FBLASocialApp.ViewModels.Login
         /// <param name="obj">The Object</param>
         private async void LoginClicked(object obj)
         {
-            await Shell.Current.GoToAsync("//LoginPage");
+            await Shell.Current.GoToAsync("//Login");
         }
 
         /// <summary>
@@ -211,7 +211,7 @@ namespace FBLASocialApp.ViewModels.Login
 
                     if (loginResponse.StatusCode == 200)
                     {
-                        await Shell.Current.GoToAsync("//HomePage");
+                        await Shell.Current.GoToAsync("//Yakka/Home");
                     }
                     else
                     {

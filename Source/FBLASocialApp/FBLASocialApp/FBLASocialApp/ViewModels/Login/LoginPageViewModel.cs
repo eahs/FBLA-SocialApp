@@ -131,7 +131,7 @@ namespace FBLASocialApp.ViewModels.Login
 
                 if (response.StatusCode == 200)
                 {
-                    await Shell.Current.GoToAsync("//HomePage");
+                    await Shell.Current.GoToAsync("//Yakka/Home");
                 }
                 else
                 {
@@ -153,7 +153,7 @@ namespace FBLASocialApp.ViewModels.Login
         /// <param name="obj">The Object</param>
         private async void SignUpClicked(object obj)
         {
-            await Shell.Current.GoToAsync("//SignUpPage");
+            await Shell.Current.GoToAsync("//SignUp");
 
         }
 
@@ -168,7 +168,7 @@ namespace FBLASocialApp.ViewModels.Login
             //await Task.Delay(100);
             //label.BackgroundColor = Color.Transparent;
 
-            await Shell.Current.GoToAsync("//ResetPasswordPage");
+            await Shell.Current.GoToAsync("//ResetPassword");
         }
 
         /// <summary>

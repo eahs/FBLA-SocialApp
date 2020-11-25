@@ -1,3 +1,5 @@
+using Syncfusion.XForms.iOS.RichTextEditor;
+using Syncfusion.XForms.iOS.TabView;
 using Syncfusion.XForms.iOS.Graphics;
 using Syncfusion.XForms.iOS.BadgeView;
 using Syncfusion.XForms.iOS.Cards;
@@ -33,7 +35,9 @@ namespace FBLASocialApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
-            global::Xamarin.Forms.Forms.Init();
+global::Xamarin.Forms.Forms.Init();
+SfRichTextEditorRenderer.Init();
+SfTabViewRenderer.Init();
             SfBadgeViewRenderer.Init();
             SfCardViewRenderer.Init();
             SfRatingRenderer.Init();

@@ -53,7 +53,7 @@ namespace FBLASocialApp.ViewModels.Login
         /// <param name="obj">The Object</param>
         private async void SignUpClicked(object obj)
         {
-            await Shell.Current.GoToAsync("//SignUpPage");
+            await Shell.Current.GoToAsync("//SignUp");
         }
 
         #endregion
