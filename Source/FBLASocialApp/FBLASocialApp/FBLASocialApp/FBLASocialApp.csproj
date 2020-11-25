@@ -69,6 +69,12 @@
     <EmbeddedResource Update="Views\Chat\Templates\OutgoingTextTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Favorites\FavoritesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Favorites\Styles.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Home\HomePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

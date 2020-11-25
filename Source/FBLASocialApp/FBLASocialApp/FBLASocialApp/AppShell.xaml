@@ -4,6 +4,7 @@
        xmlns:about="clr-namespace:FBLASocialApp.Views.About"
        xmlns:home="clr-namespace:FBLASocialApp.Views.Home"       
        xmlns:notification="clr-namespace:FBLASocialApp.Views.Notification"
+       xmlns:favorites ="clr-namespace:FBLASocialApp.Views.Favorites"
        xmlns:login="clr-namespace:FBLASocialApp.Views.Login;assembly=FBLASocialApp"
        xmlns:chat="clr-namespace:FBLASocialApp.Views.Chat"
        xmlns:social="clr-namespace:FBLASocialApp.Views.Social"
@@ -119,7 +120,7 @@
                 Size="24"
                 />
             </Tab.Icon>
-            <ShellContent ContentTemplate="{DataTemplate home:HomePage}" />
+            <ShellContent ContentTemplate="{DataTemplate favorites:FavoritesPage}" />
         </Tab>
         <Tab Title="New Post" Route="NewPost">
             <Tab.Icon>
