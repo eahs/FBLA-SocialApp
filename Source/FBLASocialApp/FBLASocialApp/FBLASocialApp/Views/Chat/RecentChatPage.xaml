@@ -11,6 +11,7 @@
     xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
     xmlns:viewModel="clr-namespace:FBLASocialApp.ViewModels.Chat"
     BackgroundColor="{DynamicResource Gray-White}"
+    Title="Chat"
     NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Resources>
@@ -70,7 +71,7 @@
                         FontSize="20"
                         HorizontalOptions="Start"
                         LineHeight="1.25"
-                        Text="Chat"
+                        Text="Recent Chat"
                         TextColor="{DynamicResource Gray-900}"
                         VerticalOptions="Center"
                         VerticalTextAlignment="Center" />

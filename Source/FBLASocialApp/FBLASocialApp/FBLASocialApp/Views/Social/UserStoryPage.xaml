@@ -10,6 +10,7 @@
     xmlns:local="clr-namespace:FBLASocialApp.Views.Social.Templates"
     xmlns:viewModel="clr-namespace:FBLASocialApp.ViewModels.Social"
     BackgroundColor="{DynamicResource Gray-White}"
+    Title="Wall"
     NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Resources>
