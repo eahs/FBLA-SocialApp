@@ -53,25 +53,27 @@ namespace FBLASocialApp.ViewModels.Home
             {
                 new Model
                 {
-                    Title = "Better Brainstorming by Hand",
+                    Title = "Lowell High School State-Wide Hackathon ",
+                    Body = "Today, my team and I participated in our school’s most famous hackathon and competed with several teams from the state. We made 1st place with a cash price of $500! A big thanks to Lisa, Miles, and Johnathan. Thank you for your dedication to practices for these last several months.",
                     Author = new Member {
                         MemberId = 1,
-                        FullName = "Diayana Sebastine",
+                        FullName = "Robert Smith",
                         ProfilePhoto = new Photo
                             {
-                                Url = App.BaseImageUrl + "ProfileImage15.png"
+                                Url = App.BaseImageUrl + "RobertSmith.jfif"
                             }
                         },
                     CreatedAt = DateTime.Now,
-                    ImagePath= App.BaseImageUrl + "ArticleParallaxHeaderImage.png",
+                    ImagePath= App.BaseImageUrl + "Hackathon.jpg",
                     FavoriteCount= 100
                 },
                 new Model
                 {
                     Title = "Holistic Approach to UI Design",
+                    Body = "",
                     Author = new Member {
-				        MemberId = 1,
-				        FullName = "John Doe",
+                        MemberId = 1,
+                        FullName = "John Doe",
                         ProfilePhoto = new Photo
                             {
                                 Url = App.BaseImageUrl + "ProfileImage12.png"
@@ -84,9 +86,10 @@ namespace FBLASocialApp.ViewModels.Home
                 new Model
                 {
                     Title = "Learning to Reset",
+                    Body = "",
                     Author = new Member {
-				        MemberId = 1,
-				        FullName = "John Doe",
+                        MemberId = 1,
+                        FullName = "John Doe",
                         ProfilePhoto = new Photo
                             {
                                 Url = App.BaseImageUrl + "ProfileImage1.png"
@@ -99,6 +102,7 @@ namespace FBLASocialApp.ViewModels.Home
                 new Model
                 {
                     Title = "Music",
+                    Body = "",
                     Author = new Member {
                         MemberId = 1,
                         FullName = "John Doe",
@@ -106,7 +110,7 @@ namespace FBLASocialApp.ViewModels.Home
                             {
                                 Url = App.BaseImageUrl + "ProfileImage2.png"
                             }
-                        },                    
+                        },
                     CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleImage7.jpg",
                     FavoriteCount= 350
@@ -114,6 +118,7 @@ namespace FBLASocialApp.ViewModels.Home
                 new Model
                 {
                     Title = "Guiding Your Flock to Success",
+                    Body = "",
                     Author = new Member {
                         MemberId = 1,
                         FullName = "John Doe",
@@ -121,7 +126,7 @@ namespace FBLASocialApp.ViewModels.Home
                             {
                                 Url = App.BaseImageUrl + "ProfileImage5.png"
                             }
-                        },                    
+                        },
                     CreatedAt = DateTime.Now,
                     ImagePath= App.BaseImageUrl + "ArticleImage4.png",
                     FavoriteCount= 90
