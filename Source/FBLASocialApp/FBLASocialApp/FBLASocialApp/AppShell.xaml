@@ -8,6 +8,7 @@
        xmlns:chat="clr-namespace:FBLASocialApp.Views.Chat"
        xmlns:social="clr-namespace:FBLASocialApp.Views.Social"
        xmlns:wall="clr-namespace:FBLASocialApp.Views.Wall"       
+       xmlns:settings="clr-namespace:FBLASocialApp.Views.Settings"
        Title="FBLASocialApp"
        x:Class="FBLASocialApp.AppShell">
 
@@ -123,7 +124,7 @@
 
     <FlyoutItem Title="Settings" Icon="tab_about.png">
         <Tab Title="Settings" Icon="tab_about.png">
-            <ShellContent ContentTemplate="{DataTemplate about:AboutPage}" />
+            <ShellContent ContentTemplate="{DataTemplate settings:SettingPage}" />
         </Tab>
     </FlyoutItem>
 
