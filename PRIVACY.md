@@ -60,7 +60,7 @@ These Terms of Use and any policies or operating rules posted by us on the Site 
 
 In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at: 
 ```
-Yakka LLC
+FBLA Navigator LLC
 2601 William Penn Highway
 Easton , PA 18045
 United States
