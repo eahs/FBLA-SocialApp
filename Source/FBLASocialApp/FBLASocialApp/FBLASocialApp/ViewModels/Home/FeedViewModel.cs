@@ -69,11 +69,17 @@ namespace FBLASocialApp.ViewModels.Home
                 },
                 new Model
                 {
-                    Title = "Holistic Approach to UI Design",
-                    Body = "",
+                    Title = "365 Days. 365 Words.",
+                    Body = "After two years of writing, drafting, redrafting, rewriting, and editing, I have finally published my first collection of poetry— 365 Days. 365 Words. Each poem is unique in theme, but every single one is exactly 365 words. It’s been a challenging but also enjoyable journey, and it is my greatest hope that there is a poem in there that will resonate with every reader. Cheers!" +
+                           "\n" + " " +
+                           "\n" + "Also, many, many grateful thanks to Mr. Hunter and Ms. Brenda for being my gracious editors. I really appreciate it!" +
+                           "\n" + " " +
+                           "\n" + "You can order your copy on Amazon by clicking on the link below:" +
+                           "\n" + " " +
+                           "\n" + "www.amazon.com / 365 - Days - 365 - Words / dp / 006303249X / ref= zg_bs_10248_7 / 144 - 7879999 - 6214567 ? _encoding = UTF8 & psc = 1 & refRID = N1452 & 6P72YYS3XKN85L",
                     Author = new Member {
-                        MemberId = 1,
-                        FullName = "John Doe",
+                        MemberId = 2,
+                        FullName = "Nina Miller",
                         ProfilePhoto = new Photo
                             {
                                 Url = App.BaseImageUrl + "ProfileImage12.png"
