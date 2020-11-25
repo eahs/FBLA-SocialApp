@@ -166,6 +166,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Hackathon.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\LibraryofKnowledge.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
