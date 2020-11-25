@@ -84,9 +84,9 @@ namespace FBLASocialApp.ViewModels.Settings
         /// Invoked when the back button clicked
         /// </summary>
         /// <param name="obj">The object</param>
-        private void BackButtonClicked(object obj)
+        private async void BackButtonClicked(object obj)
         {
-            // Do something
+            await Shell.Current.GoToAsync("//Settings");
         }
 
         /// <summary>
@@ -129,9 +129,9 @@ namespace FBLASocialApp.ViewModels.Settings
         /// Invoked when the privacy and policy clicked
         /// </summary>
         /// <param name="obj">The object</param>
-        private void PrivacyPolicyClicked(object obj)
+        private async void PrivacyPolicyClicked(object obj)
         {
-            // Do something
+            await Shell.Current.GoToAsync("//Privacy");
         }
 
         /// <summary>
