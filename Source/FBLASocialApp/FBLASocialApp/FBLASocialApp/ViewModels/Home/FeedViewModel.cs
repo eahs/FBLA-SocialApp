@@ -85,57 +85,134 @@ namespace FBLASocialApp.ViewModels.Home
                                 Url = App.BaseImageUrl + "ProfileImage12.png"
                             }
                         },
-                    CreatedAt = DateTime.Now,
+                    CreatedAt = DateTime.Now.AddDays(-1).AddHours(-4).AddMinutes(-32),
                     ImagePath= App.BaseImageUrl + "Event-Image.png",
                     FavoriteCount= 60
                 },
                 new Model
                 {
-                    Title = "Learning to Reset",
-                    Body = "",
+                    Title = "Swan Lake",
+                    Body = "I’m excited to present my dance school’s production of Swan Lake. This year, I’m grateful to have the lead role of Odette. Please come support us tonight at the Central City Theater @ 8 PM.",
                     Author = new Member {
-                        MemberId = 1,
-                        FullName = "John Doe",
+                        MemberId = 3,
+                        FullName = "Jill Booker",
                         ProfilePhoto = new Photo
                             {
                                 Url = App.BaseImageUrl + "ProfileImage1.png"
                             }
                         },
-                    CreatedAt = DateTime.Now,
+                    CreatedAt = DateTime.Now.AddDays(-2).AddHours(-3).AddMinutes(-25),
                     ImagePath= App.BaseImageUrl + "ArticleImage2.png",
                     FavoriteCount= 250
                 },
                 new Model
                 {
-                    Title = "Music",
-                    Body = "",
+                    Title = "Mathlete Competition 2.0",
+                    Body = "My mathlete team and I have been working for months together now. I am greatly humbled by the experience and proud to announce that I have been promoted to captain! Tomorrow morning, we will be leaving for our second competition, this time a smaller one at the local community center. I have full faith in my team. We’re going to rock this event!",
                     Author = new Member {
-                        MemberId = 1,
-                        FullName = "John Doe",
+                        MemberId = 3,
+                        FullName = "Jill Booker",
                         ProfilePhoto = new Photo
                             {
                                 Url = App.BaseImageUrl + "ProfileImage2.png"
                             }
                         },
-                    CreatedAt = DateTime.Now,
+                    CreatedAt = DateTime.Now.AddDays(-3).AddHours(-3).AddMinutes(-31),
                     ImagePath= App.BaseImageUrl + "ArticleImage7.jpg",
                     FavoriteCount= 350
                 },
                 new Model
                 {
-                    Title = "Guiding Your Flock to Success",
-                    Body = "",
+                    Title = "Debate Night!",
+                    Body = "I have started an initiative at Spring Public Library to host a debate night for high schoolers every Friday night starting this week. Topics will be posted soon! This is a great opportunity for those on the school debate team to practice informally as well as a great starter for public discussion. Hope that you will all join us!",
                     Author = new Member {
-                        MemberId = 1,
-                        FullName = "John Doe",
+                        MemberId = 2,
+                        FullName = "Nina Miller",
                         ProfilePhoto = new Photo
                             {
                                 Url = App.BaseImageUrl + "ProfileImage5.png"
                             }
                         },
-                    CreatedAt = DateTime.Now,
+                    CreatedAt = DateTime.Now.AddDays(-3).AddHours(-4),
                     ImagePath= App.BaseImageUrl + "ArticleImage4.png",
                     FavoriteCount= 90
+                },
+
+                new Model
+                {
+                    Title = "Music for the Soul",
+                    Body = "Tonight we celebrate my favorite concert of the season— The Winter Holiday concert. This is by far the most complex and challenging concert of the year. We play pieces from all over the world, from East Asia to the Middle East, from Europe to Latin America. Not only does the variety of music challenge us to adopt different styles of playing, but it also opens our mind to the variety of the music in the world. It is truly an enlightening and intellectually engaging experience.",
+                    Author = new Member {
+                        MemberId = 1,
+                        FullName = "Robert Smith",
+                        ProfilePhoto = new Photo
+                            {
+                                Url = App.BaseImageUrl + "ProfileImage5.png"
+                            }
+                        },
+                    CreatedAt = DateTime.Now.AddDays(-4).AddHours(-1).AddMinutes(-36),
+                    ImagePath= App.BaseImageUrl + "ArticleImage4.png",
+                    FavoriteCount= 90
+                },
+
+                new Model
+                {
+                    Title = "Blood, Sweat, and Tears",
+                    Body = "Today was a rough day of training, but totally worth it for the upcoming meet. Every second I run is a moment well-spent. " +
+                    "\n" + "Please come and support the Lowell Girls Team this Saturday, April 24, 2021. Go Jaguars!",
+                    Author = new Member
+                    {
+                        MemberId = 1,
+                        FullName = "Nina Miller" ,
+                        ProfilePhoto = new Photo
+                        {
+                            Url = App.BaseImageUrl + "ProfileImage5.png"
+                        }
+
+                    },
+                CreatedAt = DateTime.Now.AddDays(-4).AddHours(-3).AddMinutes(-1),
+                ImagePath = App.BaseImageUrl + "ArticleImage4.png",
+                FavoriteCount = 227
+
+                },
+
+                new Model
+                {
+                    Title = "App Update",
+                    Body = "I received my first client for my app. I have decided to name it “Balance” after the message that the app promotes— a balanced lifestyle. To the app, I have now added a way to track hours spent on work and relaxation to help manage work-life balance.",
+                    Author = new Member
+                    {
+                        MemberId = 1,
+                        FullName = "Robert Smith" ,
+                        ProfilePhoto = new Photo
+                        {
+                            Url = App.BaseImageUrl + "ProfileImage5.png"
+                        }
+
+                    },
+                CreatedAt = DateTime.Now.AddDays(-5).AddHours(-4).AddMinutes(-45),
+                ImagePath = App.BaseImageUrl + "ArticleImage4.png",
+                FavoriteCount = 66
+                },
+
+                new Model
+                {
+                    Title = "",
+                    Body = "We will be raising money for the local children’s hospital. This benefit concert will feature the entire dance school. It will be a two hour performance. We hope you choose to donate and provide support to your community!" +
+                    "\n" + "Performance will be at the Center City Theater at 12 PM on this Saturday.",
+                    Author = new Member
+                    {
+                        MemberId = 3,
+                        FullName = "Jill Booker" ,
+                        ProfilePhoto = new Photo
+                        {
+                            Url = App.BaseImageUrl + "ProfileImage5.png"
+                        }
+
+                    },
+                CreatedAt = DateTime.Now.AddDays(-5).AddHours(-6).AddMinutes(-11),
+                ImagePath = App.BaseImageUrl + "ArticleImage4.png",
+                FavoriteCount = 78
                 },
 
             };
