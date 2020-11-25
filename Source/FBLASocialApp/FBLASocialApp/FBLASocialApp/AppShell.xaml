@@ -88,8 +88,16 @@
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
 
-    <FlyoutItem Title="Home" Icon="tab_about.png">
-        <Tab Title="Home" Icon="tab_about.png">
+    <FlyoutItem Title="Home">
+        <FlyoutItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="&#xf015;"
+                Color="Black"
+                Size="24"
+                />
+        </FlyoutItem.Icon>
+        <Tab Title="Home">
             <ShellContent Route ="HomePage" ContentTemplate="{DataTemplate home:HomePage}" />
         </Tab>
     </FlyoutItem>
