@@ -30,6 +30,14 @@
     <Color x:Key="Gray-Black">#000000</Color>
     <Color x:Key="Gray-White">#ffffff</Color>
 
+    <OnPlatform x:Key="LineAwesomeId" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="la-regular-400" />
+        <On Platform="Android" Value="la-regular-400.ttf#la-regular-400" />
+    </OnPlatform>
+    <Style x:Key="LineAwesome" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource LineAwesomeId}" />
+    </Style>
+
     <OnPlatform x:Key="FontIcons" x:TypeArguments="x:String">
         <OnPlatform.Platforms>
             <On Platform="Android" Value="UIFontIcons.ttf#UIFontIcons" />
