@@ -10,6 +10,7 @@
              xmlns:core="clr-namespace:Syncfusion.XForms.Core;assembly=Syncfusion.Core.XForms"
              xmlns:Templates="clr-namespace:FBLASocialApp.Views.Templates"
              x:Name="homePage"
+             Title="Home"
              BackgroundColor="{DynamicResource Gray-White}"
              NavigationPage.HasNavigationBar="False"
              x:Class="FBLASocialApp.Views.Home.HomePage">
