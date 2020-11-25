@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:richTextEditor="clr-namespace:Syncfusion.XForms.RichTextEditor;assembly=Syncfusion.SfRichTextEditor.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"             
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="New Post"
+             x:Class="FBLASocialApp.Views.NewPost.NewPostPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <richTextEditor:SfRichTextEditor x:Name="rte" VerticalOptions="FillAndExpand"
+                                             />
+
+            <buttons:SfButton
+                            Grid.Row="5"
+                            Margin="0,16"
+                            Style="{StaticResource SfButtonStyle}"
+                            Text="Post" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

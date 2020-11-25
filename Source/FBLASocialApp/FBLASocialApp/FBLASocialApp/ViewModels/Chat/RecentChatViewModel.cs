@@ -155,7 +155,7 @@ namespace FBLASocialApp.ViewModels.Chat
         {
             // Do something
             
-            await Shell.Current.GoToAsync("//Chat/Session?sessionId=30");
+            await Shell.Current.GoToAsync("//Yakka/Chat/Session?sessionId=30");
         }
 
         /// <summary>

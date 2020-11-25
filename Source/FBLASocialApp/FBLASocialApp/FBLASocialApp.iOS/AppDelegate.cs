@@ -1,3 +1,5 @@
+using Syncfusion.XForms.iOS.RichTextEditor;
+using Syncfusion.XForms.iOS.TabView;
 using Syncfusion.XForms.iOS.Graphics;
 using Syncfusion.XForms.iOS.BadgeView;
 using Syncfusion.XForms.iOS.Cards;
@@ -14,6 +16,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 using Syncfusion.XForms.Pickers.iOS;
+using InstabugLib;
 
 namespace FBLASocialApp.iOS
 {
@@ -33,7 +36,9 @@ namespace FBLASocialApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
-            global::Xamarin.Forms.Forms.Init();
+global::Xamarin.Forms.Forms.Init();
+SfRichTextEditorRenderer.Init();
+SfTabViewRenderer.Init();
             SfBadgeViewRenderer.Init();
             SfCardViewRenderer.Init();
             SfRatingRenderer.Init();
@@ -46,6 +51,9 @@ namespace FBLASocialApp.iOS
             LoadApplication(new App());
 
             SfDatePickerRenderer.Init();
+
+            Instabug.StartWithToken("de0e8acfa86980fd8b252abd14d086fc", IBGInvocationEvent.Shake);
+            IBGBugReporting.InvocationEvents = IBGInvocationEvent.FloatingButton;
 
             return base.FinishedLaunching(app, options);
         }

@@ -26,6 +26,11 @@ namespace FBLASocialApp.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
 
+            new Instabug.Builder(Application, "de0e8acfa86980fd8b252abd14d086fc")
+            .SetInvocationEvents(InstabugInvocationEvent.FloatingButton, InstabugInvocationEvent.Shake)
+            .Build();
+            BugReporting.SetInvocationEvents(InstabugInvocationEvent.Shake, InstabugInvocationEvent.FloatingButton);
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
