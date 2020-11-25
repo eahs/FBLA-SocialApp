@@ -159,7 +159,8 @@
         </Tab>
     </FlyoutItem>
 
-    <FlyoutItem Title="Notifications" Route="Notifications">
+
+        <FlyoutItem Title="Notifications" Route="Notifications">
         <FlyoutItem.Icon>
             <FontImageSource
                 FontFamily="{StaticResource LineAwesomeFont}"
@@ -255,7 +256,8 @@
     <ShellContent Route="Login" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:LoginPage}" />
     <ShellContent Route="ResetPassword" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:ResetPasswordPage}" />
     <ShellContent Route="SignUp" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:SignUpPage}" />
-    <ShellContent Route="Privacy" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate settings:PrivacyPage}" />
+    <ShellContent Route="Privacy"  Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate settings:PrivacyPage}" />
+    <ShellContent Route="Terms"   Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate settings:TermsPage}" />
     <ShellContent Route="Wall" ContentTemplate="{DataTemplate wall:WallPage}" />
 
     <!-- Optional Templates 

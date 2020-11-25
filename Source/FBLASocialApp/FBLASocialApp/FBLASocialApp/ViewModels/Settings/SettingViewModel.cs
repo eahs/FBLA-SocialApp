@@ -120,9 +120,9 @@ namespace FBLASocialApp.ViewModels.Settings
         /// Invoked when the terms of service clicked
         /// </summary>
         /// <param name="obj">The object</param>
-        private void TermsServiceClicked(object obj)
+        private async void TermsServiceClicked(object obj)
         {
-            // Do something
+            await Shell.Current.GoToAsync("//Terms");
         }
 
         /// <summary>
