@@ -16,6 +16,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 using Syncfusion.XForms.Pickers.iOS;
+using InstabugLib;
 
 namespace FBLASocialApp.iOS
 {
@@ -50,6 +51,9 @@ SfTabViewRenderer.Init();
             LoadApplication(new App());
 
             SfDatePickerRenderer.Init();
+
+            Instabug.StartWithToken("de0e8acfa86980fd8b252abd14d086fc", IBGInvocationEvent.Shake);
+            IBGBugReporting.InvocationEvents = IBGInvocationEvent.FloatingButton;
 
             return base.FinishedLaunching(app, options);
         }
