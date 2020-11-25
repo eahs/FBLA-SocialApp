@@ -32,151 +32,31 @@ namespace FBLASocialApp.ViewModels.Chat
                 new ChatDetail
                 {
                     ImagePath = App.BaseImageUrl + "ProfileImage2.png",
-                    SenderName = "Alex Russell",
+                    SenderName = "Jill Booker",
                     MessageType = "Text",
-                    Message = "https://app.syncfusion",
-                    Time = "15 min",
-                    NotificationType = "New"
+                    Message = "Thank you! Have a wonderful day!",
+                    Time = "17 min",
+                    NotificationType = "Viewed"
                 },
                 new ChatDetail
                 {
                     ImagePath = App.BaseImageUrl + "ProfileImage3.png",
-                    SenderName = "Danielle Schneider",
-                    MessageType = "Audio",
-                    Time = "23 min",
-                    AvailableStatus = "Available",
-                    NotificationType = "Viewed"
+                    SenderName = "Robert Smith",
+                    MessageType = "Text",
+                    Message = "Thank you for the pleasant conversation. I hope to be in contact again soon.",
+                    Time = "11/20/20",
+                    NotificationType = "Sent"
                 },
                 new ChatDetail
                 {
                     ImagePath = App.BaseImageUrl + "ProfileImage4.png",
-                    SenderName = "Jessica Park",
+                    SenderName = "Nina Miller",
                     MessageType = "Text",
-                    Message = "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                    Time = "1 hr",
-                    NotificationType = "New"
-                },
-                new ChatDetail
-                {
-                    ImagePath = App.BaseImageUrl + "ProfileImage5.png",
-                    SenderName = "Julia Grant",
-                    MessageType = "Video",
-                    Time = "3 hr",
-                    AvailableStatus = "Available",
-                    NotificationType = "Received"
-                },
-                new ChatDetail
-                {
-                    ImagePath = App.BaseImageUrl + "ProfileImage6.png",
-                    SenderName = "kyle Greene",
-                    MessageType = "Contact",
-                    Message = "Jhone Deo Sync",
+                    Message = "Would 10:15 PM work?",
                     Time = "Yesterday",
-                    NotificationType = "Viewed"
-                },
-                new ChatDetail
-                {
-                    ImagePath = App.BaseImageUrl + "ProfileImage7.png",
-                    SenderName = "Danielle Booker",
-                    MessageType = "Text",
-                    Message = "Val Geisier is a writer who",
-                    Time = "Jan 30",
-                    AvailableStatus = "Available",
-                    NotificationType = "Sent"
-                },
-                new ChatDetail
-                {
-                    ImagePath = App.BaseImageUrl + "ProfileImage8.png",
-                    SenderName = "Jazmine Simmons",
-                    MessageType = "Text",
-                    Message = "Contrary to popular belief, Lorem Ipsum is not simply random text." +
-                              "It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-                    Time = "12/8/2020",
-                    NotificationType = "Sent"
-                },
-                new ChatDetail
-                {
-                    ImagePath = App.BaseImageUrl + "ProfileImage9.png",
-                    SenderName = "Ira Membrit",
-                    MessageType = "Photo",
-                    Time = "8/8/2020",
-                    AvailableStatus = "Available",
-                    NotificationType = "Viewed"
-                },
-                new ChatDetail
-                {
-                    ImagePath = App.BaseImageUrl + "ProfileImage10.png",
-                    MessageType = "Text",
-                    Message = "A customer who bought your",
-                    SenderName = "Serina Willams",
-                    Time = "10/6/2020",
-                    NotificationType = "Sent"
-                },
-                 new ChatDetail
-                 {
-                    ImagePath = App.BaseImageUrl + "ProfileImage11.png",
-                    SenderName = "Alise Valasquez",
-                    MessageType = "Text",
-                    Message = "Syncfusion components help you deliver applications with great user experiences across iOS, Android, and Universal Windows Platform from a single code base.",
-                    Time = "2/5/2020",
                     NotificationType = "New"
                 },
-                new ChatDetail
-                {
-                    ImagePath = App.BaseImageUrl + "ProfileImage12.png",
-                    SenderName = "Allie Bellew",
-                    MessageType = "Audio",
-                    Time = "24/4/2020",
-                    AvailableStatus = "Available",
-                    NotificationType = "Viewed"
-                },
-                new ChatDetail
-                {
-                    ImagePath = App.BaseImageUrl + "ProfileImage13.png",
-                    SenderName = "Navya Sharma",
-                    MessageType = "Text",
-                    Message = "https://www.syncfusion.com",
-                    Time = "10/4/2020",
-                    NotificationType = "New"
-                },
-                new ChatDetail
-                {
-                    ImagePath = App.BaseImageUrl + "ProfileImage14.png",
-                    SenderName = "Carly Ling",
-                    MessageType = "Video",
-                    Time = "22/3/2020",
-                    AvailableStatus = "Available",
-                    NotificationType = "Received"
-                },
-                new ChatDetail
-                {
-                    ImagePath = App.BaseImageUrl + "ProfileImage15.png",
-                    SenderName = "Diayana Sebastine",
-                    MessageType = "Contact",
-                    Message = "Kishore Nisanth",
-                    Time = "15/3/2020",
-                    NotificationType = "Viewed"
-                },
-                new ChatDetail
-                {
-                    ImagePath = App.BaseImageUrl + "ProfileImage16.png",
-                    SenderName = "Marc Sherry",
-                    MessageType = "Text",
-                    Message = "Val Geisier is a writer who",
-                    Time = "12/3/2020",
-                    AvailableStatus = "Available",
-                    NotificationType = "Sent"
-                },
-                new ChatDetail
-                {
-                    ImagePath = App.BaseImageUrl + "ProfileImage17.png",
-                    SenderName = "Dona Merina",
-                    MessageType = "Text",
-                    Message = "Contrary to popular belief, Lorem Ipsum is not simply random text." +
-                              "It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-                    Time = "3/2/2020",
-                    NotificationType = "Sent"
-                },
+                
             };
 
             this.MakeVoiceCallCommand = new Command(this.VoiceCallClicked);
