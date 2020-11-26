@@ -107,8 +107,9 @@ namespace FBLASocialApp.ViewModels.Home
                 },
                 new Model
                 {
-                    Title = "Mathlete Competition 2.0",
-                    Body = "My mathlete team and I have been working for months together now. I am greatly humbled by the experience and proud to announce that I have been promoted to captain! Tomorrow morning, we will be leaving for our second competition, this time a smaller one at the local community center. I have full faith in my team. We’re going to rock this event!",
+                    Title = "No Calculator",
+                    Body = "“You only know how to do real math when that calculator is out of sight!” My coach always says. " +
+                    "\n" + "Our mathlete team proved his words when we competed for the first time in the regional round. We were faced with derivatives and integrals alike during this year’s competition, all without a calculator. We had just our knowledge and wits. Though we may not have won anything this time around, we will persevere. ",
                     Author = new Member {
                         MemberId = 3,
                         FullName = "Jill Booker",
@@ -124,7 +125,9 @@ namespace FBLASocialApp.ViewModels.Home
                 new Model
                 {
                     Title = "Debate Night!",
-                    Body = "I have started an initiative at Spring Public Library to host a debate night for high schoolers every Friday night starting this week. Topics will be posted soon! This is a great opportunity for those on the school debate team to practice informally as well as a great starter for public discussion. Hope that you will all join us!",
+                    Body = "I have started an initiative at Spring Public Library to host a debate night for high schoolers every Friday night starting this week. Topics will be posted soon! This is a great opportunity for those on the school debate team to practice informally as well as a great starter for public discussion. Hope that you will all join us!"+
+                    "\n" + "Refreshments will be provided." +
+                    "\n" + "Event starts @ 6:30 pm. Doors open @ 6:15 pm. Event closes @ 8:00 pm.",
                     Author = new Member {
                         MemberId = 2,
                         FullName = "Nina Miller",
@@ -197,8 +200,9 @@ namespace FBLASocialApp.ViewModels.Home
 
                 new Model
                 {
-                    Title = "",
+                    Title = "Benefit Performance",
                     Body = "We will be raising money for the local children’s hospital. This benefit concert will feature the entire dance school. It will be a two hour performance. We hope you choose to donate and provide support to your community!" +
+                     "\n" + " " +
                     "\n" + "Performance will be at the Center City Theater at 12 PM on this Saturday.",
                     Author = new Member
                     {
