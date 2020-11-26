@@ -15,10 +15,11 @@
     <Color x:Key="Green">#7ed321</Color>
     <Color x:Key="Red">#e0875b</Color>
     <Color x:Key="Orange">#ff844a</Color>
+    <Color x:Key ="OrangeTwo">#ffc108</Color>
     <Color x:Key="Blue">#4acaff</Color>
     <Color x:Key="HyperLink">#567cd7</Color>
     <Color x:Key="Orange-Yellow">#ffd608</Color>
-    <Color x:Key="Cream">#F4F3f3</Color>
+    <Color x:Key="Cream">#F4F3D5</Color>
 
     <Color x:Key="Gray-100">#f6f7f8</Color>
     <Color x:Key="Gray-200">#ebecef</Color>
