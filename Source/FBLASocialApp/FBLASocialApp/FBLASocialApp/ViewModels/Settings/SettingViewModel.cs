@@ -122,7 +122,7 @@ namespace FBLASocialApp.ViewModels.Settings
         /// <param name="obj">The object</param>
         private async void TermsServiceClicked(object obj)
         {
-            await Shell.Current.GoToAsync("//Terms");
+            await AppShell.Current.Navigation.PushAsync(new TermsPage());
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace FBLASocialApp.ViewModels.Settings
         /// <param name="obj">The object</param>
         private async void PrivacyPolicyClicked(object obj)
         {
-            await Shell.Current.GoToAsync("//Privacy");
+            await AppShell.Current.Navigation.PushAsync(new PrivacyPage());
         }
 
         /// <summary>
