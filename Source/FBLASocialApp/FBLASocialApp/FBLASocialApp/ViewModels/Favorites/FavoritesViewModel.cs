@@ -53,22 +53,6 @@ namespace FBLASocialApp.ViewModels.Favorites
             {
                 new Model
                 {
-                    Title = "Lowell High School State-Wide Hackathon ",
-                    Body = "Today, my team and I participated in our school’s most famous hackathon and competed with several teams from the state. We made 1st place with a cash price of $500! A big thanks to Lisa, Miles, and Johnathan. Thank you for your dedication to practices for these last several months.",
-                    Author = new Member {
-                        MemberId = 1,
-                        FullName = "Robert Smith",
-                        ProfilePhoto = new Photo
-                            {
-                                Url = App.BaseImageUrl + "RobertSmith.jfif"
-                            }
-                        },
-                    CreatedAt = DateTime.Now,
-                    ImagePath= App.BaseImageUrl + "Hackathon.jpg",
-                    FavoriteCount= 100
-                },
-                new Model
-                {
                     Title = "365 Days. 365 Words.",
                     Body = "After two years of writing, drafting, redrafting, rewriting, and editing, I have finally published my first collection of poetry— 365 Days. 365 Words. Each poem is unique in theme, but every single one is exactly 365 words. It’s been a challenging but also enjoyable journey, and it is my greatest hope that there is a poem in there that will resonate with every reader. Cheers!" +
                            "\n" + " " +
@@ -105,39 +89,7 @@ namespace FBLASocialApp.ViewModels.Favorites
                     ImagePath= App.BaseImageUrl + "ArticleImage2.png",
                     FavoriteCount= 250
                 },
-                new Model
-                {
-                    Title = "Mathlete Competition 2.0",
-                    Body = "My mathlete team and I have been working for months together now. I am greatly humbled by the experience and proud to announce that I have been promoted to captain! Tomorrow morning, we will be leaving for our second competition, this time a smaller one at the local community center. I have full faith in my team. We’re going to rock this event!",
-                    Author = new Member {
-                        MemberId = 3,
-                        FullName = "Jill Booker",
-                        ProfilePhoto = new Photo
-                            {
-                                Url = App.BaseImageUrl + "ProfileImage2.png"
-                            }
-                        },
-                    CreatedAt = DateTime.Now.AddDays(-3).AddHours(-3).AddMinutes(-31),
-                    ImagePath= App.BaseImageUrl + "ArticleImage7.jpg",
-                    FavoriteCount= 350
-                },
-                new Model
-                {
-                    Title = "Debate Night!",
-                    Body = "I have started an initiative at Spring Public Library to host a debate night for high schoolers every Friday night starting this week. Topics will be posted soon! This is a great opportunity for those on the school debate team to practice informally as well as a great starter for public discussion. Hope that you will all join us!",
-                    Author = new Member {
-                        MemberId = 2,
-                        FullName = "Nina Miller",
-                        ProfilePhoto = new Photo
-                            {
-                                Url = App.BaseImageUrl + "ProfileImage5.png"
-                            }
-                        },
-                    CreatedAt = DateTime.Now.AddDays(-3).AddHours(-4),
-                    ImagePath= App.BaseImageUrl + "ArticleImage4.png",
-                    FavoriteCount= 90
-                },
-
+                
                 new Model
                 {
                     Title = "Music for the Soul",
@@ -170,50 +122,12 @@ namespace FBLASocialApp.ViewModels.Favorites
                         }
 
                     },
-                CreatedAt = DateTime.Now.AddDays(-4).AddHours(-3).AddMinutes(-1),
-                ImagePath = App.BaseImageUrl + "ArticleImage4.png",
-                FavoriteCount = 227
+                    CreatedAt = DateTime.Now.AddDays(-4).AddHours(-3).AddMinutes(-1),
+                    ImagePath = App.BaseImageUrl + "ArticleImage4.png",
+                    FavoriteCount = 227
 
                 },
 
-                new Model
-                {
-                    Title = "App Update",
-                    Body = "I received my first client for my app. I have decided to name it “Balance” after the message that the app promotes— a balanced lifestyle. To the app, I have now added a way to track hours spent on work and relaxation to help manage work-life balance.",
-                    Author = new Member
-                    {
-                        MemberId = 1,
-                        FullName = "Robert Smith" ,
-                        ProfilePhoto = new Photo
-                        {
-                            Url = App.BaseImageUrl + "ProfileImage5.png"
-                        }
-
-                    },
-                CreatedAt = DateTime.Now.AddDays(-5).AddHours(-4).AddMinutes(-45),
-                ImagePath = App.BaseImageUrl + "ArticleImage4.png",
-                FavoriteCount = 66
-                },
-
-                new Model
-                {
-                    Title = "",
-                    Body = "We will be raising money for the local children’s hospital. This benefit concert will feature the entire dance school. It will be a two hour performance. We hope you choose to donate and provide support to your community!" +
-                    "\n" + "Performance will be at the Center City Theater at 12 PM on this Saturday.",
-                    Author = new Member
-                    {
-                        MemberId = 3,
-                        FullName = "Jill Booker" ,
-                        ProfilePhoto = new Photo
-                        {
-                            Url = App.BaseImageUrl + "ProfileImage5.png"
-                        }
-
-                    },
-                CreatedAt = DateTime.Now.AddDays(-5).AddHours(-6).AddMinutes(-11),
-                ImagePath = App.BaseImageUrl + "ArticleImage4.png",
-                FavoriteCount = 78
-                },
 
             };
         }
