@@ -1,35 +1,35 @@
 {
   "recentNotificationList": [
     {
-      "name": "John Doe sent you a friend request.",
+      "name": "Robert Smith sent you a friend request.",
       "receivedTime": "2 mins ago",
       "isRead": "false"
     },
     {
-      "name": "You have a new friend suggestion: John Doe",
+      "name": "You have a new friend suggestion: Robert Smith",
       "receivedTime": "5 mins ago",
-      "isRead": "false"
+      "isRead": "true"
     }
   ],
 
   "earlierNotificationList": [
     {
-      "name": "Milton Lane invited you to like Syncfusion.",
+      "name": "Jill Booker cheered your latest post.",
       "receivedTime": "4 hours ago",
       "isRead": "true"
     },
     {
-      "name": "Stella Blake commented on your post.",
+      "name": "Nina Miller cheered your latest post.",
       "receivedTime": "8 hours ago",
       "isRead": "false"
     },
     {
-      "name": "Rosetta Lane and Luella Green like your photo.",
+      "name": "See Nina Miller's latest post!",
       "receivedTime": "9 hours ago",
       "isRead": "true"
     },
     {
-      "name": "Darrell Silva likes your photo.",
+      "name": "Robert Smith has posted something new. Take a look!",
       "receivedTime": "9 hours ago",
       "isRead": "true"
     }
