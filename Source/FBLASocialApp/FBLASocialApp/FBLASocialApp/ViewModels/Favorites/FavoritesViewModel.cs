@@ -66,11 +66,11 @@ namespace FBLASocialApp.ViewModels.Favorites
                         FullName = "Nina Miller",
                         ProfilePhoto = new Photo
                             {
-                                Url = App.BaseImageUrl + "ProfileImage12.png"
+                                Url = "https://yakka.tech/images/356Days365Words.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-1).AddHours(-4).AddMinutes(-32),
-                    ImagePath= App.BaseImageUrl + "Event-Image.png",
+                    ImagePath= "https://yakka.tech/images/356Days365Words.jpg",
                     FavoriteCount= 60
                 },
                 new Model
@@ -82,11 +82,11 @@ namespace FBLASocialApp.ViewModels.Favorites
                         FullName = "Jill Booker",
                         ProfilePhoto = new Photo
                             {
-                                Url = App.BaseImageUrl + "ProfileImage1.png"
+                                Url = "https://yakka.tech/images/SwanLake.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-2).AddHours(-3).AddMinutes(-25),
-                    ImagePath= App.BaseImageUrl + "ArticleImage2.png",
+                    ImagePath= "https://yakka.tech/images/SwanLake.jpg",
                     FavoriteCount= 250
                 },
                 
@@ -99,11 +99,11 @@ namespace FBLASocialApp.ViewModels.Favorites
                         FullName = "Robert Smith",
                         ProfilePhoto = new Photo
                             {
-                                Url = App.BaseImageUrl + "ProfileImage5.png"
+                                Url = "https://yakka.tech/images/MusicForTheSoul.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-4).AddHours(-1).AddMinutes(-36),
-                    ImagePath= App.BaseImageUrl + "ArticleImage4.png",
+                    ImagePath= "https://yakka.tech/images/MusicForTheSoul.jpg",
                     FavoriteCount= 90
                 },
 
@@ -118,12 +118,12 @@ namespace FBLASocialApp.ViewModels.Favorites
                         FullName = "Nina Miller" ,
                         ProfilePhoto = new Photo
                         {
-                            Url = App.BaseImageUrl + "ProfileImage5.png"
+                            Url = "https://yakka.tech/images/BloodSweatAndTears.jpg",
                         }
 
                     },
                     CreatedAt = DateTime.Now.AddDays(-4).AddHours(-3).AddMinutes(-1),
-                    ImagePath = App.BaseImageUrl + "ArticleImage4.png",
+                    ImagePath = "https://yakka.tech/images/BloodSweatAndTears.jpg",
                     FavoriteCount = 227
 
                 },
