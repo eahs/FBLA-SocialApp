@@ -176,7 +176,10 @@
     <AndroidResource Include="Resources\drawable\LibraryofKnowledge.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\YakkaLogo.png" />
+    <AndroidResource Include="Resources\drawable\MainYakkaLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\LittleYakkaLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

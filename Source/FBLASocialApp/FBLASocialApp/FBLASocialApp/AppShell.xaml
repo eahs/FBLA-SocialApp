@@ -294,20 +294,12 @@
     -->
     <Shell.FlyoutHeaderTemplate>
     <DataTemplate>
-        <Grid BackgroundColor="#FEA579"
+            <Grid BackgroundColor="#FEA579"
                   HeightRequest="200"
                   Padding="10,0,0,1">
-                <StackLayout>
-                    <Label Text="Yakka"
-                        TextColor="White"
-                        BackgroundColor="#FEA579"
-                        FontSize="30"
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Start" />
-                    <Image Source="YakkaLogo.png"
+                <Image Source="MainYakkaLogo.png"
                            VerticalOptions="Start"
-                           HorizontalOptions="CenterAndExpand"/>
-                </StackLayout>
+                           HorizontalOptions="Center"/>
             </Grid>
     </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
