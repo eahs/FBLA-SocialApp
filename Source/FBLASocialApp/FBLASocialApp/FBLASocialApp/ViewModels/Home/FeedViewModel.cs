@@ -60,11 +60,11 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Robert Smith",
                         ProfilePhoto = new Photo
                             {
-                                Url = App.BaseImageUrl + "RobertSmith.jfif"
+                                Url = "https://yakka.tech/images/Hackathon.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now,
-                    ImagePath= App.BaseImageUrl + "Hackathon.jpg",
+                    ImagePath= "https://yakka.tech/images/Hackathon.jpg",
                     FavoriteCount= 100
                 },
                 new Model
@@ -82,11 +82,11 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Nina Miller",
                         ProfilePhoto = new Photo
                             {
-                                Url = App.BaseImageUrl + "ProfileImage12.png"
+                                Url = "https://yakka.tech/images/356Days365Words.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-1).AddHours(-4).AddMinutes(-32),
-                    ImagePath= App.BaseImageUrl + "Event-Image.png",
+                    ImagePath= "https://yakka.tech/images/356Days365Words.jpg",
                     FavoriteCount= 60
                 },
                 new Model
@@ -98,11 +98,11 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Jill Booker",
                         ProfilePhoto = new Photo
                             {
-                                Url = App.BaseImageUrl + "ProfileImage1.png"
+                                Url = "https://yakka.tech/images/SwanLake.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-2).AddHours(-3).AddMinutes(-25),
-                    ImagePath= App.BaseImageUrl + "ArticleImage2.png",
+                    ImagePath= "https://yakka.tech/images/SwanLake.jpg",
                     FavoriteCount= 250
                 },
                 new Model
@@ -115,11 +115,11 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Jill Booker",
                         ProfilePhoto = new Photo
                             {
-                                Url = App.BaseImageUrl + "ProfileImage2.png"
+                                Url = "https://yakka.tech/images/NoCalculator.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-3).AddHours(-3).AddMinutes(-31),
-                    ImagePath= App.BaseImageUrl + "ArticleImage7.jpg",
+                    ImagePath= "https://yakka.tech/images/NoCalculator.jpg",
                     FavoriteCount= 350
                 },
                 new Model
@@ -133,11 +133,11 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Nina Miller",
                         ProfilePhoto = new Photo
                             {
-                                Url = App.BaseImageUrl + "ProfileImage5.png"
+                                Url = "https://yakka.tech/images/DebateNight.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-3).AddHours(-4),
-                    ImagePath= App.BaseImageUrl + "ArticleImage4.png",
+                    ImagePath= "https://yakka.tech/images/DebateNight.jpg",
                     FavoriteCount= 90
                 },
 
@@ -150,11 +150,11 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Robert Smith",
                         ProfilePhoto = new Photo
                             {
-                                Url = App.BaseImageUrl + "ProfileImage5.png"
+                                Url = "https://yakka.tech/images/MusicForTheSoul.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-4).AddHours(-1).AddMinutes(-36),
-                    ImagePath= App.BaseImageUrl + "ArticleImage4.png",
+                    ImagePath= "https://yakka.tech/images/MusicForTheSoul.jpg",
                     FavoriteCount= 90
                 },
 
@@ -169,12 +169,12 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Nina Miller" ,
                         ProfilePhoto = new Photo
                         {
-                            Url = App.BaseImageUrl + "ProfileImage5.png"
+                            Url = "https://yakka.tech/images/BloodSweatAndTears.jpg",
                         }
 
                     },
                 CreatedAt = DateTime.Now.AddDays(-4).AddHours(-3).AddMinutes(-1),
-                ImagePath = App.BaseImageUrl + "ArticleImage4.png",
+                ImagePath = "https://yakka.tech/images/BloodSweatAndTears.jpg",
                 FavoriteCount = 227
 
                 },
@@ -189,12 +189,12 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Robert Smith" ,
                         ProfilePhoto = new Photo
                         {
-                            Url = App.BaseImageUrl + "ProfileImage5.png"
+                            Url = "https://yakka.tech/images/AppUpdate.jpg",
                         }
 
                     },
                 CreatedAt = DateTime.Now.AddDays(-5).AddHours(-4).AddMinutes(-45),
-                ImagePath = App.BaseImageUrl + "ArticleImage4.png",
+                ImagePath = "https://yakka.tech/images/AppUpdate.jpg",
                 FavoriteCount = 66
                 },
 
@@ -210,12 +210,12 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Jill Booker" ,
                         ProfilePhoto = new Photo
                         {
-                            Url = App.BaseImageUrl + "ProfileImage5.png"
+                            Url = "https://yakka.tech/images/BenefitPerformance.jpg",
                         }
 
                     },
                 CreatedAt = DateTime.Now.AddDays(-5).AddHours(-6).AddMinutes(-11),
-                ImagePath = App.BaseImageUrl + "ArticleImage4.png",
+                ImagePath = "https://yakka.tech/images/BenefitPerformance.jpg",
                 FavoriteCount = 78
                 },
 
