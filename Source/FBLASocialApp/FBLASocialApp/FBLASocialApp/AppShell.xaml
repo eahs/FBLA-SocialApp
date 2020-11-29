@@ -12,6 +12,7 @@
        xmlns:newpost="clr-namespace:FBLASocialApp.Views.NewPost"    
        xmlns:settings="clr-namespace:FBLASocialApp.Views.Settings"
        xmlns:font="clr-namespace:FBLASocialApp.Helpers"
+       xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
        Title="FBLASocialApp"
        x:Class="FBLASocialApp.AppShell">
 
@@ -126,7 +127,7 @@
             <Tab.Icon>
                 <FontImageSource
                 FontFamily="{StaticResource LineAwesomeFont}"
-                Glyph="{x:Static font:LineAwesome.AlternatePencil}"
+                Glyph="{x:Static font:LineAwesome.PlusCircle}"
                 Color="Black"
                 Size="24"
                 />
@@ -213,7 +214,7 @@
         <MenuItem.IconImageSource>
             <FontImageSource
                 FontFamily="{StaticResource LineAwesomeFont}"
-                Glyph="{x:Static font:LineAwesome.AlternatePencil}"
+                Glyph="{x:Static font:LineAwesome.PlusCircle}"
                 Color="Black"
                 Size="24"
                 />
@@ -295,11 +296,12 @@
     <Shell.FlyoutHeaderTemplate>
     <DataTemplate>
             <Grid BackgroundColor="#FEA579"
-                  HeightRequest="200"
-                  Padding="10,0,0,1">
-                <Image Source="MainYakkaLogo.png"
-                           VerticalOptions="Start"
-                           HorizontalOptions="Center"/>
+                  HeightRequest="100"
+                  Padding="10,5,10,10"
+                  >
+                <Frame BackgroundColor="Transparent">
+                    <ffimageloadingsvg:SvgCachedImage Source="YakkaLogoWhiteText.svg" HorizontalOptions="StartAndExpand"/>
+                </Frame>
             </Grid>
     </DataTemplate>
     </Shell.FlyoutHeaderTemplate>

@@ -6,7 +6,6 @@ using Syncfusion.XForms.iOS.Cards;
 using Syncfusion.SfRating.XForms.iOS;
 using Syncfusion.XForms.iOS.Core;
 using Syncfusion.ListView.XForms.iOS;
-using  Syncfusion.XForms.iOS.Graphics;
 using Syncfusion.XForms.iOS.Border;
 using Syncfusion.XForms.iOS.Buttons;
 using System;
@@ -36,9 +35,9 @@ namespace FBLASocialApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
-global::Xamarin.Forms.Forms.Init();
-SfRichTextEditorRenderer.Init();
-SfTabViewRenderer.Init();
+            global::Xamarin.Forms.Forms.Init();
+            SfRichTextEditorRenderer.Init();
+            SfTabViewRenderer.Init();
             SfBadgeViewRenderer.Init();
             SfCardViewRenderer.Init();
             SfRatingRenderer.Init();
@@ -47,6 +46,7 @@ SfTabViewRenderer.Init();
             SfGradientViewRenderer.Init();
             SfBorderRenderer.Init();
             SfButtonRenderer.Init();
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
 
             LoadApplication(new App());
 

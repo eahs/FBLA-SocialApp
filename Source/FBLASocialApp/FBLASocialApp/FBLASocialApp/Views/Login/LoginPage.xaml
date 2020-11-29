@@ -9,6 +9,7 @@
     xmlns:converter="clr-namespace:FBLASocialApp.Converters"
     xmlns:core="clr-namespace:Syncfusion.XForms.Core;assembly=Syncfusion.Core.XForms"
     xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:local="clr-namespace:FBLASocialApp.Views.Login"
     xmlns:viewModel="clr-namespace:FBLASocialApp.ViewModels.Login"
     BackgroundImageSource="{core:OnPlatformOrientationStringValue Default=LibraryofKnowledge.png,
@@ -69,12 +70,9 @@
                         </Grid.RowDefinitions>
 
                         <!--  Label to display the title of this page  -->
-                        <Label
-                            FontFamily="{StaticResource Montserrat-SemiBold}"
-                            FontSize="30"
-                            HorizontalTextAlignment="Center"
-                            Style="{StaticResource LabelStyle}"
-                            Text="Log In" />
+
+                        <ffimageloadingsvg:SvgCachedImage HeightRequest="80" Source="YakkaLogoWhiteText.svg"/>
+
 
                         <!--  Label to display the description of this page  -->
                         <Label
