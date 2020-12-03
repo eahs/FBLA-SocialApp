@@ -295,7 +295,7 @@
     -->
     <Shell.FlyoutHeaderTemplate>
     <DataTemplate>
-            <Grid BackgroundColor="#FEA579"
+            <Grid BackgroundColor="#7A0646"
                   HeightRequest="100"
                   Padding="10,5,10,10"
                   >
