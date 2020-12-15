@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="FBLASocialApp.Views.Social.Styles"     
     xmlns:control="clr-namespace:FBLASocialApp.Controls" 
+    xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"   
     xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
     xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
 
@@ -75,6 +76,15 @@
         <Setter Property="HorizontalTextAlignment" Value="Center"/>
     </Style>
 
+    <!--  Common style for profile border style  -->
+    <Style x:Key="ProfileBorderStyle" TargetType="border:SfBorder">
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="BorderColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="CornerRadius" Value="20" />
+    </Style>
+    
     <!--Common follwer title label style-->
     <Style x:Key="FollowerTitleLabelStyle" TargetType="Label">
         <Setter Property="FontSize" Value="12"/>
