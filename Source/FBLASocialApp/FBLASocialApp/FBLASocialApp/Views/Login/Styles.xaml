@@ -104,7 +104,7 @@
                 <graphics:SfLinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <graphics:SfLinearGradientBrush.GradientStops>
                         <graphics:SfGradientStop Offset="0.0" Color="{StaticResource GradientEndColor}" />
-                        <graphics:SfGradientStop Offset="1.0" Color="{StaticResource GradientStartColor}" />
+                        <graphics:SfGradientStop Offset="1.0" Color="{StaticResource Cherry-Purple}" />
                     </graphics:SfLinearGradientBrush.GradientStops>
                 </graphics:SfLinearGradientBrush>
             </Setter.Value>
