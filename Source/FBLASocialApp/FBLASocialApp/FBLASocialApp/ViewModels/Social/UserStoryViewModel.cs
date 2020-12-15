@@ -94,6 +94,7 @@ namespace FBLASocialApp.ViewModels.Social
                 {
                     Title = "Productivity",
                     Body = "Today, these students, who make up the executive board did a phenomenal job of sharing their proposal for a Toys for Tots fundraiser. I would like to share their ",
+                    Author = new Member {
                         MemberId = 4,
                         FullName = "FBLA Judge",
                         ProfilePhoto = new Photo
@@ -121,7 +122,7 @@ namespace FBLASocialApp.ViewModels.Social
                     CreatedAt = DateTime.Now.AddDays(-4).AddHours(-1).AddMinutes(-36),
                     ImagePath= "https://yakka.tech/images/MusicForTheSoul.jpg",
                     FavoriteCount= 90
-                },
+                }
 
             };
         }
