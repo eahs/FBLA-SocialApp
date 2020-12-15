@@ -25,15 +25,15 @@
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource PrimaryDarkColor}" />
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Cherry-Purple}" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource PrimaryDarkColor}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Cherry-Purple}" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
-                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource Gray-900}"/>
-                <Setter Property="Shell.TabBarTitleColor" Value="Black"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="White"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="Yellow"/>
             </Style>
             <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
@@ -44,7 +44,7 @@
             -->
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="Medium"></Setter>
-                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="TextColor" Value="{StaticResource Cherry-Purple}"></Setter>
             </Style>
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
                 <Setter Property="BackgroundColor" Value="LightBlue"></Setter>
@@ -59,7 +59,7 @@
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource PrimaryDarkColor}" />
+                                    <Setter Property="BackgroundColor" Value="Yellow" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
