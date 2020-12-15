@@ -40,16 +40,16 @@ namespace FBLASocialApp.ViewModels.Social
         public UserStoryViewModel()
         {
             this.HeaderImagePath = "Album2.png";
-            this.ProfileImage = "ProfileImage16.png";
+            this.ProfileImage = "https://yakka.tech/images/FBLAProfilePic.jpg";
             this.BackgroundImage = "Sky-Image.png";
-            this.ProfileName = "Lela Cortez";
-            this.Designation = "Designer";
-            this.State = "San Francisco";
-            this.Country = "CA";
-            this.About = "I’m a UMN graduate (go Gophers!) and Minnesota native, but I’m already loving my new home in the Golden Gate City! I can’t wait to explore more of the great music scene here.";
-            this.PostsCount = 8;
-            this.FollowersCount = 45;
-            this.FollowingCount = 45;
+            this.ProfileName = "FBLA Judge";
+            this.Designation = "FBLA Administrator";
+            this.State = "Pennsylvania";
+            this.Country = "USA";
+            this.About = "Hello! I graduated from UPenn and have been working with FBLA for 25 years. Currently, I coordinate events for FBLA and judge competitions at the regional and national level. I am also a critically acclaimed author of several books on effective business practices.";
+            this.PostsCount = 3;
+            this.FollowersCount = 789;
+            this.FollowingCount = 78;
 
             this.Interests = new ObservableCollection<ProfileModel>()
             {
@@ -67,14 +67,9 @@ namespace FBLASocialApp.ViewModels.Social
 
             this.Connections = new ObservableCollection<ProfileModel>()
             {
-                new ProfileModel { Name = "Rose King", ImagePath = "ProfileImage7.png" },
-                new ProfileModel { Name = "Jeanette Bell", ImagePath = "ProfileImage9.png" },
-                new ProfileModel { Name = "Lily Castro", ImagePath = "ProfileImage10.png" },
-                new ProfileModel { Name = "Susie Moss", ImagePath = "ProfileImage11.png" },
-                new ProfileModel { Name = "Rose King", ImagePath = "ProfileImage7.png" },
-                new ProfileModel { Name = "Jeanette Bell", ImagePath = "ProfileImage9.png" },
-                new ProfileModel { Name = "Lily Castro", ImagePath = "ProfileImage10.png" },
-                new ProfileModel { Name = "Susie Moss", ImagePath = "ProfileImage11.png" }
+                new ProfileModel { Name = "Jill Booker", ImagePath = "https://yakka.tech/images/JillBooker.jpg" },
+                new ProfileModel { Name = "Robert Smith", ImagePath = "https://yakka.tech/images/RobertSmith.jpg" },
+                new ProfileModel { Name = "Nina Miller", ImagePath = "https://yakka.tech/images/NinaMiller.jpg" }
             };
 
             this.Posts = new ObservableCollection<Model>()
@@ -82,39 +77,32 @@ namespace FBLASocialApp.ViewModels.Social
                 new Model
                 {
                     Title = "365 Days. 365 Words.",
-                    Body = "After two years of writing, drafting, redrafting, rewriting, and editing, I have finally published my first collection of poetry— 365 Days. 365 Words. Each poem is unique in theme, but every single one is exactly 365 words. It’s been a challenging but also enjoyable journey, and it is my greatest hope that there is a poem in there that will resonate with every reader. Cheers!" +
-                           "\n" + " " +
-                           "\n" + "Also, many, many grateful thanks to Mr. Hunter and Ms. Brenda for being my gracious editors. I really appreciate it!" +
-                           "\n" + " " +
-                           "\n" + "You can order your copy on Amazon by clicking on the link below:" +
-                           "\n" + " " +
-                           "\n" + "www.amazon.com / 365 - Days - 365 - Words / dp / 006303249X / ref= zg_bs_10248_7 / 144 - 7879999 - 6214567 ? _encoding = UTF8 & psc = 1 & refRID = N1452 & 6P72YYS3XKN85L",
+                    Body = "Congrats to winners of FBLA states competition this year! So proud of all your hard work and hope that you will continue to strive to achieve. I can see success in all of your futures.",
                     Author = new Member {
-                        MemberId = 2,
-                        FullName = "Nina Miller",
+                        MemberId = 4,
+                        FullName = "FBLA Judge",
                         ProfilePhoto = new Photo
                             {
-                                Url = "https://yakka.tech/images/356Days365Words.jpg",
+                                Url = "https://yakka.tech/images/FBLAProfilePic.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-1).AddHours(-4).AddMinutes(-32),
-                    ImagePath= "https://yakka.tech/images/356Days365Words.jpg",
+                    ImagePath= "https://yakka.tech/images/SLC2019.JPG",
                     FavoriteCount= 60
                 },
                 new Model
                 {
-                    Title = "Swan Lake",
-                    Body = "I’m excited to present my dance school’s production of Swan Lake. This year, I’m grateful to have the lead role of Odette. Please come support us tonight at the Central City Theater @ 8 PM.",
-                    Author = new Member {
-                        MemberId = 3,
-                        FullName = "Jill Booker",
+                    Title = "Productivity",
+                    Body = "Today, these students, who make up the executive board did a phenomenal job of sharing their proposal for a Toys for Tots fundraiser. I would like to share their ",
+                        MemberId = 4,
+                        FullName = "FBLA Judge",
                         ProfilePhoto = new Photo
                             {
-                                Url = "https://yakka.tech/images/SwanLake.jpg",
+                                Url = "https://yakka.tech/images/FBLAProfilePic.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-2).AddHours(-3).AddMinutes(-25),
-                    ImagePath= "https://yakka.tech/images/SwanLake.jpg",
+                    ImagePath= "https://yakka.tech/images/Meeting.jpg",
                     FavoriteCount= 250
                 },
 
@@ -127,35 +115,13 @@ namespace FBLASocialApp.ViewModels.Social
                         FullName = "Robert Smith",
                         ProfilePhoto = new Photo
                             {
-                                Url = "https://yakka.tech/images/MusicForTheSoul.jpg",
+                                Url = "https://yakka.tech/images/FBLAProfilePic.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-4).AddHours(-1).AddMinutes(-36),
                     ImagePath= "https://yakka.tech/images/MusicForTheSoul.jpg",
                     FavoriteCount= 90
                 },
-
-                new Model
-                {
-                    Title = "Blood, Sweat, and Tears",
-                    Body = "Today was a rough day of training, but totally worth it for the upcoming meet. Every second I run is a moment well-spent. " +
-                    "\n" + "Please come and support the Lowell Girls Team this Saturday, April 24, 2021. Go Jaguars!",
-                    Author = new Member
-                    {
-                        MemberId = 1,
-                        FullName = "Nina Miller" ,
-                        ProfilePhoto = new Photo
-                        {
-                            Url = "https://yakka.tech/images/BloodSweatAndTears.jpg",
-                        }
-
-                    },
-                    CreatedAt = DateTime.Now.AddDays(-4).AddHours(-3).AddMinutes(-1),
-                    ImagePath = "https://yakka.tech/images/BloodSweatAndTears.jpg",
-                    FavoriteCount = 227
-
-                },
-
 
             };
         }
@@ -259,7 +225,7 @@ namespace FBLASocialApp.ViewModels.Social
         /// </summary>
         public string ProfileImage
         {
-            get { return App.BaseImageUrl + this.profileImage; }
+            get { return /*App.BaseImageUrl + */ this.profileImage; }
             set { this.profileImage = value; }
         }
 
