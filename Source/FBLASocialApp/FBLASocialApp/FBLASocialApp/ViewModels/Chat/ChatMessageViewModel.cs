@@ -18,9 +18,9 @@ namespace FBLASocialApp.ViewModels.Chat
         /// <summary>
         /// Stores the message text in an array. 
         /// </summary>
-        private readonly string[] descriptions = { "Hi, Jill! My name is FBLA Judge. I am an alumni of Carnegie Mellon University. I just saw your recent post about your Swan Lake performance.",
+        private readonly string[] descriptions = { "Hi, Jill! My name is FBLA Judge. I am an alumni of UPenn. I just saw your recent post about your Swan Lake performance.",
             "Can you tell me more about your dance?",
-            "Hello, Mr. Alex! It's very nice to meet you. I can definitely tell you more about my dance.",
+            "Hello, FBLA Judge! It's very nice to meet you. I can definitely tell you more about my dance.",
             "I started learning ballet when I was five years old at the local dance studio. At age eleven, I auditioned for the Lincoln Performing Arts School and was accepted." +
             "\n" + "Now, I have been a student there throughout my middle school and high school career. With my school's ballet team, I have competed in several state and national competitions." +
             "\n" + "Apart from competitions, I take great pride in being a part of our school's productions of famous ballets. I truly enjoy working with the younger students during rehearsals and encouraging their love for dance. Here is a picture from our production of the Nutcracker",
@@ -34,7 +34,7 @@ namespace FBLASocialApp.ViewModels.Chat
 
         private string newMessage;
 
-        private string profileImage = App.BaseImageUrl + "ProfileImage3.png";
+        private string profileImage = /*App.BaseImageUrl + */ "https://yakka.tech/images/JillBooker.jpg";
 
         private ObservableCollection<ChatMessage> chatMessageInfo = new ObservableCollection<ChatMessage>();
 
@@ -210,7 +210,7 @@ namespace FBLASocialApp.ViewModels.Chat
                 },
                 new ChatMessage
                 {
-                    Image = App.BaseImageUrl + "Electronics.png",
+                    Image = /*App.BaseImageUrl + */ "https://yakka.tech/images/SwanLake.jpg",
                     CreatedAt = currentTime.AddMinutes(-38),
                     IsReceived = true,
                 },

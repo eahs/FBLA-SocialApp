@@ -15,7 +15,7 @@ namespace FBLASocialApp.ViewModels.Chat
 
         private ObservableCollection<ChatDetail> chatItems;
 
-        private string profileImage = App.BaseImageUrl + "ProfileImage1.png";
+        private string profileImage = /*App.BaseImageUrl + */ "https://yakka.tech/images/FBLAProfilePic.jpg";
 
         private Command itemSelectedCommand;
 
@@ -31,7 +31,7 @@ namespace FBLASocialApp.ViewModels.Chat
             {
                 new ChatDetail
                 {
-                    ImagePath = App.BaseImageUrl + "ProfileImage2.png",
+                    ImagePath = /*App.BaseImageUrl + */ "https://yakka.tech/images/JillBooker.jpg",
                     SenderName = "Jill Booker",
                     MessageType = "Text",
                     Message = "Thank you! Have a wonderful day!",
@@ -40,7 +40,7 @@ namespace FBLASocialApp.ViewModels.Chat
                 },
                 new ChatDetail
                 {
-                    ImagePath = App.BaseImageUrl + "ProfileImage3.png",
+                    ImagePath = /*App.BaseImageUrl + */ "https://yakka.tech/images/RobertSmith.jpg",
                     SenderName = "Robert Smith",
                     MessageType = "Text",
                     Message = "Thank you for the pleasant conversation. I hope to be in contact again soon.",
@@ -49,7 +49,7 @@ namespace FBLASocialApp.ViewModels.Chat
                 },
                 new ChatDetail
                 {
-                    ImagePath = App.BaseImageUrl + "ProfileImage4.png",
+                    ImagePath = /*App.BaseImageUrl + */ "https://yakka.tech/images/NinaMiller.jpg",
                     SenderName = "Nina Miller",
                     MessageType = "Text",
                     Message = "Would 10:15 PM work?",

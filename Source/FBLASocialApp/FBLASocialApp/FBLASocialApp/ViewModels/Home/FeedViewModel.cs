@@ -60,7 +60,7 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Robert Smith",
                         ProfilePhoto = new Photo
                             {
-                                Url = "https://yakka.tech/images/Hackathon.jpg",
+                                Url = "https://yakka.tech/images/RobertSmith.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now,
@@ -82,7 +82,7 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Nina Miller",
                         ProfilePhoto = new Photo
                             {
-                                Url = "https://yakka.tech/images/356Days365Words.jpg",
+                                Url = "https://yakka.tech/images/NinaMiller.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-1).AddHours(-4).AddMinutes(-32),
@@ -98,7 +98,7 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Jill Booker",
                         ProfilePhoto = new Photo
                             {
-                                Url = "https://yakka.tech/images/SwanLake.jpg",
+                                Url = "https://yakka.tech/images/JillBooker.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-2).AddHours(-3).AddMinutes(-25),
@@ -115,7 +115,7 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Jill Booker",
                         ProfilePhoto = new Photo
                             {
-                                Url = "https://yakka.tech/images/NoCalculator.jpg",
+                                Url = "https://yakka.tech/images/JillBooker.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-3).AddHours(-3).AddMinutes(-31),
@@ -133,7 +133,7 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Nina Miller",
                         ProfilePhoto = new Photo
                             {
-                                Url = "https://yakka.tech/images/DebateNight.jpg",
+                                Url = "https://yakka.tech/images/NinaMiller.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-3).AddHours(-4),
@@ -150,7 +150,7 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Robert Smith",
                         ProfilePhoto = new Photo
                             {
-                                Url = "https://yakka.tech/images/MusicForTheSoul.jpg",
+                                Url = "https://yakka.tech/images/RobertSmith.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-4).AddHours(-1).AddMinutes(-36),
@@ -169,7 +169,7 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Nina Miller" ,
                         ProfilePhoto = new Photo
                         {
-                            Url = "https://yakka.tech/images/BloodSweatAndTears.jpg",
+                            Url = "https://yakka.tech/images/NinaMiller.jpg",
                         }
 
                     },
@@ -189,7 +189,7 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Robert Smith" ,
                         ProfilePhoto = new Photo
                         {
-                            Url = "https://yakka.tech/images/AppUpdate.jpg",
+                            Url = "https://yakka.tech/images/RobertSmith.jpg",
                         }
 
                     },
@@ -210,7 +210,7 @@ namespace FBLASocialApp.ViewModels.Home
                         FullName = "Jill Booker" ,
                         ProfilePhoto = new Photo
                         {
-                            Url = "https://yakka.tech/images/BenefitPerformance.jpg",
+                            Url = "https://yakka.tech/images/JillBooker.jpg",
                         }
 
                     },

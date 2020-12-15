@@ -64,7 +64,7 @@
                                                   HorizontalOptions="End">
 
                                     <Label Text="MARK ALL AS READ"
-                                           TextColor="{DynamicResource Orange}"
+                                           TextColor= "{DynamicResource Cherry-Purple}"
                                            FontSize="12"
                                            VerticalTextAlignment="Center"
                                            HorizontalTextAlignment="Center"

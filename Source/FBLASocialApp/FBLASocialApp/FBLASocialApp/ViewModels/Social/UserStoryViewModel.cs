@@ -51,20 +51,6 @@ namespace FBLASocialApp.ViewModels.Social
             this.FollowersCount = 789;
             this.FollowingCount = 78;
 
-            this.Interests = new ObservableCollection<ProfileModel>()
-            {
-                new ProfileModel { Name = "Food", ImagePath = "Recipe12.png" },
-                new ProfileModel { Name = "Travel", ImagePath = "Album5.png" },
-                new ProfileModel { Name = "Music", ImagePath = "ArticleImage7.jpg" },
-                new ProfileModel { Name = "Bags", ImagePath = "Accessories.png" },
-                new ProfileModel { Name = "Market", ImagePath = "PersonalCare.png" },
-                new ProfileModel { Name = "Food", ImagePath = "Recipe12.png" },
-                new ProfileModel { Name = "Travel", ImagePath = "Album5.png" },
-                new ProfileModel { Name = "Music", ImagePath = "ArticleImage7.jpg" },
-                new ProfileModel { Name = "Bags", ImagePath = "Accessories.png" },
-                new ProfileModel { Name = "Market", ImagePath = "PersonalCare.png" }
-            };
-
             this.Connections = new ObservableCollection<ProfileModel>()
             {
                 new ProfileModel { Name = "Jill Booker", ImagePath = "https://yakka.tech/images/JillBooker.jpg" },
@@ -93,7 +79,7 @@ namespace FBLASocialApp.ViewModels.Social
                 new Model
                 {
                     Title = "Productivity",
-                    Body = "Today, these students, who make up the executive board did a phenomenal job of sharing their proposal for a Toys for Tots fundraiser. I would like to share their ",
+                    Body = "Today, these students, who make up the executive board did a phenomenal job of sharing their proposal for a Toys for Tots fundraiser. I would like to commend their dedication and progress!",
                     Author = new Member {
                         MemberId = 4,
                         FullName = "FBLA Judge",
@@ -109,18 +95,18 @@ namespace FBLASocialApp.ViewModels.Social
 
                 new Model
                 {
-                    Title = "Music for the Soul",
-                    Body = "Tonight we celebrate my favorite concert of the season— The Winter Holiday concert. This is by far the most complex and challenging concert of the year. We play pieces from all over the world, from East Asia to the Middle East, from Europe to Latin America. Not only does the variety of music challenge us to adopt different styles of playing, but it also opens our mind to the variety of the music in the world. It is truly an enlightening and intellectually engaging experience.",
+                    Title = "Heart Walk",
+                    Body = "Thank you FBLA volunteers for joining this year's Heart Walk and giving back to the community!",
                     Author = new Member {
-                        MemberId = 1,
-                        FullName = "Robert Smith",
+                        MemberId = 4,
+                        FullName = "FBLA Judge",
                         ProfilePhoto = new Photo
                             {
                                 Url = "https://yakka.tech/images/FBLAProfilePic.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-4).AddHours(-1).AddMinutes(-36),
-                    ImagePath= "https://yakka.tech/images/MusicForTheSoul.jpg",
+                    ImagePath= "https://yakka.tech/images/HeartWalk.JPG",
                     FavoriteCount= 90
                 }
 
