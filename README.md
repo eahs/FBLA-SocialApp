@@ -1,4 +1,4 @@
-# FBLA Social App
+![](https://raw.githubusercontent.com/eahs/FBLASocialApp/development/Media/YakkaLogo.png)
 
 # FBLA Social App 1.0 README
 
@@ -12,7 +12,7 @@ Easton, PA
 
   
 
-About FBLA Social App Here....
+Yakka is a professional social media app giving students the ability to share real life events with the option to put that on their resume. It is a mobile application for Android and iOS devices. To login into the app, users must first sign in using an email and password or authenticate using Google. Once in the app, members can view their wall, add friends, privately message other students, create posts, view their resume, and much more! On the “Settings” page, users will have access to their profile information, the Terms of Service, Privacy Policy, and all of our other important links to help make Yakka a safer and better social media platform.
 
   
 
@@ -22,9 +22,20 @@ About FBLA Social App Here....
 
   
 
-- Designed for Android devices
-
+- Designed for Android and iOS devices
+- Login System utilizing JWTs
+- Ability to sign in using Google
+- Information about Yakka and the TOS
+- Create posts that get featured on your personal wall
+- An accompanied backend for administrative purposes
+- Secure server running 24/7
+- Change privacy settings on your account, giving you control over who can see it
+- Swagger for easy-to-use API documentation
+- Posts can have multiple reactions of different types
+- Able to add posts to favorites
+- Chats and private messages
 - A bug reporting system
+
 
   
 
@@ -64,7 +75,7 @@ About FBLA Social App Here....
 
   
 
-This mobile application was developed in C# using Visual Studio 2019 and the Xamarin Platform on Microsoft Windows. Contained within the competition submission is a folder named “CompiledApp” that contains a signed APK that was created for Android phones and emulators. Simply install the APK to your Android mobile device and run.
+This mobile application was developed in C# using Visual Studio 2019 and the Xamarin Platform on Microsoft Windows. Contained within the competition submission is a folder named “CompiledApp” that contains a signed APK that was created for Android and iOS phones and emulators. Simply install the APK to your mobile device and run.
 
   
 
@@ -84,19 +95,22 @@ Visual Studio Requirements:
 
   
 
-In order to build for Android you will need Visual Studio or Visual Studio for Mac. Upon opening the Visual Studio solution it will immediately download all necessary packages from Nuget. You will need to execute a debug version of the FBLAManager.Android project either on a simulator or by connecting an Android mobile device that has Developer Options and Enable USB debugging turned on.
+In order to build you will need Visual Studio or Visual Studio for Mac. Upon opening the Visual Studio solution it will immediately download all necessary packages from Nuget. You will need to execute a debug version of either the FBLASocialApp.Android or FBLASocialApp.iOS project either on a simulator or by connecting an Android mobile device that has Developer Options and Enable USB debugging turned on.
   
 
 ## Resources Used
 
   
 
-Menu Icons from Icons8 - [https://icons8.com/](https://icons8.com/)
+Menu Icons from Icons8 - https://icons8.com/
 
-  
-  
+Background Image from Pexels - https://www.pexels.com/
 
-Background Image from Pexels - [https://www.pexels.com/](https://www.pexels.com/)
+Font Awesome - https://fontawesome.com/
+
+Pixabay - https://pixabay.com/
+
+Unsplash - https://unsplash.com/
 
 
   
@@ -175,7 +189,31 @@ Newtonsoft.Json by James Newton-King - [https://www.nuget.org/packages/Newtonsof
 
 > Json.NET is a popular high-performance JSON framework for .NET
 
-  
+
+
+Microsoft.AppCenter by Microsoft -  https://azure.microsoft.com/en-us/services/app-center/
+
+
+
+> This package contains the basic functionalities that all App Center services use to communicate with the backend, including reports on analytics and crashes.
+
+
+
+MonkeyCache by James Montemagno - https://github.com/jamesmontemagno/monkey-cache
+
+
+
+> A simple caching library to cache any data structure for a specific amount of time in any .NET application. Additionally, offers simple HTTP methods for caching web request data.
+
+
+
+JSON Web Tokens(JWT) by Auth0 - https://jwt.io
+
+
+
+> Authentication system using tokens creating a secure way to access information and data.
+
+
 
 ### Xamarin
 
@@ -220,29 +258,7 @@ Syncfusion.Xamarin.Core by Syncfusion Inc. - [https://www.nuget.org/packages/Syn
   
 
 > This package contains common classes and interfaces that are used in other Syncfusion Xamarin UI controls
-
   
-
-  
-
-Syncfusion.Xamarin.SfBusyIndicator by Syncfusion Inc. - [https://www.nuget.org/packages/Syncfusion.Xamarin.SfBusyIndicator/](https://www.nuget.org/packages/Syncfusion.Xamarin.SfBusyIndicator/)
-
-  
-
-> The Syncfusion Busy Indicator for Xamarin.Forms control provides over 10 built-in animations that can be displayed within the application. It is used to indicate busy status during app loading, data processing, and more.
-
-  
-
-  
-
-Syncfusion.Xamarin.SfSchedule by Syncfusion Inc. - [https://www.nuget.org/packages/Syncfusion.Xamarin.SfSchedule/](https://www.nuget.org/packages/Syncfusion.Xamarin.SfSchedule/)
-
-  
-
-> Syncfusion Schedule for Xamarin.Forms is used to schedule and manage appointments through an intuitive user interface to efficiently plan and manage events or appointments.
-
-  
-
   
 
 Syncfusion.Xamarin.SfListView by Syncfusion Inc. - [https://www.nuget.org/packages/Syncfusion.Xamarin.SfListView/](https://www.nuget.org/packages/Syncfusion.Xamarin.SfListView/)
@@ -250,8 +266,6 @@ Syncfusion.Xamarin.SfListView by Syncfusion Inc. - [https://www.nuget.org/packag
   
 
 > Syncfusion ListView for Xamarin.Forms is a feature rich list control that renders a set of data items with views or custom templates. It has many features like grouping, sorting, filtering, paging, swiping, multiple selection, dragging and dropping, and layout types. This control has also been optimized to work with large amounts of data.
-
-  
 
   
 
@@ -263,12 +277,37 @@ Syncfusion.Xamarin.SfComboBox by Syncfusion Inc. - [https://www.nuget.org/packag
 
   
 
+Syncfusion.Xamarin.Buttons by Syncfusion Inc. - [https://www.nuget.org/packages/Syncfusion.Xamarin.Buttons/](https://www.nuget.org/packages/Syncfusion.Xamarin.Butons/)
+
   
+
+> The Syncfusion Buttons for Xamarin.Forms is a custom button control with UI customization, toggle states, and theme support. You can set icons,custom content, background images  background images and corner edge radii and customize the appearance for different visual states using the visual state manager.
+
+
+
+Syncfusion.Xamarin.Cards by Syncfusion Inc. - [https://www.nuget.org/packages/Syncfusion.Xamarin.Cards/](https://www.nuget.org/packages/Syncfusion.Xamarin.Cards/)
+
+  
+
+> Syncfusion Cards for Xamarin.Forms provides a perfect way to display content in an intuitive way.
+
+
+
+ Syncfusion.Xamarin.SFBadgeView by Syncfusion Inc. - [https://www.nuget.org/packages/Syncfusion.Xamarin.SFBadgeView/](https://www.nuget.org/packages/Syncfusion.Xamarin.SFBadgeView/)
+
+  
+
+> Syncfusion BadgeView control for Xamarin.Forms is a notification control consists of small shapes such as circle and rectangle which contain a number or message. It is used to show the notification count, messages and status of something. It has key features such as animation, predefined shapes and badge color types. The position of the control can be easily customizable.
+
+
 
 ## References
 
   
  
+- https://github.com/eahs/FBLAManager
+- “FBLA-PBL.” FBLA-PBL, www.fbla-pbl.org/.
+- https://www.fbla-pbl.org/fbla/competitive-events/
 
   
 
