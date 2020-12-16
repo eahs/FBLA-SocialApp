@@ -47,7 +47,7 @@
                 <Setter Property="TextColor" Value="{StaticResource Cherry-Purple}"></Setter>
             </Style>
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
-                <Setter Property="BackgroundColor" Value="LightBlue"></Setter>
+                <Setter Property="BackgroundColor" Value="{StaticResource Cherry-Purple}"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
@@ -158,6 +158,18 @@
 
             <ShellContent ContentTemplate="{DataTemplate chat:RecentChatPage}" />
         </Tab>
+        <Tab Title="Wall" Route="Wall">
+            <Tab.Icon>
+                <FontImageSource
+                FontFamily="{StaticResource LineAwesomeFont}"
+                Glyph="{x:Static font:LineAwesome.Newspaper}"
+                Color="Black"
+                Size="24"
+                />
+            </Tab.Icon>
+
+            <ShellContent ContentTemplate="{DataTemplate social:UserStoryPage}" />
+        </Tab>
     </FlyoutItem>
 
 
@@ -259,7 +271,7 @@
     <ShellContent Route="SignUp" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:SignUpPage}" />
     <ShellContent Route="Privacy"  Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate settings:PrivacyPage}" />
     <ShellContent Route="Terms"   Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate settings:TermsPage}" />
-    <ShellContent Route="Wall" ContentTemplate="{DataTemplate wall:WallPage}" />
+    <ShellContent Route="Social" Shell.NavBarIsVisible="True" Shell.FlyoutBehavior="Flyout" ContentTemplate="{DataTemplate social:UserStoryPage}" />
 
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.

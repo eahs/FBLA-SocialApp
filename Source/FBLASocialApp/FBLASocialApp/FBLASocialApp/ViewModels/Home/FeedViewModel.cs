@@ -34,7 +34,7 @@ namespace FBLASocialApp.ViewModels.Home
         {
             get
             {
-                return this.itemTappedCommand ?? (this.itemTappedCommand = new Command<object>(this.NavigateToNextPage));
+               return this.itemTappedCommand ?? (this.itemTappedCommand = new Command<object>(this.NavigateToNextPage));
             }
         }
 
@@ -229,10 +229,10 @@ namespace FBLASocialApp.ViewModels.Home
         /// <summary>
         /// Invoked when an item is selected from the articles card list page.
         /// </summary>
-        /// <param name="selectedItem">Selected item from the list view.</param>
-        private void NavigateToNextPage(object obj)
+        /// <param name="obj">Selected item from the list view.</param>
+        private async void NavigateToNextPage(object obj)
         {
-            // Do something
+            await Shell.Current.GoToAsync("//Social");
         }
 
         /// <summary>

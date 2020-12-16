@@ -26,26 +26,26 @@ namespace FBLASocialApp
 
         private async void Favorites_Clicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//Yakka/Favorites");
             FlyoutIsPresented = false;
+            await Shell.Current.GoToAsync("//Yakka/Favorites");
         }
 
         private async void Chat_Clicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//Yakka/Chat");
             FlyoutIsPresented = false;
+            await Shell.Current.GoToAsync("//Yakka/Chat");
         }
 
         private async void MyWall_Clicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//Yakka/MyWall");
             FlyoutIsPresented = false;
+            await Shell.Current.GoToAsync("//Yakka/MyWall");
         }
 
         private async void NewPost_Clicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("//Yakka/NewPost");
             FlyoutIsPresented = false;
+            await Shell.Current.GoToAsync("//Yakka/NewPost");
         }
 
     }

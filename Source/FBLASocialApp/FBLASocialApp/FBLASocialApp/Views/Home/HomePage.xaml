@@ -96,7 +96,6 @@ xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTab
                                                             Margin="0,5,0,0"
                                                             VerticalOptions="End" />
 
-
                                                             <!--  Published date  -->
                                                             <Label 
                                                                 Margin="0,-5,0,0" VerticalOptions="End"
