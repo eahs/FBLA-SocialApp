@@ -118,6 +118,9 @@
     <EmbeddedResource Update="Views\Settings\PrivacyPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\READMEPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Settings\SettingPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

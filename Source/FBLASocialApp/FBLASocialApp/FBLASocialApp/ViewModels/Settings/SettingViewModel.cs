@@ -149,9 +149,9 @@ namespace FBLASocialApp.ViewModels.Settings
         /// Invoked when the help option is clicked
         /// </summary>
         /// <param name="obj">The object</param>
-        private void HelpClicked(object obj)
+        private async void HelpClicked(object obj)
         {
-            // Do something
+            await AppShell.Current.Navigation.PushAsync(new READMEPage());
         }
 
         #endregion
