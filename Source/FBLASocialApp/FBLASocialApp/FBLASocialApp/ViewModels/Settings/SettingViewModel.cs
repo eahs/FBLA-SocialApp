@@ -95,16 +95,16 @@ namespace FBLASocialApp.ViewModels.Settings
         /// <param name="obj">The object</param>
         private void EditProfileClicked(object obj)
         {
-            // Do something
+            // Do Something
         }
 
         /// <summary>
         /// Invoked when the change password clicked
         /// </summary>
         /// <param name="obj">The object</param>
-        private void ChangePasswordClicked(object obj)
+        private async void ChangePasswordClicked(object obj)
         {
-            // Do something
+            await Shell.Current.GoToAsync("//ChangePassword");
         }
 
         /// <summary>

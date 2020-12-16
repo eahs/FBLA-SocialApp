@@ -158,18 +158,6 @@
 
             <ShellContent ContentTemplate="{DataTemplate chat:RecentChatPage}" />
         </Tab>
-        <Tab Title="Wall" Route="Wall">
-            <Tab.Icon>
-                <FontImageSource
-                FontFamily="{StaticResource LineAwesomeFont}"
-                Glyph="{x:Static font:LineAwesome.Newspaper}"
-                Color="Black"
-                Size="24"
-                />
-            </Tab.Icon>
-
-            <ShellContent ContentTemplate="{DataTemplate social:UserStoryPage}" />
-        </Tab>
     </FlyoutItem>
 
 
@@ -268,6 +256,7 @@
     -->
     <ShellContent Route="Login" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:LoginPage}" />
     <ShellContent Route="ResetPassword" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:ResetPasswordPage}" />
+    <ShellContent Route="ChangePassword" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Flyout" ContentTemplate="{DataTemplate login:ResetPasswordPage}" />
     <ShellContent Route="SignUp" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:SignUpPage}" />
     <ShellContent Route="Privacy"  Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate settings:PrivacyPage}" />
     <ShellContent Route="Terms"   Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate settings:TermsPage}" />
