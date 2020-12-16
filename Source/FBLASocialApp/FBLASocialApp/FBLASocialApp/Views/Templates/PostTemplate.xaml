@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
     xmlns:converter="clr-namespace:FBLASocialApp.Converters"
+     xmlns:font="clr-namespace:FBLASocialApp.Helpers"
     x:Class="FBLASocialApp.Views.Templates.PostTemplate"
     x:Name="postTemplate">
 
@@ -40,9 +41,17 @@
         <!--  Favourites Count  -->
         <Label Text="{Binding FavouritesCount}" Margin="0,0,10,0" Style="{StaticResource ActivityCount}" />
 
-        <!--  Share Icon  -->
-        <buttons:SfButton Text="{StaticResource Share}" Style="{StaticResource NavigationBarButtonStyle}" CornerRadius="4"
+        <!--  Cheer Icon  -->
+        <buttons:SfButton Text="{x:Static font:LineAwesome.SmilingFace}" TextColor ="Gold" Style="{StaticResource NavigationBarButtonStyle}" CornerRadius="4"
                           x:Name="shareButton" Command="{Binding Path=ParentBindingContext.ShareCommand, Source={x:Reference postTemplate}}"
+                          CommandParameter="{Binding .}" WidthRequest="35" Margin="0" Padding="0"   />
+        <!--  Favorite Icon  -->
+        <buttons:SfButton Text="{x:Static font:LineAwesome.Heart}" TextColor ="Red" Style="{StaticResource NavigationBarButtonStyle}" CornerRadius="4"
+                          x:Name="favoriteButton" Command="{Binding Path=ParentBindingContext.ShareCommand, Source={x:Reference postTemplate}}"
+                          CommandParameter="{Binding .}" WidthRequest="35" Margin="0" Padding="0"   />
+        <!--  Follow Icon  -->
+        <buttons:SfButton Text="{x:Static font:LineAwesome.UserPlus}" TextColor ="Black" Style="{StaticResource NavigationBarButtonStyle}" CornerRadius="4"
+                          x:Name="followButton" Command="{Binding Path=ParentBindingContext.ShareCommand, Source={x:Reference postTemplate}}"
                           CommandParameter="{Binding .}" WidthRequest="35" Margin="0" Padding="0"   />
         <!--  Shared Count  -->
         <Label Text="{Binding SharedCount}" Style="{StaticResource ActivityCount}"/>
