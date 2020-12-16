@@ -66,7 +66,7 @@ namespace FBLASocialApp.ViewModels.Favorites
                         FullName = "Nina Miller",
                         ProfilePhoto = new Photo
                             {
-                                Url = "https://yakka.tech/images/356Days365Words.jpg",
+                                Url = "https://yakka.tech/images/NinaMiller.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-1).AddHours(-4).AddMinutes(-32),
@@ -82,7 +82,7 @@ namespace FBLASocialApp.ViewModels.Favorites
                         FullName = "Jill Booker",
                         ProfilePhoto = new Photo
                             {
-                                Url = "https://yakka.tech/images/SwanLake.jpg",
+                                Url = "https://yakka.tech/images/JillBooker.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-2).AddHours(-3).AddMinutes(-25),
@@ -99,7 +99,7 @@ namespace FBLASocialApp.ViewModels.Favorites
                         FullName = "Robert Smith",
                         ProfilePhoto = new Photo
                             {
-                                Url = "https://yakka.tech/images/MusicForTheSoul.jpg",
+                                Url = "https://yakka.tech/images/RobertSmith.jpg",
                             }
                         },
                     CreatedAt = DateTime.Now.AddDays(-4).AddHours(-1).AddMinutes(-36),
@@ -118,7 +118,7 @@ namespace FBLASocialApp.ViewModels.Favorites
                         FullName = "Nina Miller" ,
                         ProfilePhoto = new Photo
                         {
-                            Url = "https://yakka.tech/images/BloodSweatAndTears.jpg",
+                            Url = "https://yakka.tech/images/NinaMiller.jpg",
                         }
 
                     },
