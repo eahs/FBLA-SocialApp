@@ -260,7 +260,7 @@
     <ShellContent Route="SignUp" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate login:SignUpPage}" />
     <ShellContent Route="Privacy"  Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate settings:PrivacyPage}" />
     <ShellContent Route="Terms"   Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate settings:TermsPage}" />
-    <ShellContent Route="Social" Shell.NavBarIsVisible="True" Shell.FlyoutBehavior="Flyout" ContentTemplate="{DataTemplate social:UserStoryPage}" />
+    <ShellContent Route="Social" Shell.NavBarIsVisible="True" Shell.FlyoutBehavior="Flyout" Shell.BackgroundColor ="{StaticResource Cherry-Purple}" ContentTemplate="{DataTemplate social:UserStoryPage}" />
 
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
