@@ -243,7 +243,7 @@ Xamarin.FFImageLoading by Daniel Luberda, Fabien Molinet - [https://www.nuget.or
 
 ### Syncfusion
 
-Syncfusion Essential UI Kit for Xamarin by Syncfusion Inc. - https://quizlet.com/447443583/easton-pa-fbla-study-set-flash-cards/ 
+Syncfusion Essential UI Kit for Xamarin by Syncfusion Inc. - https://www.syncfusion.com/essential-xamarin-ui-kit 
 
   
 
