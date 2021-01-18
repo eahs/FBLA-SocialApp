@@ -136,6 +136,12 @@
     <Reference Include="Syncfusion.SfComboBox.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.SfComboBox.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfComboBox.XForms.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfImageEditor.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfImageEditor.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfImageEditor.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfImageEditor.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfImageEditor.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfImageEditor.XForms.iOS.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.SfListView.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.SfListView.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfListView.XForms.dll</HintPath>
     </Reference>
