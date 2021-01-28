@@ -17,7 +17,8 @@ namespace FBLASocialApp.Views.NewPost
         {
             InitializeComponent();
 
-            rte.ToolbarOptions = ToolbarOptions.Bold | ToolbarOptions.Hyperlink;
+            Body.ToolbarOptions = ToolbarOptions.Bold | ToolbarOptions.Italic | ToolbarOptions.Hyperlink | ToolbarOptions.InsertImage;
+            PostTitle.ToolbarOptions = ToolbarOptions.Bold | ToolbarOptions.Italic;
         }
     }
 }

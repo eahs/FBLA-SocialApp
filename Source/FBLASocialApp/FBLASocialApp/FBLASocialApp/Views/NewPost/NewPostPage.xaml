@@ -5,7 +5,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              Title="New Post"
              x:Class="FBLASocialApp.Views.NewPost.NewPostPage"
-             xmlns:viewModel="clr-namespace:FBLASocialApp.ViewModels.NewPost">
+             xmlns:viewModel="clr-namespace:FBLASocialApp.ViewModels.NewPost" xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms" xmlns:control="clr-namespace:FBLASocialApp.Controls">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -14,18 +14,44 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
+    <ContentPage.BindingContext>
+        <viewModel:NewPostViewModel />
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
-        <StackLayout>
+    
+            <StackLayout>
 
-            <richTextEditor:SfRichTextEditor x:Name="rte" VerticalOptions="FillAndExpand"
-                                             />
+               <!-- <border:SfBorder
+                            Grid.Row="3"
+                            BorderColor="{Binding Source={x:Reference PostTitleEntry}, Path=IsFocused, Converter={StaticResource ColorConverter}, ConverterParameter=0}"
+                            Style="{StaticResource SfBorderStyle}">
+                <control:BorderlessEntry
+                                x:Name="PostTitleEntry"
+                                Placeholder="Title"
+                                Style="{StaticResource EntryStyle}"
+                                Text="{Binding PostTitle}" />
+            </border:SfBorder> -->
+                
+            <richTextEditor:SfRichTextEditor 
+                x:Name="PostTitle" 
+                VerticalOptions="Start"
+                PlaceHolder="Title"
+                Text="{Binding PostTitle}" />
+        
+            <richTextEditor:SfRichTextEditor 
+                x:Name="Body" 
+                VerticalOptions="FillAndExpand"
+                PlaceHolder="Type your text here..."
+                Text="{Binding Body}" />
 
-            <buttons:SfButton
+                <buttons:SfButton
                             Grid.Row="5"
                             Margin="0,16"
+                            Command="{Binding CreatePostCommand}"
                             Style="{StaticResource SfButtonStyle}"
-                            Text="Post" />
+                            Text="POST" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
