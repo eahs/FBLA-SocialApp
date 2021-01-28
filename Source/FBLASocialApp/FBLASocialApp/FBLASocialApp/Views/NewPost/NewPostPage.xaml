@@ -4,7 +4,8 @@
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"             
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              Title="New Post"
-             x:Class="FBLASocialApp.Views.NewPost.NewPostPage">
+             x:Class="FBLASocialApp.Views.NewPost.NewPostPage"
+             xmlns:viewModel="clr-namespace:FBLASocialApp.ViewModels.NewPost">
 
     <ContentPage.Resources>
         <ResourceDictionary>
