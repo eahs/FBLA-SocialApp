@@ -4,6 +4,8 @@ using FBLASocialApp.Models.Chat;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using SocialApi.Models;
+using SocialApi;
+using System.Collections.Generic;
 
 namespace FBLASocialApp.ViewModels.Chat
 {
@@ -18,23 +20,23 @@ namespace FBLASocialApp.ViewModels.Chat
         /// <summary>
         /// Stores the message text in an array. 
         /// </summary>
-        private readonly string[] descriptions = { "Hi, Jill! My name is FBLA Judge. I am an alumni of UPenn. I just saw your recent post about your Swan Lake performance.",
-            "Can you tell me more about your dance?",
-            "Hello, FBLA Judge! It's very nice to meet you. I can definitely tell you more about my dance.",
-            "I started learning ballet when I was five years old at the local dance studio. At age eleven, I auditioned for the Lincoln Performing Arts School and was accepted." +
-            "\n" + "Now, I have been a student there throughout my middle school and high school career. With my school's ballet team, I have competed in several state and national competitions." +
-            "\n" + "Apart from competitions, I take great pride in being a part of our school's productions of famous ballets. I truly enjoy working with the younger students during rehearsals and encouraging their love for dance. Here is a picture from our production of the Nutcracker",
-            "Wow, I congratulate you on your accomplishments! I would like to get to know you more. Would you be open for an interview on this Saturday at 1:00 PM?",
-            "Yes, I would. Thank you so much for the offer! I look forward to speaking with you.",
-            "I look forward to speaking with you as well. The interview will be over phonecall. Here is my number: 567-897-9050",
-            "Thank you! Have a wonderful day!",
-        };
+       
 
-        private string profileName = "Jill Booker";
+        private string profileName;
 
         private string newMessage;
 
-        private string profileImage = /*App.BaseImageUrl + */ "https://yakka.tech/images/JillBooker.jpg";
+        private string profileImage;
+
+        private string connectionId;
+
+        private List<int> participants;
+
+        private int sessionId;
+
+        private int memberId;
+
+        private string body;
 
         private ObservableCollection<ChatMessage> chatMessageInfo = new ObservableCollection<ChatMessage>();
 
@@ -54,8 +56,14 @@ namespace FBLASocialApp.ViewModels.Chat
             this.SendCommand = new Command(this.SendClicked);
             this.BackCommand = new Command(this.BackButtonClicked);
             this.ProfileCommand = new Command(this.ProfileClicked);
-
-            this.GenerateMessageInfo();
+            this.GetActiveChatCommand = new Command(this.GetActiveChatClicked);
+            this.ConnectToChatCommand = new Command(this.ConnectToChatClicked);
+            this.CreateChatSessionCommand = new Command(this.CreateChatSessionClicked);
+            this.GetChatSessionCommand = new Command(this.GetChatSessionClicked);
+            this.AddChatSessionMemberCommand = new Command(this.AddChatSessionMemberClicked);
+            this.RemoveChatSessionMemberCommand = new Command(this.RemoveChatSessionMemberClicked);
+            this.AddChatMessageCommand = new Command(this.AddChatMessageClicked);
+            
         }
 
         #endregion
@@ -76,6 +84,76 @@ namespace FBLASocialApp.ViewModels.Chat
             {
                 this.profileName = value;
                 this.NotifyPropertyChanged();
+            }
+        }
+
+        public string ConnectionId
+        {
+            get
+            {
+                return this.connectionId;
+            }
+
+            set
+            {
+                this.connectionId = value;
+                this.NotifyPropertyChanged();
+            }
+        }
+
+        public List<int> Participants
+        {
+            get
+            {
+                return this.participants;
+            }
+
+            set
+            {
+                this.participants = value;
+                this.OnPropertyChanged("Participants");
+            }
+        }
+
+        public int SessionId
+        {
+            get
+            {
+                return this.sessionId;
+            }
+
+            set
+            {
+                this.sessionId = value;
+                this.OnPropertyChanged("SessionId");
+            }
+        }
+
+        public int MemberId
+        {
+            get
+            {
+                return this.memberId;
+            }
+
+            set
+            {
+                this.memberId = value;
+                this.OnPropertyChanged("MemberId");
+            }
+        }
+
+        public string Body
+        {
+            get
+            {
+                return this.body;
+            }
+
+            set
+            {
+                this.body = value;
+                this.OnPropertyChanged("Body");
             }
         }
 
@@ -173,72 +251,26 @@ namespace FBLASocialApp.ViewModels.Chat
         /// Gets or sets the command that is executed when the back button is clicked.
         /// </summary>
         public Command BackCommand { get; set; }
+        public Command GetActiveChatCommand { get; set; }
+
+        public Command ConnectToChatCommand { get; set; }
+
+        public Command CreateChatSessionCommand { get; set; }
+
+        public Command GetChatSessionCommand { get; set; }
+
+        public Command AddChatSessionMemberCommand { get; set; }
+
+        public Command RemoveChatSessionMemberCommand { get; set; }
+
+        public Command AddChatMessageCommand { get; set; }
 
         #endregion
 
         #region Methods
 
-        /// <summary>
-        /// Initializes a collection and add it to the message items.
-        /// </summary>
-        private void GenerateMessageInfo()
-        {
-            var currentTime = DateTime.Now;
-            this.ChatMessageInfo = new ObservableCollection<ChatMessage>
-            {
-                new ChatMessage
-                {
-                    Body = this.descriptions[0],
-                    CreatedAt = currentTime.AddMinutes(-60),
-                },
-                new ChatMessage
-                {
-                    Body = this.descriptions[1],
-                    CreatedAt = currentTime.AddMinutes(-59),
-                },
-                new ChatMessage
-                {
-                    Body = this.descriptions[2],
-                    CreatedAt = currentTime.AddMinutes(-45),
-                    IsReceived = true,
-                },
-                new ChatMessage
-                {
-                    Body = this.descriptions[3],
-                    CreatedAt = currentTime.AddMinutes(-40),
-                    IsReceived = true,
-                },
-                new ChatMessage
-                {
-                    Image = /*App.BaseImageUrl + */ "https://yakka.tech/images/SwanLake.jpg",
-                    CreatedAt = currentTime.AddMinutes(-38),
-                    IsReceived = true,
-                },
-                new ChatMessage
-                {
-                    Body = this.descriptions[4],
-                    CreatedAt = currentTime.AddMinutes(-26),
-                },
-                new ChatMessage
-                {
-                    Body = this.descriptions[5],
-                    CreatedAt = currentTime.AddMinutes(-23),
-                    IsReceived = true,
-                },
-                new ChatMessage
-                {
-                    Body = this.descriptions[6],
-                    CreatedAt = currentTime.AddMinutes(-21),
-                },
-                new ChatMessage
-                {
-                    Body = this.descriptions[7],
-                    CreatedAt = currentTime.AddMinutes(-17),
-                    IsReceived = true,
-                },
-
-            };
-        }
+      
+       
 
         /// <summary>
         /// Invoked when the voice call button is clicked.
@@ -318,6 +350,70 @@ namespace FBLASocialApp.ViewModels.Chat
         private void ProfileClicked(object obj)
         {
             // Do something
+        }
+
+        private async void GetActiveChatClicked(object obj)
+        {
+            if (IsBusy) return;
+
+            IsBusy = true;
+
+
+            await SocialApi.Chat.GetActiveChatSessions();
+        }
+
+        public async void ConnectToChatClicked(object obj)
+        {
+            if (IsBusy) return;
+
+            IsBusy = true;
+
+            await SocialApi.Chat.ConnectToChatSessions(connectionId);
+        }
+
+        public async void CreateChatSessionClicked(object obj)
+        {
+            if (IsBusy) return;
+
+            IsBusy = true;
+
+            await SocialApi.Chat.CreateChatSession(participants);
+        }
+
+        public async void GetChatSessionClicked(object obj)
+        {
+            if (IsBusy) return;
+
+            IsBusy = true;
+
+            await SocialApi.Chat.GetChatSession(sessionId);
+        }
+
+        public async void AddChatSessionMemberClicked(object obj)
+        {
+            if (IsBusy) return;
+
+            IsBusy = true;
+
+            await SocialApi.Chat.AddChatSessionMember(sessionId, memberId);
+        }
+
+        public async void RemoveChatSessionMemberClicked(object obj)
+        {
+            if (IsBusy) return;
+
+            IsBusy = true;
+
+            await SocialApi.Chat.RemoveChatSessionMember(sessionId, memberId);
+        }
+
+        public async void AddChatMessageClicked(object obj)
+        {
+            if (IsBusy) return;
+
+            IsBusy = true;
+
+            await SocialApi.Chat.AddChatMessage(sessionId, body);
         }
 
         #endregion

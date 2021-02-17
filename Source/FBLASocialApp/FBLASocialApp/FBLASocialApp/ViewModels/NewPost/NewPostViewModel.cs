@@ -21,6 +21,7 @@ namespace FBLASocialApp.ViewModels.NewPost
         public NewPostViewModel()
         {
            this.CreatePostCommand = new Command(this.CreatePostClicked);
+           
 
         }
 
@@ -42,7 +43,7 @@ namespace FBLASocialApp.ViewModels.NewPost
                 this.OnPropertyChanged("PostTitle");
             }
         }
-        
+
         public string Body
         {
             get
@@ -64,6 +65,7 @@ namespace FBLASocialApp.ViewModels.NewPost
 
         public Command CreatePostCommand { get; set; }
 
+        
         private async void CreatePostClicked(object obj)
         {
             if (IsBusy) return;
@@ -73,6 +75,8 @@ namespace FBLASocialApp.ViewModels.NewPost
 
             await Posts.CreatePost(postTitle, body, privacyLevel, isFeatured);
         }
+
+        
 
     }
 }
