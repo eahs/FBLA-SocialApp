@@ -30,8 +30,6 @@ namespace FBLASocialApp.ViewModels.Chat
 
         private string connectionId;
 
-        private List<int> participants;
-
         private int sessionId;
 
         private int memberId;
@@ -58,8 +56,6 @@ namespace FBLASocialApp.ViewModels.Chat
             this.ProfileCommand = new Command(this.ProfileClicked);
             this.GetActiveChatCommand = new Command(this.GetActiveChatClicked);
             this.ConnectToChatCommand = new Command(this.ConnectToChatClicked);
-            this.CreateChatSessionCommand = new Command(this.CreateChatSessionClicked);
-            this.GetChatSessionCommand = new Command(this.GetChatSessionClicked);
             this.AddChatSessionMemberCommand = new Command(this.AddChatSessionMemberClicked);
             this.RemoveChatSessionMemberCommand = new Command(this.RemoveChatSessionMemberClicked);
             this.AddChatMessageCommand = new Command(this.AddChatMessageClicked);
@@ -101,19 +97,6 @@ namespace FBLASocialApp.ViewModels.Chat
             }
         }
 
-        public List<int> Participants
-        {
-            get
-            {
-                return this.participants;
-            }
-
-            set
-            {
-                this.participants = value;
-                this.OnPropertyChanged("Participants");
-            }
-        }
 
         public int SessionId
         {
@@ -255,10 +238,6 @@ namespace FBLASocialApp.ViewModels.Chat
 
         public Command ConnectToChatCommand { get; set; }
 
-        public Command CreateChatSessionCommand { get; set; }
-
-        public Command GetChatSessionCommand { get; set; }
-
         public Command AddChatSessionMemberCommand { get; set; }
 
         public Command RemoveChatSessionMemberCommand { get; set; }
@@ -371,23 +350,6 @@ namespace FBLASocialApp.ViewModels.Chat
             await SocialApi.Chat.ConnectToChatSessions(connectionId);
         }
 
-        public async void CreateChatSessionClicked(object obj)
-        {
-            if (IsBusy) return;
-
-            IsBusy = true;
-
-            await SocialApi.Chat.CreateChatSession(participants);
-        }
-
-        public async void GetChatSessionClicked(object obj)
-        {
-            if (IsBusy) return;
-
-            IsBusy = true;
-
-            await SocialApi.Chat.GetChatSession(sessionId);
-        }
 
         public async void AddChatSessionMemberClicked(object obj)
         {

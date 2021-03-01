@@ -1,7 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using FBLASocialApp.Models.Chat;
+using SocialApi;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using System.Collections.Generic;
 
 namespace FBLASocialApp.ViewModels.Chat
 {
@@ -14,10 +16,12 @@ namespace FBLASocialApp.ViewModels.Chat
         #region Fields
 
         private ObservableCollection<ChatDetail> chatItems;
-
+        private List<int> participants;
+        private int sessionId;
         private string profileImage = /*App.BaseImageUrl + */ "https://yakka.tech/images/FBLAProfilePic.jpg";
 
         private Command itemSelectedCommand;
+
 
         #endregion
 
@@ -64,6 +68,8 @@ namespace FBLASocialApp.ViewModels.Chat
             this.ShowSettingsCommand = new Command(this.SettingsClicked);
             this.MenuCommand = new Command(this.MenuClicked);
             this.ProfileImageCommand = new Command(this.ProfileImageClicked);
+            this.CreateChatSessionCommand = new Command(this.CreateChatSessionClicked);
+            this.GetChatSessionCommand = new Command(this.GetChatSessionClicked);
         }
         #endregion
 
@@ -83,6 +89,34 @@ namespace FBLASocialApp.ViewModels.Chat
             {
                 this.profileImage = value;
                 this.NotifyPropertyChanged();
+            }
+        }
+
+        public List<int> Participants
+        {
+            get
+            {
+                return this.participants;
+            }
+
+            set
+            {
+                this.participants = value;
+                this.OnPropertyChanged("Participants");
+            }
+        }
+
+        public int SessionId
+        {
+            get
+            {
+                return this.sessionId;
+            }
+
+            set
+            {
+                this.sessionId = value;
+                this.OnPropertyChanged("SessionId");
             }
         }
 
@@ -144,6 +178,10 @@ namespace FBLASocialApp.ViewModels.Chat
         /// </summary>
         public Command ProfileImageCommand { get; set; }
 
+        public Command CreateChatSessionCommand { get; set; }
+
+        public Command GetChatSessionCommand { get; set; }
+
         #endregion
 
         #region Methods
@@ -201,7 +239,23 @@ namespace FBLASocialApp.ViewModels.Chat
         {
             // Do something
         }
+        public async void CreateChatSessionClicked(object obj)
+        {
+            if (IsBusy) return;
 
+            IsBusy = true;
+
+            await SocialApi.Chat.CreateChatSession(participants);
+        }
+
+        public async void GetChatSessionClicked(object obj)
+        {
+            if (IsBusy) return;
+
+            IsBusy = true;
+
+            await SocialApi.Chat.GetChatSession(sessionId);
+        }
         #endregion
     }
 }
