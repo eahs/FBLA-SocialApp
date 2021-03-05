@@ -2,6 +2,8 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
+using Syncfusion.XForms.PopupLayout;
+
 
 namespace FBLASocialApp.Views.Chat
 {
@@ -15,9 +17,12 @@ namespace FBLASocialApp.Views.Chat
         /// <summary>
         /// Initializes a new instance of the <see cref="RecentChatPage" /> class.
         /// </summary>
+        /// 
+        SfPopupLayout popupLayout;
         public RecentChatPage()
         {
             InitializeComponent();
+            popupLayout = new SfPopupLayout();
         }
 
         /// <summary>
@@ -96,6 +101,11 @@ namespace FBLASocialApp.Views.Chat
                     }, 0, TitleBar.Width, Easing.Linear);
                 expandAnimation.Commit(SearchBox, "Expand", 16, 250, Easing.Linear, (p, q) => this.SearchExpandAnimationCompleted());
             }
+        }
+        private void MenuButton_Clicked(object sender, EventArgs e)
+        {
+                popupLayout.Show();
+
         }
 
         /// <summary>

@@ -109,11 +109,11 @@
     <Reference Include="Syncfusion.Cards.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.Cards.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.Cards.XForms.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Core.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.Core.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.Core.XForms.dll</HintPath>
+    <Reference Include="Syncfusion.Core.XForms, Version=18.4451.0.46, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.Core.18.4.0.46\lib\Xamarin.iOS10\Syncfusion.Core.XForms.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Core.XForms.iOS, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.Core.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.Core.XForms.iOS.dll</HintPath>
+    <Reference Include="Syncfusion.Core.XForms.iOS, Version=18.4451.0.46, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.Core.18.4.0.46\lib\Xamarin.iOS10\Syncfusion.Core.XForms.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.DataSource.Portable, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.DataSource.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.DataSource.Portable.dll</HintPath>
@@ -121,8 +121,8 @@
     <Reference Include="Syncfusion.GridCommon.Portable, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.GridCommon.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.GridCommon.Portable.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Licensing, Version=18.3.0.48, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Licensing.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.Licensing.dll</HintPath>
+    <Reference Include="Syncfusion.Licensing, Version=18.4.0.46, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Licensing.18.4.0.46\lib\Xamarin.iOS10\Syncfusion.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfBadgeView.XForms, Version=18.3451.0.48, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.SfBadgeView.18.3.0.48\lib\Xamarin.iOS10\Syncfusion.SfBadgeView.XForms.dll</HintPath>
@@ -204,6 +204,7 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />

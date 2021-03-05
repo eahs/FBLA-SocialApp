@@ -4,6 +4,7 @@ using SocialApi;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace FBLASocialApp.ViewModels.Chat
 {
@@ -18,6 +19,7 @@ namespace FBLASocialApp.ViewModels.Chat
         private ObservableCollection<ChatDetail> chatItems;
         private List<int> participants;
         private int sessionId;
+        private bool displayPopup;
         private string profileImage = /*App.BaseImageUrl + */ "https://yakka.tech/images/FBLAProfilePic.jpg";
 
         private Command itemSelectedCommand;
@@ -70,6 +72,7 @@ namespace FBLASocialApp.ViewModels.Chat
             this.ProfileImageCommand = new Command(this.ProfileImageClicked);
             this.CreateChatSessionCommand = new Command(this.CreateChatSessionClicked);
             this.GetChatSessionCommand = new Command(this.GetChatSessionClicked);
+            this.OpenPopupCommand = new Command(this.OpenPopupClicked);
         }
         #endregion
 
@@ -117,6 +120,19 @@ namespace FBLASocialApp.ViewModels.Chat
             {
                 this.sessionId = value;
                 this.OnPropertyChanged("SessionId");
+            }
+        }
+
+        public bool DisplayPopup
+        {
+            get
+            {
+                return displayPopup;
+            }
+            set
+            {
+                displayPopup = value;
+                this.OnPropertyChanged("DisplayPopup");
             }
         }
 
@@ -181,6 +197,7 @@ namespace FBLASocialApp.ViewModels.Chat
         public Command CreateChatSessionCommand { get; set; }
 
         public Command GetChatSessionCommand { get; set; }
+        public Command OpenPopupCommand { get; set; }
 
         #endregion
 
@@ -237,7 +254,7 @@ namespace FBLASocialApp.ViewModels.Chat
         /// <param name="obj">The Object</param>
         private void MenuClicked(object obj)
         {
-            // Do something
+            //Do something
         }
         public async void CreateChatSessionClicked(object obj)
         {
@@ -256,6 +273,13 @@ namespace FBLASocialApp.ViewModels.Chat
 
             await SocialApi.Chat.GetChatSession(sessionId);
         }
+        private void OpenPopupClicked()
+        {
+            DisplayPopup = true;
+        }
+
+
         #endregion
+
     }
 }

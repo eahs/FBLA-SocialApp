@@ -116,10 +116,12 @@
 
                 <!--  Menu Button  -->
                 <buttons:SfButton
-                    x:Name="MenuButton"
-                    Command="{Binding MenuCommand}"
-                    Style="{StaticResource NavigationBarButtonStyle}"
+                    x:Name="MenuButton" 
+                    VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+                    Clicked="MenuButton_Clicked"
+                    Style="{StaticResource NavigationBarButtonStyle}" 
                     Text="{StaticResource Menu}" />
+
             </StackLayout>
 
             <BoxView BackgroundColor="{DynamicResource Gray-200}" HeightRequest="1" />

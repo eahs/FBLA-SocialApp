@@ -47,6 +47,7 @@ namespace FBLASocialApp.iOS
             SfBorderRenderer.Init();
             SfButtonRenderer.Init();
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+            Syncfusion.XForms.iOS.PopupLayout.SfPopupLayoutRenderer.Init();
 
             LoadApplication(new App());
 
