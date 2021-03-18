@@ -18,11 +18,11 @@ namespace FBLASocialApp.Views.Chat
         /// Initializes a new instance of the <see cref="RecentChatPage" /> class.
         /// </summary>
         /// 
-        SfPopupLayout popupLayout;
+        
         public RecentChatPage()
         {
             InitializeComponent();
-            popupLayout = new SfPopupLayout();
+           
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace FBLASocialApp.Views.Chat
         }
         private void MenuButton_Clicked(object sender, EventArgs e)
         {
-                popupLayout.Show();
+               
 
         }
 

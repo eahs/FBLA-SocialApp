@@ -17,9 +17,7 @@ namespace FBLASocialApp.ViewModels.Chat
         #region Fields
 
         private ObservableCollection<ChatDetail> chatItems;
-        private List<int> participants;
         private int sessionId;
-        private bool displayPopup;
         private string profileImage = /*App.BaseImageUrl + */ "https://yakka.tech/images/FBLAProfilePic.jpg";
 
         private Command itemSelectedCommand;
@@ -62,7 +60,7 @@ namespace FBLASocialApp.ViewModels.Chat
                     Time = "Yesterday",
                     NotificationType = "New"
                 },
-                
+
             };
 
             this.MakeVoiceCallCommand = new Command(this.VoiceCallClicked);
@@ -70,9 +68,8 @@ namespace FBLASocialApp.ViewModels.Chat
             this.ShowSettingsCommand = new Command(this.SettingsClicked);
             this.MenuCommand = new Command(this.MenuClicked);
             this.ProfileImageCommand = new Command(this.ProfileImageClicked);
-            this.CreateChatSessionCommand = new Command(this.CreateChatSessionClicked);
             this.GetChatSessionCommand = new Command(this.GetChatSessionClicked);
-            this.OpenPopupCommand = new Command(this.OpenPopupClicked);
+            
         }
         #endregion
 
@@ -95,19 +92,6 @@ namespace FBLASocialApp.ViewModels.Chat
             }
         }
 
-        public List<int> Participants
-        {
-            get
-            {
-                return this.participants;
-            }
-
-            set
-            {
-                this.participants = value;
-                this.OnPropertyChanged("Participants");
-            }
-        }
 
         public int SessionId
         {
@@ -123,18 +107,7 @@ namespace FBLASocialApp.ViewModels.Chat
             }
         }
 
-        public bool DisplayPopup
-        {
-            get
-            {
-                return displayPopup;
-            }
-            set
-            {
-                displayPopup = value;
-                this.OnPropertyChanged("DisplayPopup");
-            }
-        }
+        
 
         /// <summary>
         /// Gets or sets the property that has been bound with a list view, which displays the profile items.
@@ -194,8 +167,6 @@ namespace FBLASocialApp.ViewModels.Chat
         /// </summary>
         public Command ProfileImageCommand { get; set; }
 
-        public Command CreateChatSessionCommand { get; set; }
-
         public Command GetChatSessionCommand { get; set; }
         public Command OpenPopupCommand { get; set; }
 
@@ -209,7 +180,7 @@ namespace FBLASocialApp.ViewModels.Chat
         private async void ItemSelected(object selectedItem)
         {
             // Do something
-            
+
             await Shell.Current.GoToAsync("//Yakka/Chat/Session?sessionId=30");
         }
 
@@ -256,14 +227,6 @@ namespace FBLASocialApp.ViewModels.Chat
         {
             //Do something
         }
-        public async void CreateChatSessionClicked(object obj)
-        {
-            if (IsBusy) return;
-
-            IsBusy = true;
-
-            await SocialApi.Chat.CreateChatSession(participants);
-        }
 
         public async void GetChatSessionClicked(object obj)
         {
@@ -273,10 +236,7 @@ namespace FBLASocialApp.ViewModels.Chat
 
             await SocialApi.Chat.GetChatSession(sessionId);
         }
-        private void OpenPopupClicked()
-        {
-            DisplayPopup = true;
-        }
+        
 
 
         #endregion
