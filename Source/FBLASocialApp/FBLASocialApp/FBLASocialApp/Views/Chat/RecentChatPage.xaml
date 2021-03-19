@@ -118,7 +118,7 @@
                 <buttons:SfButton
                     x:Name="MenuButton" 
                     VerticalOptions="Start" HorizontalOptions="FillAndExpand"
-                    Clicked="MenuButton_Clicked"
+                    Command="{Binding MenuCommand}"
                     Style="{StaticResource NavigationBarButtonStyle}" 
                     Text="{StaticResource Menu}" />
 

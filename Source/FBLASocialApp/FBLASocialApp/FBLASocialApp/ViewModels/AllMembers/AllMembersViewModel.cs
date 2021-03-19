@@ -102,6 +102,16 @@ namespace FBLASocialApp.ViewModels.AllMembers
             this.memberList = response.Result;
         }
 
+        public async void GetMemberName(object obj)
+        {
+            if (IsBusy) return;
+
+            IsBusy = true;
+
+            ApiResponse<List<Member>> response = await Members.GetFriends();
+            this.memberList = response.Result;
+        }
+
         public async void CurrentMember()
         {
 

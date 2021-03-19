@@ -102,11 +102,7 @@ namespace FBLASocialApp.Views.Chat
                 expandAnimation.Commit(SearchBox, "Expand", 16, 250, Easing.Linear, (p, q) => this.SearchExpandAnimationCompleted());
             }
         }
-        private void MenuButton_Clicked(object sender, EventArgs e)
-        {
-               
-
-        }
+        
 
         /// <summary>
         /// Invokes when search expand Animation completed.

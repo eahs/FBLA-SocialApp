@@ -66,7 +66,7 @@ namespace FBLASocialApp.ViewModels.Chat
             this.MakeVoiceCallCommand = new Command(this.VoiceCallClicked);
             this.MakeVideoCallCommand = new Command(this.VideoCallClicked);
             this.ShowSettingsCommand = new Command(this.SettingsClicked);
-            this.MenuCommand = new Command(this.MenuClicked);
+            this.MenuCommand = new Command(this.MenuButton_Clicked);
             this.ProfileImageCommand = new Command(this.ProfileImageClicked);
             this.GetChatSessionCommand = new Command(this.GetChatSessionClicked);
             
@@ -223,9 +223,9 @@ namespace FBLASocialApp.ViewModels.Chat
         /// Invoked when the menu button is clicked.
         /// </summary>
         /// <param name="obj">The Object</param>
-        private void MenuClicked(object obj)
+        private async void MenuButton_Clicked(object obj)
         {
-            //Do something
+            await Shell.Current.GoToAsync("//AllMembers");
         }
 
         public async void GetChatSessionClicked(object obj)

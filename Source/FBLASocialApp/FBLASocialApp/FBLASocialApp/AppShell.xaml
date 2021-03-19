@@ -7,6 +7,7 @@
        xmlns:favorites ="clr-namespace:FBLASocialApp.Views.Favorites"
        xmlns:login="clr-namespace:FBLASocialApp.Views.Login;assembly=FBLASocialApp"
        xmlns:chat="clr-namespace:FBLASocialApp.Views.Chat"
+       xmlns:allmembers="clr-namespace:FBLASocialApp.Views.AllMembers"
        xmlns:social="clr-namespace:FBLASocialApp.Views.Social"
        xmlns:wall="clr-namespace:FBLASocialApp.Views.Wall"       
        xmlns:newpost="clr-namespace:FBLASocialApp.Views.NewPost"    
@@ -261,7 +262,7 @@
     <ShellContent Route="Privacy"  Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate settings:PrivacyPage}" />
     <ShellContent Route="Terms"   Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate settings:TermsPage}" />
     <ShellContent Route="Social" Shell.NavBarIsVisible="True" Shell.FlyoutBehavior="Flyout" Shell.BackgroundColor ="{StaticResource Cherry-Purple}" ContentTemplate="{DataTemplate social:UserStoryPage}" />
-
+    <ShellContent Route="AllMembers" Shell.NavBarIsVisible="False" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate allmembers:AllMembersPage}" />
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
 
