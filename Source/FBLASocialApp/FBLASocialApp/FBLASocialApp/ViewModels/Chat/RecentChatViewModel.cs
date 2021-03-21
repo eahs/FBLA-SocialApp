@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using System.Collections.Generic;
 using System.ComponentModel;
+using FBLASocialApp.ViewModels.AllMembers;
 
 namespace FBLASocialApp.ViewModels.Chat
 {

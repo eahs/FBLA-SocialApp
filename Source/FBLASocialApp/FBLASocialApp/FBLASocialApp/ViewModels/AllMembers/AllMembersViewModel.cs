@@ -7,6 +7,7 @@ using System.Text;
 
 using Xamarin.Forms;
 using SocialApi.Response.v1;
+using System.Collections.ObjectModel;
 
 namespace FBLASocialApp.ViewModels.AllMembers
 {
@@ -16,12 +17,24 @@ namespace FBLASocialApp.ViewModels.AllMembers
         private Member selfParticipant;
         private int participant;
         private List<Member> memberList;
-        
+
+        ObservableCollection<Member> allMemberNames = new ObservableCollection<Member>();
+        public ObservableCollection<Member> AllMemberNames { get { return allMemberNames; }}
+
 
         public AllMembersViewModel()
         {
             this.GetAllMembersClickedCommand = new Command(this.GetAllMembersClicked);
-        }
+
+            allMemberNames.Add(new Member { FullName = "Makenna" });
+
+            for (int i = 0; i < this.memberList.Count(); i++)
+                {
+                    allMemberNames.Add(new Member {FullName = this.memberList[i].FullName });
+                }
+            
+
+            }
 
         public List<int> Participants
         {
@@ -82,7 +95,6 @@ namespace FBLASocialApp.ViewModels.AllMembers
         public Command CreateChatSessionCommand { get; set; }
 
         public Command GetAllMembersClickedCommand { get; set; }
-
         public async void CreateChatSessionClicked(List<int> participants)
         {
             if (IsBusy) return;
@@ -92,6 +104,7 @@ namespace FBLASocialApp.ViewModels.AllMembers
             await SocialApi.Chat.CreateChatSession(participants);
         }
 
+
         public async void GetAllMembersClicked(object obj)
         {
             if (IsBusy) return;
@@ -100,17 +113,10 @@ namespace FBLASocialApp.ViewModels.AllMembers
 
             ApiResponse<List<Member>> response = await Members.GetFriends();
             this.memberList = response.Result;
+
         }
 
-        public async void GetMemberName(object obj)
-        {
-            if (IsBusy) return;
 
-            IsBusy = true;
-
-            ApiResponse<List<Member>> response = await Members.GetFriends();
-            this.memberList = response.Result;
-        }
 
         public async void CurrentMember()
         {
