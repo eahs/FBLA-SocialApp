@@ -17,24 +17,15 @@ namespace FBLASocialApp.ViewModels.AllMembers
         private Member selfParticipant;
         private int participant;
         private List<Member> memberList;
-
-        ObservableCollection<Member> allMemberNames = new ObservableCollection<Member>();
-        public ObservableCollection<Member> AllMemberNames { get { return allMemberNames; }}
+        private List<string> allMemberNames;
 
 
         public AllMembersViewModel()
         {
             this.GetAllMembersClickedCommand = new Command(this.GetAllMembersClicked);
+            this.CreateChatSessionCommand = new Command (this.CreateChatSessionClicked);
 
-            allMemberNames.Add(new Member { FullName = "Makenna" });
-
-            for (int i = 0; i < this.memberList.Count(); i++)
-                {
-                    allMemberNames.Add(new Member {FullName = this.memberList[i].FullName });
-                }
-            
-
-            }
+        }
 
         public List<int> Participants
         {
@@ -92,10 +83,24 @@ namespace FBLASocialApp.ViewModels.AllMembers
             }
         }
 
+        public List<string> AllMemberNames
+        {
+            get
+            {
+                return this.allMemberNames;
+            }
+
+            set
+            {
+                this.allMemberNames = value;
+                this.OnPropertyChanged("AllMemberNames");
+            }
+        }
+
         public Command CreateChatSessionCommand { get; set; }
 
         public Command GetAllMembersClickedCommand { get; set; }
-        public async void CreateChatSessionClicked(List<int> participants)
+        public async void CreateChatSessionClicked(object obj)
         {
             if (IsBusy) return;
 
@@ -114,8 +119,14 @@ namespace FBLASocialApp.ViewModels.AllMembers
             ApiResponse<List<Member>> response = await Members.GetFriends();
             this.memberList = response.Result;
 
-        }
+            for (int i = 0; i < this.memberList.Count(); i++)
+            {
+                string memberName;
+                memberName = memberList[i].FullName;
+                allMemberNames.Add(memberName);
+            }
 
+        }
 
 
         public async void CurrentMember()

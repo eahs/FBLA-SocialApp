@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FBLASocialApp.ViewModels.AllMembers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,12 @@ namespace FBLASocialApp.Views.AllMembers
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AllMembersPage : ContentPage
     {
+        private AllMembersViewModel AllMembersViewModel;
         public AllMembersPage()
         {
             InitializeComponent();
+
+            BindingContext = AllMembersViewModel = new AllMembersViewModel();
         }
     }
 }

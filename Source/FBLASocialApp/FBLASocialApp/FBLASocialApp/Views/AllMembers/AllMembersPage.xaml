@@ -5,22 +5,29 @@
              x:Name="allMembersPage"
              Title="AllMembers"
              xmlns:controls="clr-namespace:FBLASocialApp.Controls" 
-             xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
-
+             xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" 
+             xmlns:viewModel="clr-namespace:FBLASocialApp.ViewModels.AllMembers">
+    <!--  Binding context for allMembers page  -->
+    <ContentPage.BindingContext>
+        <viewModel:AllMembersViewModel />
+    </ContentPage.BindingContext>
 
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="0, 16" Spacing="24">
-                <listView:SfListView x:Name="RecentList"
+                <listView:SfListView x:Name="AllMember"
                                      IsScrollBarVisible="False" IsScrollingEnabled="False"
                                      AllowSwiping="True"
                                      AutoFitMode="Height"
                                      ItemSpacing="0"
                                      VerticalOptions="FillAndExpand"
-                                     ItemsSource="{Binding AllMemberNames}">
-                <listView:SfListView.ItemTemplate>
+                                     SelectionMode ="None"
+                                     TapCommand = "{Binding GetAllMembersClickedCommand}"
+                                     ItemsSource="{Binding MemberList}">
+
+                    <listView:SfListView.ItemTemplate>
                         <DataTemplate>
-                            <Label Text="Makenna"
+                            <Label Text="{Binding AllMemberNames}"
                                        Margin="16, 0, 16, 8"
                                        TextColor="{DynamicResource Gray-900}"
                                        FontSize="12"
