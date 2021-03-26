@@ -17,6 +17,7 @@ namespace FBLASocialApp
             Routing.RegisterRoute("Yakka/Chat/Session", typeof(ChatMessagePage));
             
             //Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+
         }
 
         private async void Logout_Clicked(object sender, EventArgs e)

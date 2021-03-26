@@ -378,6 +378,11 @@ namespace FBLASocialApp.ViewModels.Chat
             await SocialApi.Chat.AddChatMessage(sessionId, body);
         }
 
+        public void SetProfileName(int memberId)
+        {
+           
+        }
+
         #endregion
     }
 }

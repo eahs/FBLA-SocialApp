@@ -22,6 +22,11 @@ namespace FBLASocialApp
 
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
+
+            if (!SocialApi.YakkaApi.Current.IsLoggedIn)
+            {
+                Shell.Current.GoToAsync("//Login");
+            }
         }
 
         protected override void OnStart()

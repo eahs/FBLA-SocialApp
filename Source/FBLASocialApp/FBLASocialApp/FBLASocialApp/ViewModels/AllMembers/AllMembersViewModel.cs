@@ -8,38 +8,85 @@ using System.Text;
 using Xamarin.Forms;
 using SocialApi.Response.v1;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace FBLASocialApp.ViewModels.AllMembers
 {
     public class AllMembersViewModel : BaseViewModel
     {
-        private List<int> participants;
         private Member selfParticipant;
-        private int participant;
-        private List<Member> memberList;
-        private List<string> allMemberNames;
+        private ObservableCollection<Member> memberList;
+        public ObservableCollection<Member> participantList;
+
 
 
         public AllMembersViewModel()
         {
-            this.GetAllMembersClickedCommand = new Command(this.GetAllMembersClicked);
-            this.CreateChatSessionCommand = new Command (this.CreateChatSessionClicked);
+            this.MemberClickedCommand = new Command(this.MemberClicked);
+
+            memberList = new ObservableCollection<Member>();
+
 
         }
 
-        public List<int> Participants
+        protected override async Task LoadItemsAsync()
         {
-            get
+            // Basic pattern
+            try
             {
-                return this.participants;
+
+
+
+                // Make async request to obtain data
+                ApiResponse<List<Member>> response = await Members.GetFriends();
+
+                if (response.ErrorCount == 0)
+                {
+                    IsError = false;
+                    DataAvailable = true;
+
+                    //this.memberList = new ObservableCollection<Member>(response.Result);
+                    foreach (var member in response.Result)
+                    {
+                        MemberList.Add(member);
+                    }
+
+                }
+
+                else
+                {
+                    // An error occurred that is stored
+                    ErrorMessage = "An error occurred";
+                    DataAvailable = false;
+                    IsError = true;
+                }
+
+                ApiResponse<Member> self = await Members.GetMember();
+
+                if (self.ErrorCount == 0)
+                {
+                    IsError = false;
+                    DataAvailable = true;
+
+                    this.SelfParticipant = self.Result;
+                }
+                else
+                {
+                    // An error occurred that is stored
+                    ErrorMessage = "An error occurred";
+                    DataAvailable = false;
+                    IsError = true;
+                }
+            }
+            catch (Exception e)
+            {
+                // An exception occurred
+                DataAvailable = false;
             }
 
-            set
-            {
-                this.participants = value;
-                this.OnPropertyChanged("Participants");
-            }
+
         }
+
 
         public Member SelfParticipant
         {
@@ -55,21 +102,7 @@ namespace FBLASocialApp.ViewModels.AllMembers
             }
         }
 
-        public int Participant
-        {
-            get
-            {
-                return this.participant;
-            }
-
-            set
-            {
-                this.participant = value;
-                this.OnPropertyChanged("Participant");
-            }
-        }
-
-        public List<Member> MemberList
+        public ObservableCollection<Member> MemberList
         {
             get
             {
@@ -83,72 +116,51 @@ namespace FBLASocialApp.ViewModels.AllMembers
             }
         }
 
-        public List<string> AllMemberNames
+        public ObservableCollection<Member> ParticipantList
         {
             get
             {
-                return this.allMemberNames;
+                return this.participantList;
             }
 
             set
             {
-                this.allMemberNames = value;
-                this.OnPropertyChanged("AllMemberNames");
+                this.participantList = value;
+                this.OnPropertyChanged("ParticipantList");
             }
         }
 
-        public Command CreateChatSessionCommand { get; set; }
+        public Command MemberClickedCommand { get; set; }
 
-        public Command GetAllMembersClickedCommand { get; set; }
-        public async void CreateChatSessionClicked(object obj)
+
+
+        public async void MemberClicked()
         {
             if (IsBusy) return;
 
             IsBusy = true;
 
-            await SocialApi.Chat.CreateChatSession(participants);
-        }
+            var chatlist = memberList.Select(m => m.MemberId).ToList();
 
-
-        public async void GetAllMembersClicked(object obj)
-        {
-            if (IsBusy) return;
-
-            IsBusy = true;
-
-            ApiResponse<List<Member>> response = await Members.GetFriends();
-            this.memberList = response.Result;
-
-            for (int i = 0; i < this.memberList.Count(); i++)
+            if (!chatlist.Contains(selfParticipant.MemberId))
             {
-                string memberName;
-                memberName = memberList[i].FullName;
-                allMemberNames.Add(memberName);
+                chatlist.Add(selfParticipant.MemberId);
             }
 
+
+            await SocialApi.Chat.CreateChatSession(chatlist);
+
+            await Shell.Current.GoToAsync("//Yakka/Chat/Session?sessionId=30");
+
+
+            IsBusy = false;
+
         }
 
-
-        public async void CurrentMember()
+        public void CreateParticipantList()
         {
-
-            if (IsBusy) return;
-
-            IsBusy = true;
-
-            ApiResponse<Member> response = await Members.GetMember();
-            this.selfParticipant = response.Result;
-
+            ParticipantList = this.memberList;
         }
 
-
-        public void MemberClicked(Member member)
-        {
-            this.participant = member.MemberId;
-            this.participants.Add(selfParticipant.MemberId);
-            this.participants.Add(participant);
-            CreateChatSessionClicked(this.participants);
-          
-        }
     }
 }

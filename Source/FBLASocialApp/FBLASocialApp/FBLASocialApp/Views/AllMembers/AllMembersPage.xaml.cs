@@ -19,6 +19,8 @@ namespace FBLASocialApp.Views.AllMembers
             InitializeComponent();
 
             BindingContext = AllMembersViewModel = new AllMembersViewModel();
+
+            AllMembersViewModel.LoadItemsCommand.Execute(null);
         }
     }
 }
