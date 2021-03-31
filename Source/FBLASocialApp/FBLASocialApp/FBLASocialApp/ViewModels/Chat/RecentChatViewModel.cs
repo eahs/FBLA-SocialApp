@@ -6,6 +6,10 @@ using Xamarin.Forms.Internals;
 using System.Collections.Generic;
 using System.ComponentModel;
 using FBLASocialApp.ViewModels.AllMembers;
+using System.Threading.Tasks;
+using SocialApi.Response.v1;
+using SocialApi.Models;
+using System;
 
 namespace FBLASocialApp.ViewModels.Chat
 {
@@ -18,6 +22,8 @@ namespace FBLASocialApp.ViewModels.Chat
         #region Fields
 
         private ObservableCollection<ChatDetail> chatItems;
+        private ObservableCollection<ChatSession> sessionsList;
+        private Member selfParticipant;
         private int sessionId;
         private string profileImage = /*App.BaseImageUrl + */ "https://yakka.tech/images/FBLAProfilePic.jpg";
 
@@ -32,11 +38,12 @@ namespace FBLASocialApp.ViewModels.Chat
         /// </summary>
         public RecentChatViewModel()
         {
+           
             this.ChatItems = new ObservableCollection<ChatDetail>
             {
                 new ChatDetail
                 {
-                    ImagePath = /*App.BaseImageUrl + */ "https://yakka.tech/images/JillBooker.jpg",
+                    ImagePath = /* App.BaseImageUrl + */  "https://yakka.tech/images/JillBooker.jpg",
                     SenderName = "Jill Booker",
                     MessageType = "Text",
                     Message = "Thank you! Have a wonderful day!",
@@ -45,7 +52,7 @@ namespace FBLASocialApp.ViewModels.Chat
                 },
                 new ChatDetail
                 {
-                    ImagePath = /*App.BaseImageUrl + */ "https://yakka.tech/images/RobertSmith.jpg",
+                    ImagePath = /*App.BaseImageUrl + */  "https://yakka.tech/images/RobertSmith.jpg",
                     SenderName = "Robert Smith",
                     MessageType = "Text",
                     Message = "Thank you for the pleasant conversation. I hope to be in contact again soon.",
@@ -54,13 +61,13 @@ namespace FBLASocialApp.ViewModels.Chat
                 },
                 new ChatDetail
                 {
-                    ImagePath = /*App.BaseImageUrl + */ "https://yakka.tech/images/NinaMiller.jpg",
+                    ImagePath = /*App.BaseImageUrl + */  "https://yakka.tech/images/NinaMiller.jpg",
                     SenderName = "Nina Miller",
                     MessageType = "Text",
                     Message = "Would 10:15 PM work?",
                     Time = "Yesterday",
                     NotificationType = "New"
-                },
+                }, 
 
             };
 
@@ -73,6 +80,64 @@ namespace FBLASocialApp.ViewModels.Chat
             
         }
         #endregion
+
+        protected override async Task LoadItemsAsync()
+        {
+            // Basic pattern
+            try
+            {
+
+
+
+                // Make async request to obtain data
+                ApiResponse<List<ChatSession>> response = await SocialApi.Chat.GetActiveChatSessions();
+
+                if (response.ErrorCount == 0)
+                {
+                    IsError = false;
+                    DataAvailable = true;
+
+                    //this.memberList = new ObservableCollection<Member>(response.Result);
+                    foreach (var chatSession in response.Result)
+                    {
+                        SessionsList.Add(chatSession);
+                    }
+
+                }
+
+                else
+                {
+                    // An error occurred that is stored
+                    ErrorMessage = "An error occurred";
+                    DataAvailable = false;
+                    IsError = true;
+                }
+
+                ApiResponse<Member> self = await Members.GetMember();
+
+                if (self.ErrorCount == 0)
+                {
+                    IsError = false;
+                    DataAvailable = true;
+
+                    this.SelfParticipant = self.Result;
+                }
+                else
+                {
+                    // An error occurred that is stored
+                    ErrorMessage = "An error occurred";
+                    DataAvailable = false;
+                    IsError = true;
+                }
+            }
+            catch (Exception e)
+            {
+                // An exception occurred
+                DataAvailable = false;
+            }
+
+
+        }
 
         #region Public Properties
 
@@ -93,6 +158,19 @@ namespace FBLASocialApp.ViewModels.Chat
             }
         }
 
+        public Member SelfParticipant
+        {
+            get
+            {
+                return this.selfParticipant;
+            }
+
+            set
+            {
+                this.selfParticipant = value;
+                this.OnPropertyChanged("SelfParticipant");
+            }
+        }
 
         public int SessionId
         {
@@ -108,7 +186,21 @@ namespace FBLASocialApp.ViewModels.Chat
             }
         }
 
-        
+        public ObservableCollection<ChatSession> SessionsList
+        {
+            get
+            {
+                return this.sessionsList;
+            }
+
+            set
+            {
+                this.sessionsList = value;
+                this.OnPropertyChanged("SessionsList");
+            }
+        }
+
+
 
         /// <summary>
         /// Gets or sets the property that has been bound with a list view, which displays the profile items.
@@ -237,8 +329,25 @@ namespace FBLASocialApp.ViewModels.Chat
 
             await SocialApi.Chat.GetChatSession(sessionId);
         }
-        
 
+       /* public string OtherMemberName()
+        {
+            var memberList;
+            foreach (var chatSession in sessionsList)
+            {
+                memberList.Add(chatSession.ChatMembers);
+
+                if (memberList.Member.Equals(selfParticipant))
+                {
+                   memberList.Remove();
+                }
+
+                else
+                    return ChatSession.ChatMembers[1].FullName;
+            }
+
+            
+        }*/
 
         #endregion
 

@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using SocialApi.Models;
 using SocialApi;
+using FBLASocialApp.ViewModels.AllMembers;
 using System.Collections.Generic;
 
 namespace FBLASocialApp.ViewModels.Chat
@@ -36,6 +37,8 @@ namespace FBLASocialApp.ViewModels.Chat
 
         private string body;
 
+        private int member;
+
         private ObservableCollection<ChatMessage> chatMessageInfo = new ObservableCollection<ChatMessage>();
 
         #endregion
@@ -58,8 +61,9 @@ namespace FBLASocialApp.ViewModels.Chat
             this.ConnectToChatCommand = new Command(this.ConnectToChatClicked);
             this.AddChatSessionMemberCommand = new Command(this.AddChatSessionMemberClicked);
             this.RemoveChatSessionMemberCommand = new Command(this.RemoveChatSessionMemberClicked);
-            this.AddChatMessageCommand = new Command(this.AddChatMessageClicked);
-            
+            this.GetChatSessionCommand = new Command(this.GetChatSessionClicked);
+
+
         }
 
         #endregion
@@ -191,6 +195,20 @@ namespace FBLASocialApp.ViewModels.Chat
             }
         }
 
+        public int Member
+        {
+            get
+            {
+                return this.member;
+            }
+
+            set
+            {
+                this.member = value;
+                this.OnPropertyChanged("Member");
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -241,15 +259,14 @@ namespace FBLASocialApp.ViewModels.Chat
         public Command AddChatSessionMemberCommand { get; set; }
 
         public Command RemoveChatSessionMemberCommand { get; set; }
-
-        public Command AddChatMessageCommand { get; set; }
+        public Command GetChatSessionCommand { get; set; }
 
         #endregion
 
         #region Methods
 
-      
-       
+
+
 
         /// <summary>
         /// Invoked when the voice call button is clicked.
@@ -300,7 +317,7 @@ namespace FBLASocialApp.ViewModels.Chat
         /// Invoked when the send button is clicked.
         /// </summary>
         /// <param name="obj">The object</param>
-        private void SendClicked(object obj)
+        public async void SendClicked(object obj)
         {
             if (!string.IsNullOrWhiteSpace(this.NewMessage))
             {
@@ -312,6 +329,14 @@ namespace FBLASocialApp.ViewModels.Chat
             }
 
             this.NewMessage = null;
+
+            if (IsBusy) return;
+
+            IsBusy = true;
+
+            await SocialApi.Chat.AddChatMessage(sessionId, body);
+
+            IsBusy = false;
         }
 
         /// <summary>
@@ -339,6 +364,15 @@ namespace FBLASocialApp.ViewModels.Chat
 
 
             await SocialApi.Chat.GetActiveChatSessions();
+
+            IsBusy = false;
+
+            ChatSession session = new ChatSession();
+
+            //session = GetChatSessionClicked();
+           
+           int member = session.ChatMembers[0].Member.MemberId;
+            //if (!(Member.)) ;
         }
 
         public async void ConnectToChatClicked(object obj)
@@ -348,6 +382,8 @@ namespace FBLASocialApp.ViewModels.Chat
             IsBusy = true;
 
             await SocialApi.Chat.ConnectToChatSessions(connectionId);
+
+            IsBusy = false;
         }
 
 
@@ -358,6 +394,8 @@ namespace FBLASocialApp.ViewModels.Chat
             IsBusy = true;
 
             await SocialApi.Chat.AddChatSessionMember(sessionId, memberId);
+
+            IsBusy = false;
         }
 
         public async void RemoveChatSessionMemberClicked(object obj)
@@ -367,21 +405,25 @@ namespace FBLASocialApp.ViewModels.Chat
             IsBusy = true;
 
             await SocialApi.Chat.RemoveChatSessionMember(sessionId, memberId);
+
+            IsBusy = false;
         }
 
-        public async void AddChatMessageClicked(object obj)
+       
+        public async void GetChatSessionClicked(object obj)
         {
             if (IsBusy) return;
 
             IsBusy = true;
 
-            await SocialApi.Chat.AddChatMessage(sessionId, body);
+            await SocialApi.Chat.GetChatSession(sessionId);
+
+            IsBusy = false;
+
+
         }
 
-        public void SetProfileName(int memberId)
-        {
-           
-        }
+
 
         #endregion
     }
