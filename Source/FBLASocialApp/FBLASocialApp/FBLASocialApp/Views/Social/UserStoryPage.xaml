@@ -29,7 +29,7 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout BindableLayout.ItemsSource = "{Binding SelfParticipant}">
                 <Grid Margin="0,16,0,0" RowSpacing="0" ColumnSpacing="0">
 
                     <Grid.RowDefinitions>
@@ -60,7 +60,7 @@
                         HeightRequest="80"
                         HorizontalOptions="StartAndExpand"
                         VerticalOptions="StartAndExpand"
-                        WidthRequest="80">
+                        WidthRequest="80" >
 
                         <!--  Profile image  -->
                         <Image
@@ -68,8 +68,10 @@
                             BackgroundColor="{DynamicResource Gray-200}"
                             HeightRequest="80"
                             WidthRequest="80">
+                            
                             <Image.Source>
-                                <UriImageSource Uri="{Binding ProfileImage}" 
+                                
+                                <UriImageSource Uri="{Binding ProfilePhoto.Url}" 
 			                                        CacheValidity="14" 
 			                                        CachingEnabled="true"/>
                             </Image.Source>
@@ -81,7 +83,8 @@
                         Grid.Column="1"
                         Padding="0"
                         Spacing="0"
-                        Margin="16,0,0,24">
+                        Margin="16,0,0,24"
+                        BindableLayout.ItemsSource="{Binding SelfParticipant}">
 
                         <!--  Profile name  -->
                         <Label
@@ -91,7 +94,7 @@
                             HorizontalOptions="StartAndExpand"
                             LineHeight="{OnPlatform Default=-1,
                                                     Android=1.5}"
-                            Text="{Binding ProfileName}"
+                            Text="{Binding FullName}"
                             TextColor="{DynamicResource Gray-900}" />
 
                         <StackLayout
@@ -100,8 +103,8 @@
                             Orientation="Horizontal"
                             Spacing="5">
 
-                            <!--  Designation label  -->
-                            <Label Style="{StaticResource ContentLabelStyle}" Text="{Binding Designation}" />
+                            <!--  Designation label  
+                            <Label Style="{StaticResource ContentLabelStyle}" Text="{Binding Designation}" /> -->
 
                             <BoxView Style="{StaticResource BoxViewStyle}" />
 
@@ -144,12 +147,12 @@
                                 Style="{StaticResource FollowerTitleLabelStyle}"
                                 Text="Posts" />
 
-                            <!--  Followers count label  -->
+                            <!--  Followers count label 
                             <Label
                                 Grid.Row="0"
                                 Grid.Column="1"
                                 Style="{StaticResource FollowerCountLabelStyle}"
-                                Text="{Binding FollowersCount}" />
+                                Text="{Binding FollowersCount}" />  -->
 
                             <!--  Followers title label  -->
                             <Label
@@ -158,12 +161,12 @@
                                 Style="{StaticResource FollowerTitleLabelStyle}"
                                 Text="Followers" />
 
-                            <!--  Following count label  -->
+                            <!--  Following count label  
                             <Label
                                 Grid.Row="0"
                                 Grid.Column="2"
                                 Style="{StaticResource FollowerCountLabelStyle}"
-                                Text="{Binding FollowingCount}" />
+                                Text="{Binding FollowingCount}" /> -->
 
                             <!--  Following title label  -->
                             <Label
@@ -189,7 +192,7 @@
                     <Label
                         Grid.Row="2"
                         Grid.ColumnSpan="2"
-                        Text="{Binding About}" 
+                        Text="{Binding Description}" 
                         FontSize="12" 
                         FontFamily="{StaticResource Montserrat-Medium}"
                         LineHeight="{OnPlatform Default=-1, Android=1.5}"
@@ -202,7 +205,7 @@
                     <Label
                         Grid.Row="3"
                         Grid.ColumnSpan="2"
-                        Text="CONNECTIONS"
+                        Text="Friends"
                         FontSize="12"                     
                         Margin="16,0,0,0" 
                         Style="{StaticResource TitleLabelStyle}"/>              
@@ -218,7 +221,7 @@
                             HorizontalOptions="FillAndExpand"
                             IsScrollBarVisible="False"
                             ItemSpacing="0"
-                            ItemsSource="{Binding Connections}"
+                            ItemsSource="{Binding FriendsList}"
                             Orientation="Horizontal"
                             RowSpacing="0"
                             IsStickyHeader="False"
@@ -266,7 +269,7 @@
 
                 </Grid>
 
-                <StackLayout Spacing="0" Grid.Row="7" BindableLayout.ItemsSource="{Binding Posts}" Orientation="Vertical">
+                <StackLayout Spacing="0" Grid.Row="7" BindableLayout.ItemsSource="{Binding PostList}" Orientation="Vertical">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <controls:CustomShadowFrame CornerRadius="4" HasShadow="True"  BorderColor="{DynamicResource Gray-White}"  BackgroundColor="{DynamicResource Gray-White}"

@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using FBLASocialApp.ViewModels.Social;
+using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
@@ -14,9 +15,15 @@ namespace FBLASocialApp.Views.Social
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStoryPage" /> class.
         /// </summary>
+        /// 
+        private UserStoryViewModel UserStoryViewModel;
         public UserStoryPage()
         {
-            InitializeComponent();
+           
+        InitializeComponent();
+            BindingContext = UserStoryViewModel = new UserStoryViewModel();
+
+            UserStoryViewModel.LoadItemsCommand.Execute(null);
         }
     }
 }
