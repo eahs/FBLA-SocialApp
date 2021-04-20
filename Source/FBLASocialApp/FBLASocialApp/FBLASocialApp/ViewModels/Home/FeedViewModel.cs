@@ -5,6 +5,10 @@ using Xamarin.Forms.Internals;
 using Model = SocialApi.Models.Post;
 using SocialApi.Models;
 using System;
+using System.Threading.Tasks;
+using SocialApi.Response.v1;
+using SocialApi;
+using System.Collections.Generic;
 
 namespace FBLASocialApp.ViewModels.Home
 {
@@ -17,6 +21,7 @@ namespace FBLASocialApp.ViewModels.Home
         #region Fields
 
         private Command<object> itemTappedCommand;
+        private ObservableCollection<Post> postList;
 
         #endregion
 
@@ -25,18 +30,18 @@ namespace FBLASocialApp.ViewModels.Home
         /// <summary>
         /// Gets or sets a collction of value to be displayed in articles card page.
         /// </summary>
-        public ObservableCollection<Model> Posts { get; set; }
+        //public ObservableCollection<Model> Posts { get; set; }
 
         /// <summary>
         /// Gets the command that will be executed when an item is selected.
         /// </summary>
-        public Command<object> ItemTappedCommand
+       /* public Command<object> ItemTappedCommand
         {
             get
             {
                return this.itemTappedCommand ?? (this.itemTappedCommand = new Command<object>(this.NavigateToNextPage));
             }
-        }
+        } */
 
         #endregion
 
@@ -49,7 +54,45 @@ namespace FBLASocialApp.ViewModels.Home
             this.AddFavouriteCommand = new Command(this.FavouriteButtonClicked);
             this.ShareCommand = new Command(this.ShareButtonClicked);
 
-            this.Posts = new ObservableCollection<Model>()
+        }
+
+             protected override async Task LoadItemsAsync()
+        {
+            // Basic pattern
+            try
+            {
+
+                ApiResponse <List<Post>> response = await Posts.GetMemberHome(1, 25);
+
+                if (response.ErrorCount == 0)
+                {
+                    IsError = false;
+                    DataAvailable = true;
+
+                    foreach (var post in response.Result)
+                    {
+                        PostList.Add(post);
+                    }
+                }
+                else
+                {
+                    // An error occurred that is stored
+                    ErrorMessage = "An error occurred";
+                    DataAvailable = false;
+                    IsError = true;
+                }
+
+                
+
+
+            }
+            catch (Exception e)
+            {
+                // An exception occurred
+                DataAvailable = false;
+            }
+
+            /*this.Posts = new ObservableCollection<Model>()
             {
                 new Model
                 {
@@ -219,11 +262,23 @@ namespace FBLASocialApp.ViewModels.Home
                 FavoriteCount = 78
                 },
 
-            };
+            }; */
         }
 
         #endregion
+        public ObservableCollection<Post> PostList
+        {
+            get
+            {
+                return this.postList;
+            }
 
+            set
+            {
+                this.postList = value;
+                this.OnPropertyChanged("PostList");
+            }
+        }
         #region Methods
 
         /// <summary>
@@ -277,6 +332,7 @@ namespace FBLASocialApp.ViewModels.Home
         {
             // Do Something.
         }
+
         #endregion
 
         #region commands
