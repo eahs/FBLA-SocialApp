@@ -48,6 +48,9 @@ namespace FBLASocialApp.ViewModels.Social
         /// </summary>
         public UserStoryViewModel()
         {
+            this.friendsList = new ObservableCollection<Member>();
+            this.postList = new ObservableCollection<Model>();
+
             /*this.HeaderImagePath = "Album2.png";
             this.ProfileImage = "https://yakka.tech/images/FBLAProfilePic.jpg";
             this.BackgroundImage = "Sky-Image.png";

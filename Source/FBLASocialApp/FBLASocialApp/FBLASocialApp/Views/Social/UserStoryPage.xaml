@@ -22,14 +22,10 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <!--  Binding context for social profile with connections page  -->
-    <ContentPage.BindingContext>
-        <viewModel:UserStoryViewModel />
-    </ContentPage.BindingContext>
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout BindableLayout.ItemsSource = "{Binding SelfParticipant}">
+            <StackLayout>
                 <Grid Margin="0,16,0,0" RowSpacing="0" ColumnSpacing="0">
 
                     <Grid.RowDefinitions>
@@ -70,8 +66,8 @@
                             WidthRequest="80">
                             
                             <Image.Source>
-                                
-                                <UriImageSource Uri="{Binding ProfilePhoto.Url}" 
+
+                                <UriImageSource Uri="{Binding SelfParticipant.ProfilePhoto.Url}" 
 			                                        CacheValidity="14" 
 			                                        CachingEnabled="true"/>
                             </Image.Source>
@@ -84,7 +80,7 @@
                         Padding="0"
                         Spacing="0"
                         Margin="16,0,0,24"
-                        BindableLayout.ItemsSource="{Binding SelfParticipant}">
+                        >
 
                         <!--  Profile name  -->
                         <Label
@@ -94,7 +90,7 @@
                             HorizontalOptions="StartAndExpand"
                             LineHeight="{OnPlatform Default=-1,
                                                     Android=1.5}"
-                            Text="{Binding FullName}"
+                            Text="{Binding  SelfParticipant.FullName}"
                             TextColor="{DynamicResource Gray-900}" />
 
                         <StackLayout
@@ -112,9 +108,9 @@
                             <Label Style="{StaticResource ContentLabelStyle}">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="{Binding State}" />
+                                        <Span Text="{Binding SelfParticipant.State}" />
                                         <Span Text=" " />
-                                        <Span Text="{Binding Country}" />
+                                        <Span Text="{Binding SelfParticipant.Country}" />
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
@@ -192,7 +188,7 @@
                     <Label
                         Grid.Row="2"
                         Grid.ColumnSpan="2"
-                        Text="{Binding Description}" 
+                        Text="{Binding SelfParticipant.Description}" 
                         FontSize="12" 
                         FontFamily="{StaticResource Montserrat-Medium}"
                         LineHeight="{OnPlatform Default=-1, Android=1.5}"
